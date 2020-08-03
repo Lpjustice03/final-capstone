@@ -77,11 +77,20 @@ INSERT INTO cards(front, back, card_creator_id) VALUES ('dog', 'woof', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('cat', 'meow', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('fox', 'https://www.youtube.com/watch?v=jofNR_WkoCE', 2);
 
+INSERT INTO cards(front, back, card_creator_id) VALUES ('2+2', '4', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('2*3', '6', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('9/3', '3', 2);
+
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('Animal Sounds', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('Math', 2);
 
 INSERT INTO card_deck(card_id, deck_id) VALUES (1, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (2, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (3, 1);
+
+INSERT INTO card_deck(card_id, deck_id) VALUES (4, 2);
+INSERT INTO card_deck(card_id, deck_id) VALUES (5, 2);
+INSERT INTO card_deck(card_id, deck_id) VALUES (6, 2);
 
 
 COMMIT TRANSACTION;
