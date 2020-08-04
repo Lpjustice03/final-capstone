@@ -21,6 +21,7 @@ export default new Vuex.Store({
     token: currentToken || '',
     user: currentUser || {},
     cards: [],
+    decks: [],
     activeCard: {
       id:0,
       front: '',
@@ -50,6 +51,9 @@ export default new Vuex.Store({
     },
     SET_ACTIVE_CARD(state,data) {
       state.activeCard = data;
+    },
+    SET_DECKS(state, data){
+      state.decks = data;
     }
   }
 })
