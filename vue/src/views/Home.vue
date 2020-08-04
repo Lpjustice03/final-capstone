@@ -1,12 +1,19 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <p>You must be authenticated to see this</p>
+    <list-of-cards/>
   </div>
 </template>
 
 <script>
+
+import ListOfCards from '@/components/ListOfCards.vue';
+
+
 export default {
-  name: "home"
+  name: "Home",
+  components: {
+    ListOfCards
+  }
 };
 </script>

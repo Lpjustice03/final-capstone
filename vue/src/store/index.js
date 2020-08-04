@@ -19,7 +19,14 @@ if(currentToken != null) {
 export default new Vuex.Store({
   state: {
     token: currentToken || '',
-    user: currentUser || {}
+    user: currentUser || {},
+    cards: [],
+    activeCard: {
+      id:0,
+      front: '',
+      back: ''
+    }
+    
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -37,6 +44,12 @@ export default new Vuex.Store({
       state.token = '';
       state.user = {};
       axios.defaults.headers.common = {};
+    },
+    SET_CARDS(state, data){
+      state.cards = data;
+    },
+    SET_ACTIVE_CARD(state,data) {
+      state.activeCard = data;
     }
   }
 })
