@@ -12,16 +12,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.techelevator.dao.CardDAO;
+import com.techelevator.dao.DeckDAO;
 import com.techelevator.model.Card;
+import com.techelevator.model.Deck;
 
 @CrossOrigin
 @RestController
 
 public class FlashCardController {
 	private CardDAO cardDao;
+	private DeckDAO deckDao;
 	
-	public FlashCardController(CardDAO cardDao) {
+	public FlashCardController(CardDAO cardDao, DeckDAO deckDao) {
 		this.cardDao = cardDao;
+		this.deckDao = deckDao;
 		
 	}
 	
@@ -31,7 +35,10 @@ public class FlashCardController {
 		return cardDao.getCards();
 	}
 	
-	
+	@RequestMapping(path = "/decks", method = RequestMethod.GET)
+	public List<Deck> getDecks(){
+		return deckDao.getDecks();
+	}
 	
 
 }

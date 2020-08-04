@@ -6,6 +6,6 @@ import com.techelevator.model.Deck;
 
 public interface DeckDAO {
 	
-	List <Deck> getDeck();
+	List <Deck> getDecks();
 
 }

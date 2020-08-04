@@ -4,12 +4,18 @@ import java.util.List;
 
 public class Deck {
 	
-	private int id;
-	private int userId;
+	private Long id;
+	private Long userId;
 	private String deckName;
 	private List<Card> listOfCards;
 	
 	
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getDeckName() {
 		return deckName;
 	}
@@ -22,10 +28,10 @@ public class Deck {
 	public void setListOfCards(List<Card> listOfCards) {
 		this.listOfCards = listOfCards;
 	}
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
