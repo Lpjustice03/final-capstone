@@ -10,9 +10,16 @@ public class Card {
 	private String front;
 	private String back;
 	private List<String> Categories;
+	private Boolean flipped;
 	
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public Boolean getFlipped() {
+		return flipped;
+	}
+	public void setFlipped(Boolean flipped) {
+		this.flipped = flipped;
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;

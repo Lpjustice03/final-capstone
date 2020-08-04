@@ -47,6 +47,7 @@ CREATE TABLE cards (
 	front varchar(1000) NOT NULL,
 	back varchar(1000) NOT NULL,
 	card_creator_id int NOT NULL,
+	flipped boolean NOT NULL,
 	CONSTRAINT PK_card_id PRIMARY KEY (card_id),
 	CONSTRAINT FK_card_creator_id FOREIGN KEY (card_creator_id) REFERENCES users(user_id)
 );
@@ -73,13 +74,14 @@ CREATE TABLE card_deck (
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
-INSERT INTO cards(front, back, card_creator_id) VALUES ('dog', 'woof', 2);
-INSERT INTO cards(front, back, card_creator_id) VALUES ('cat', 'meow', 2);
-INSERT INTO cards(front, back, card_creator_id) VALUES ('fox', 'https://www.youtube.com/watch?v=jofNR_WkoCE', 2);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('dog', 'woof', 2, false);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('cat', 'meow', 2, false);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('fox', 'https://www.youtube.com/watch?v=jofNR_WkoCE', 2, false);
 
-INSERT INTO cards(front, back, card_creator_id) VALUES ('2+2', '4', 2);
-INSERT INTO cards(front, back, card_creator_id) VALUES ('2*3', '6', 2);
-INSERT INTO cards(front, back, card_creator_id) VALUES ('9/3', '3', 2);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('2+2', '4', 2, false);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('2*3', '6', 2, false);
+INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('9/3', '3', 2, false);
+
 
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('Animal Sounds', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('Math', 2);

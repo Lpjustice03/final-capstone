@@ -41,6 +41,7 @@ public class CardSqlDAO implements CardDAO {
 		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));
+		card.setFlipped(results.getBoolean("flipped"));
 		return card;
 	}
 	
