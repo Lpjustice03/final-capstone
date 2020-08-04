@@ -1,0 +1,24 @@
+<template>
+  <div class="decks">
+    <h1>Decks</h1>
+  
+    <list-of-decks />
+    
+  </div>
+</template>
+
+<script>
+
+import ListOfDecks from '@/components/ListOfDecks.vue';
+
+export default {
+  name: "Decks",
+  components: {
+    ListOfDecks
+    
+  }
+  
+  
+
+};
+</script>

@@ -1,23 +1,33 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <list-of-decks />
-    <list-of-cards />
+   <router-link v-bind:to="{name:'cards'}"> Cards
+   </router-link>
+   <div>
+    <router-link :to="{ name: 'register' }">Register/Log In</router-link>
+     </div>
+  <div>
+<router-link v-bind:to="{name:'decks'}"> Decks
+</router-link>
+  </div>
+
+    
+    
     
   </div>
 </template>
 
 <script>
 
-import ListOfCards from '@/components/ListOfCards.vue';
-import ListOfDecks from '@/components/ListOfDecks.vue';
+
 
 
 export default {
   name: "Home",
   components: {
-    ListOfCards,
-    ListOfDecks
+
+   
+   
   }
   
   
