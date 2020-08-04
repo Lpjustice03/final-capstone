@@ -1,13 +1,20 @@
 
 <template>
-  <div> </div>
+   <div class="container">
+<div class="card">
+<h1 id="frontQuestion">{{this.$store.state.activeCard.front}}</h1>
+<p>Click below for answer:</p>
+<button id="answerButton" >Answer</button>
+</div>
+</div>
 </template>
 
 <script>
 
 import cardService from "../services/CardService.js";
+
 export default {
-    name: 'card-details',
+    name: "card-details",
     props: {
         cardId: Number
     },
@@ -19,5 +26,7 @@ export default {
 </script>
 
 <style>
+
+
 
 </style>
