@@ -3,12 +3,7 @@
 <div class= "list-of-cards">
 
     <div v-for="card in this.$store.state.cards" v-bind:key="card.id">
-        {{card.front}}
-
-  
-
-
-
+     {{}}              {{card.front}} /////// {{card.back}}
     </div>
 
 
@@ -18,22 +13,21 @@
 
 <script>
 
-import CardService from '@/services/CardService.js';
+import cardService from "@/services/CardService.js";
 
 export default {
-name: 'list-of-cards',
+name: "list-of-cards",
 methods:{
     getCards() {
-    CardService.list().then(response =>{
+    cardService.list().then(response =>{
         this.$store.commit("SET_CARDS", response.data);
     });
+}
+
 },
 created() {
     this.getCards();
 }
-
-}
-
 
 }
 

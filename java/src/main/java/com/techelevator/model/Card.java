@@ -4,24 +4,24 @@ import java.util.List;
 
 public class Card {
 	
-	public void setId(int id) {
-		this.id = id;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	private int id;
-	private int userId;
+	
+	private Long id;
+	private Long userId;
 	private String front;
 	private String back;
 	private List<String> Categories;
 	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 	
-	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public int getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 	public String getFront() {

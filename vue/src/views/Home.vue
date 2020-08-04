@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <list-of-cards/>
+    <list-of-cards />
+    <h2> hey </h2>
   </div>
 </template>
 

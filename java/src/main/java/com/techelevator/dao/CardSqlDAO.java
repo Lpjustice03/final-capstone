@@ -6,11 +6,12 @@ import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.techelevator.model.Card;
 
 
-@Component
+@Service
 public class CardSqlDAO implements CardDAO {
 	private JdbcTemplate jdbcTemplate;
 	
@@ -22,7 +23,7 @@ public class CardSqlDAO implements CardDAO {
 
 	@Override
 	public List<Card> getCards() {
-		List <Card> cards = new ArrayList<Card>();
+		List<Card> cards = new ArrayList<>();
 		String sqlGetAllCards = "SELECT * From cards";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllCards);
 		
@@ -35,9 +36,9 @@ public class CardSqlDAO implements CardDAO {
 	
 	private Card mapRowToCard(SqlRowSet results) {
 		Card card = new Card();
-		card.setCategories(null);
-		card.setId(results.getInt("card_id"));
-		card.setUserId(results.getInt("card_creator_id"));
+		//card.setCategories(null);
+		card.setId(results.getLong("card_id"));
+		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));
 		return card;
