@@ -33,6 +33,19 @@ public class DeckSqlDAO implements DeckDAO {
 		}
 		return decks;
 	}
+	
+	@Override
+	public Deck getDeck(Long id) {
+		Deck deck = null;
+		String sqlGetSpecificDeck = "SELECT * FROM decks WHERE deck_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetSpecificDeck, id);
+		while (results.next())
+		{
+			deck = mapRowToDecks(results);			
+		}
+		return deck;
+		
+	}
 
 	private Deck mapRowToDecks(SqlRowSet results) {
 	Deck deck = new Deck();

@@ -11,7 +11,16 @@ public class Card {
 	private String back;
 	private List<String> Categories;
 	private Boolean flipped;
+	private long deckId;
 	
+	
+	
+	public long getDeckId() {
+		return deckId;
+	}
+	public void setDeckId(long deckId) {
+		this.deckId = deckId;
+	}
 	public void setId(Long id) {
 		this.id = id;
 	}

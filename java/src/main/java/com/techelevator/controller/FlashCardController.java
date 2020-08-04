@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.techelevator.dao.CardDAO;
@@ -38,6 +39,11 @@ public class FlashCardController {
 	@RequestMapping(path = "/decks", method = RequestMethod.GET)
 	public List<Deck> getDecks(){
 		return deckDao.getDecks();
+	}
+	
+	@RequestMapping(path = "/decks/{id}", method = RequestMethod.GET)
+	public Deck getDeck(@PathVariable Long id){
+		return deckDao.getDeck(id);
 	}
 	
 

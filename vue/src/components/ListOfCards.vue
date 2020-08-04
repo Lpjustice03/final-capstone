@@ -2,16 +2,13 @@
 
 <div class= "list-of-cards">
 
-    <div v-for="card in this.$store.state.cards" v-bind:key="card.id" >
-          
-        
-               <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
-               
-         
-           </div> 
+    <div v-for="card in filterCards" v-bind:key="card.id" >
+
+    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
+    
+    </div> 
            
 
-   
 </div>
 
 
@@ -24,11 +21,18 @@ import cardService from "@/services/CardService.js";
 
 export default {
 name: "list-of-cards",
+computed: {
+    filterCards() {
+        return this.$store.state.cards.filter( card => {
+            return card.deckId == this.$route.params.id;
+        });
+    }
+},
 methods:{
     getCards() {
-    cardService.list().then(response =>{
+        cardService.list().then(response =>{
         this.$store.commit("SET_CARDS", response.data);
-    });
+        });
 },
 toggleCard: function(card) {
       card.flipped = !card.flipped;

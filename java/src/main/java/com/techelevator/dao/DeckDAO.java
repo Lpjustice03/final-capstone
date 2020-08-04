@@ -8,4 +8,5 @@ public interface DeckDAO {
 	
 	List <Deck> getDecks();
 
+	Deck getDeck(Long id);
 }

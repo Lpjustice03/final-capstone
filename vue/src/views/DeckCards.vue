@@ -2,8 +2,7 @@
   <div class="cards">
     <h1>Cards</h1>
   
-    <list-of-cards />
-
+    <list-of-cards v-bind:deck-id="parseInt($route.params.id)" />
     
   </div>
 </template>
@@ -13,10 +12,9 @@
 import ListOfCards from '@/components/ListOfCards.vue';
 
 export default {
-  name: "Cards",
+  name: "DeckCards",
   components: {
     ListOfCards
-    
   }
   
   

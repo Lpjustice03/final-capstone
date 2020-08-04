@@ -1,6 +1,6 @@
 <template>
   <div class="decks">
-    <h1>Decks</h1>
+    <h1 class="heroBanner">Decks</h1>
   
     <list-of-decks />
     
