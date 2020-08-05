@@ -46,10 +46,23 @@ public class FlashCardController {
 		return deckDao.getDeck(id);
 	}
 	
+	@ResponseStatus(HttpStatus.CREATED)
 	@RequestMapping(path = "/cards/create", method = RequestMethod.POST)
 	public void createCard(@RequestBody Card card ) {
 		cardDao.createCard(card.getUserId(), card);
 	}
+	
+	@RequestMapping(path = "cards/{id}", method = RequestMethod.PUT)
+	public void updateCard(@RequestBody Card card, @PathVariable Long id) {
+		cardDao.updateCard(card, id);
+	}
+	
+	@RequestMapping(path = "cards/{id}", method = RequestMethod.DELETE)
+	public void cardDelete(@PathVariable Long id) {
+		cardDao.deleteCard(id);
+	}
+	
+	
 	
 
 }
