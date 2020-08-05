@@ -1,8 +1,13 @@
 <template>
 
 <div class= "list-of-decks">
-
+  <div class="action">
+ 
+ <button type="submit" v-on:click="updateDeck()"> Update Deck </button>
+        <button type="submit" v-on:click="addDeck()"> Add A Deck </button>
+  </div>
     <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
+   
     
      <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} </div>
@@ -28,6 +33,12 @@ methods:{
 }
 
 },
+updateDeck(){
+
+},
+addDeck(){
+
+},
 created() {
     this.getDecks();
 }
@@ -35,7 +46,14 @@ created() {
 }
 </script>
 <style scoped>
-
+.submit{
+  display: flex;
+  justify-content: center;
+  
+}
+.deck:hover{
+  transform: scale(1.2);
+}
   .deck {
     display: flex;
     flex-direction:column;
@@ -62,6 +80,22 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
+  }
+  button{
+    border-radius: 5px;
+    border: 1px solid #cb84b0;
+    background-color: #8984cb;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover{
+    background-color: #70a66f;
   }
   
 </style>

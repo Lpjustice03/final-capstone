@@ -22,3 +22,8 @@ export default {
 
 };
 </script>
+<style scoped>
+.heroBanner {
+  text-align: center;
+}
+</style>
