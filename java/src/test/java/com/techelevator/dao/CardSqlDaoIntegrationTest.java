@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.techelevator.model.Card;
 
-import org.junit.Assert;
+
 
 public class CardSqlDaoIntegrationTest extends DAOIntegrationTest{
 	private CardSqlDAO cardSqlDAO;

@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.techelevator.model.Card;
+
 import com.techelevator.model.Deck;
 
 public class DeckSqlDaoIntegrationTest extends DAOIntegrationTest{
