@@ -75,19 +75,9 @@ header {
     from{color: white}
     to {color: black};
 }
-<<<<<<< HEAD
-nav, section {
-    float:left;
-}
-nav { 
-    display:flex;
-    align-content: space-between;
-    background-color: black;
-=======
 
 nav {
  float:left;
->>>>>>> 021f386a2fd37baa49077db64a075b56f1376f94
     height: 150px;
     width: 200px;
     margin-right: 10px;
