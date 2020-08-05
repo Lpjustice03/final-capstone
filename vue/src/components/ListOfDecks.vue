@@ -40,7 +40,7 @@ created() {
     display: flex;
     flex-direction:column;
     width: 250px;
-    height: 195px;
+    height: 300px;
     padding: 40px 25px;
     background-color: #1fbd41;
     border-radius: 7px;
@@ -51,7 +51,7 @@ created() {
     position: relative;
     color: #fff;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 30px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);

@@ -6,7 +6,7 @@
     
       
   
-  <footer> Facebook icon, IG icon, etc... </footer>
+  <!-- <footer> Facebook icon, IG icon, etc... </footer> -->
 
     
     
