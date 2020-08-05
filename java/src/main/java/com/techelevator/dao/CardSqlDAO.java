@@ -52,6 +52,31 @@ public class CardSqlDAO implements CardDAO {
 
 		return card;
 	}
+
+
+	@Override
+	public void updateCard( Card card) {
+		String sqlUpdateCard = "UPDATE cards set front = ? and back = ?";
+		jdbcTemplate.update(sqlUpdateCard, card.getFront(), card.getBack() );
+		
+	}
+
+
+	@Override
+	public void createCard( Long id, Card card) {
+		String sqlCard = "INSERT into cards(front, back, card_creator_id, flipped) VALUES (?,?,?,?)";
+		jdbcTemplate.update(sqlCard, card.getFront(), card.getBack(), card.getUserId(), card.getFlipped());
+		
+	}
+
+
+	@Override
+	public void deleteCard(Card card) {
+		String sqlDelete = "DELETE from card_deck where card_id = ?";
+		jdbcTemplate.update(sqlDelete, card.getId());
+		sqlDelete = "DELETE from cards where card_id = ?";
+		jdbcTemplate.update(sqlDelete, card.getId());
+	}
 	
 
 }
