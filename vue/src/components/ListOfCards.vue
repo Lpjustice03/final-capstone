@@ -81,7 +81,7 @@ created() {
     padding: 40px 25px;
     background-color: #51aae5;
     border-radius: 7px;
-    margin: 15px;
+    margin: 25px;
     text-align: center;
     line-height: 27px;
     cursor: pointer;
@@ -96,6 +96,7 @@ created() {
   }
   .card:hover{
       transform: scale(1.2);
+    
   }
   .card:active {
 transform: rotateY(180deg);
