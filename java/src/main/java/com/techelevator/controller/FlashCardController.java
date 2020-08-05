@@ -46,5 +46,10 @@ public class FlashCardController {
 		return deckDao.getDeck(id);
 	}
 	
+	@RequestMapping(path = "/cards/create", method = RequestMethod.POST)
+	public void createCard(@RequestBody Card card ) {
+		cardDao.createCard(card.getUserId(), card);
+	}
+	
 
 }
