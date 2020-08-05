@@ -47,7 +47,6 @@ CREATE TABLE cards (
 	front varchar(1000) NOT NULL,
 	back varchar(1000) NOT NULL,
 	card_creator_id int NOT NULL,
-	flipped boolean NOT NULL,
 	CONSTRAINT PK_card_id PRIMARY KEY (card_id),
 	CONSTRAINT FK_card_creator_id FOREIGN KEY (card_creator_id) REFERENCES users(user_id)
 );
@@ -74,24 +73,24 @@ CREATE TABLE card_deck (
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('What does the dog say?', 'Woof!', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('What does the cat say?', 'Meow!', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('What does the fox say?', 'A-hee-ahee ha-hee!', 2, false);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Which number is larger: -2 or -5?', '-2', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('What is 85% of 21?', '17.85', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('8.563 + 4.8292 = ?', 'A-hee-ahee ha-hee!', 2);
 
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('2+2=?', '4', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('2*3=?', '6', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('9/3=?', '3', 2, false);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('2+2=?', '4', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('2*3=?', '6', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('9/3=?', '3', 2);
 
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('Who is the best Basketball Player?', 'Michael Jordan', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('Who had the worst football season?', 'Cleveland Browns', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('Who is the best Soccer Player?', 'Pele', 2, false);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Who is the best Basketball Player?', 'Michael Jordan', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Who had the worst football season?', 'Cleveland Browns', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Who is the best Soccer Player?', 'Pele', 2);
 
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('What movie is about a sinking ship?', 'Titanic', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('Best anthology of all time?', 'Star Wars', 2, false);
-INSERT INTO cards(front, back, card_creator_id, flipped) VALUES ('In what movie had a ring to rule them all?', 'Lord Of The Rings', 2, false);
+INSERT INTO cards(front, back, card_creator_id ) VALUES ('What movie is about a sinking ship?', 'Titanic', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Best anthology of all time?', 'Star Wars', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('In what movie had a ring to rule them all?', 'Lord Of The Rings', 2);
 
 
-INSERT INTO decks (deck_name, deck_user_id) VALUES ('Animal Sounds', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('SPORTS', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('MOVIES', 2);
