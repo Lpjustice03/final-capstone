@@ -41,7 +41,7 @@ public class CardSqlDAO implements CardDAO {
 		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));
-		card.setFlipped(results.getBoolean("flipped"));
+		card.setFlipped(false);
 		String sqlGetCardDeckId = "Select * from card_deck join cards on cards.card_id = card_deck.card_id where cards.card_id = ?";
 		SqlRowSet deckIdResults = jdbcTemplate.queryForRowSet(sqlGetCardDeckId, card.getId());
 		
@@ -55,9 +55,9 @@ public class CardSqlDAO implements CardDAO {
 
 
 	@Override
-	public void updateCard( Card card) {
-		String sqlUpdateCard = "UPDATE cards set front = ? and back = ?";
-		jdbcTemplate.update(sqlUpdateCard, card.getFront(), card.getBack() );
+	public void updateCard( Card card, Long id) {
+		String sqlUpdateCard = "UPDATE cards set front = ?, back = ? WHERE card_id = ?";
+		jdbcTemplate.update(sqlUpdateCard, card.getFront(), card.getBack(), id);
 		
 	}
 
@@ -71,11 +71,11 @@ public class CardSqlDAO implements CardDAO {
 
 
 	@Override
-	public void deleteCard(Card card) {
+	public void deleteCard(Long id) {
 		String sqlDelete = "DELETE from card_deck where card_id = ?";
-		jdbcTemplate.update(sqlDelete, card.getId());
+		jdbcTemplate.update(sqlDelete, id);
 		sqlDelete = "DELETE from cards where card_id = ?";
-		jdbcTemplate.update(sqlDelete, card.getId());
+		jdbcTemplate.update(sqlDelete, id);
 	}
 	
 
