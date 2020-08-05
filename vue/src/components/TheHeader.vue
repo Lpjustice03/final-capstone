@@ -6,10 +6,10 @@
 <div class="menu">
     <nav class="navBar"> 
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
-        <router-link class="menuLink" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
-        <router-link class="menuLink" tag="button"> About us </router-link> 
-        <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Decks/Try It Now </router-link> 
-        <router-link class="menuLink" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
+        <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
+        <router-link class="menuLink" id="about" tag="button"> About us </router-link> 
+        <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
+        <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
     </nav>  
 </div>
 <section></section>
@@ -46,6 +46,9 @@ export default {
 
 
 header {
+    animation-name: title;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
     text-shadow: 2px 2px 5px gray;
     display: flex;
     justify-content: center;
@@ -55,10 +58,15 @@ header {
     font-family: fantasy;
     width: 960px;
 }
+@keyframes title {
+    from{color: white}
+    to {color: black};
+}
 nav, section {
     float:left;
 }
 nav {
+    
     height: 150px;
     width: 200px;
     margin-right: 10px;
@@ -66,6 +74,7 @@ nav {
   
 }
 .menuLink {
+    margin-bottom: 20px;
     font-family: fantasy;
     height: 50px;
     width: 150px;
@@ -85,6 +94,7 @@ nav {
 section {
     width: 750px;
 }
+
 
 
 
@@ -112,6 +122,7 @@ section {
 }
 
 header {
+
   padding: 20px 0;
 }
 
