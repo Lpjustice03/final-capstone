@@ -41,7 +41,7 @@ public class CardSqlDAO implements CardDAO {
 		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));
-		card.setFlipped(false);
+		card.setFlipped(results.getBoolean("flipped"));
 		String sqlGetCardDeckId = "Select * from card_deck join cards on cards.card_id = card_deck.card_id where cards.card_id = ?";
 		SqlRowSet deckIdResults = jdbcTemplate.queryForRowSet(sqlGetCardDeckId, card.getId());
 		
