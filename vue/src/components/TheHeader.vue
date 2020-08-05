@@ -12,8 +12,9 @@
         <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
     </nav>  
 </div>
-<section></section>
+
 </div>
+
 
 
 </template>
@@ -65,8 +66,10 @@ header {
 nav, section {
     float:left;
 }
-nav {
-    
+nav { 
+    display:flex;
+    align-content: space-between;
+    background-color: black;
     height: 150px;
     width: 200px;
     margin-right: 10px;
