@@ -97,6 +97,12 @@ created() {
   .card:hover{
       transform: scale(1.2);
   }
+  .card:active {
+transform: rotateY(180deg);
+transition: transform .5s;
+color:#51aae5;
+
+}
   .list-of-cards{
       display:flex;
       justify-content: center;
