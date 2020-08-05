@@ -41,12 +41,22 @@ export default {
 
 <style scoped>
 .wrapper {
-    width: 960px;
+    display: flex;
     margin: 0 auto;
+   flex-direction: column;
+}
+.menu{
+  display:flex;
+  flex-direction: row;
+
 }
 
 
+
 header {
+   /* background-image: url(../assets/artificial-intelligence.jpg);
+  background-position: center;
+  background-size: 285px; */
     animation-name: title;
     animation-duration: 1.5s;
     animation-fill-mode: backwards;
@@ -54,15 +64,18 @@ header {
     display: flex;
     justify-content: center;
     background-color: white;
-    color: black;
+    color: #91ebf1;
     font-size: 100px;
     font-family: fantasy;
     width: 960px;
+    flex-flow: row wrap;
+    padding: 20px 0;
 }
 @keyframes title {
     from{color: white}
     to {color: black};
 }
+<<<<<<< HEAD
 nav, section {
     float:left;
 }
@@ -70,9 +83,18 @@ nav {
     display:flex;
     align-content: space-between;
     background-color: black;
+=======
+
+nav {
+ float:left;
+>>>>>>> 021f386a2fd37baa49077db64a075b56f1376f94
     height: 150px;
     width: 200px;
     margin-right: 10px;
+      padding: 200px 0;
+      display:flex;
+      
+     flex-direction: column;
   
   
 }
@@ -86,6 +108,7 @@ nav {
     border-color: black;
     border-width: 2px;
     border-radius: 15px;
+    
 }
 .menuLink:hover{
     height:65px;
@@ -93,45 +116,29 @@ nav {
     background-color: lightgray;
     transition-duration: 0.2s;
     color: black;
-}
-section {
-    width: 750px;
-}
-
-
-
-
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    
 }
 
 body {
-  background: white;
+  background-image: url(../assets/mind.webp);
   color: black;
   font-family: Helvetica;
   text-align: center;
   margin: 0;
+  
 }
 
 header,
-nav,
-section {
+nav
+ {
   border: 1px solid black;
   margin-bottom: 10px;
   border-radius: 3px;
 }
 
-header {
 
-  padding: 20px 0;
-}
 
-nav, section {
-  padding: 200px 0;
-}
+
 
 
 
