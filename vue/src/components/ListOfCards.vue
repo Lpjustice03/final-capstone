@@ -1,9 +1,15 @@
 <template>
-
-<div class= "list-of-cards">
-    <div class="action">
+   <div class="header">
+       <div class="cardButton">
         <button type="submit" v-on:click="updateCard()"> Update Card </button>
+    
         <button type="submit" v-on:click="addCard()"> Add A Card </button>
+       </div>
+<div class= "list-of-cards">
+    
+     
+    <div class="action">
+       
         
     </div>
     
@@ -14,7 +20,7 @@
     
     </div> 
            
-
+</div>
 </div>
 
 
@@ -63,6 +69,10 @@ created() {
 </script>
 
 <style>
+.header {
+     display:flex;
+     flex-direction: column; 
+  }
   .card {
     display: flex;
     flex-direction:column;
@@ -91,8 +101,20 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
-      
   } 
+  .cardButton{
+      justify-content: center;
+      display:flex;
+  }
+ @media screen and (max-width: width 600px)    {
+     .list-of-cards{
+         display:flex;
+      justify-content: center;
+      flex-flow: row wrap;
+
+     }
+     
+ }
   button{
     border-radius: 5px;
     border: 1px solid #cb84b0;
@@ -104,10 +126,15 @@ created() {
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 25px;
   }
   
   button:hover{
     background-color: #70a66f;
   }
+  
   
 </style>
