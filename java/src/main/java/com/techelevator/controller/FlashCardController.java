@@ -61,6 +61,11 @@ public class FlashCardController {
 	public void cardDelete(@PathVariable Long id) {
 		cardDao.deleteCard(id);
 	}
+	@ResponseStatus(HttpStatus.CREATED)
+	@RequestMapping(path = "/decks/create", method = RequestMethod.POST)
+	public void createDeck(@RequestBody Deck deck) {
+		deckDao.createDeck(deck.getUserId(), deck);
+	}
 	
 	
 	

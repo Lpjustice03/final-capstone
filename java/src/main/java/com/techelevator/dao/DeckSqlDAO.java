@@ -46,7 +46,14 @@ public class DeckSqlDAO implements DeckDAO {
 		return deck;
 		
 	}
-
+    @Override
+    	public void createDeck( Long id, Deck deck) {
+    		String sqlDeck = "INSERT into decks(deck_name, deck_user_id) VALUES (?,?)";
+    		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId());
+    		
+    	}
+    
+	
 	private Deck mapRowToDecks(SqlRowSet results) {
 	Deck deck = new Deck();
 	List<Card> cards = new ArrayList<>();
