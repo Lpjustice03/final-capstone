@@ -1,5 +1,6 @@
 <template>
   <div id="login" class="text-center">
+    <!-- <img src= ../assets/artificial-intelligence.jpg id= "background-image"> -->
     <form class="form-signin" @submit.prevent="login">
       <div><h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
       </div>
@@ -78,26 +79,41 @@ export default {
 <style scoped>
 
 
-*, *:before, *:after {
-  box-sizing: border-box;
+/* *, *:before, *:after {
   text-align: center;
-}
+  
+} */
 
 .text-center {
-  margin: 15%;  
+  height: 100%;
+  padding: 8%;
+  text-align: center;
+  background-image: url(../assets/login.jpeg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0%;  
+}
+
+h1 {
+  text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+  font-size: 50px;
+  color:burlywood;
 }
 input[type=text] {
-  width: 20%;
+  width: 50%;
   padding: 10px;
-  margin:10px 10px;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  margin:10px 20%;
   border-radius: 12px;
+  opacity:1;
 }
 input[type=password] {
+  width: 50%;
   padding: 10px;
-  margin:10px 10px;
+  margin:10px 20%;
   border-radius: 12px;
-  width: 20%;
 }
 .border-customized-input {
    border: 2px solid #eee;
@@ -105,33 +121,43 @@ input[type=password] {
 button {
   appearance:none;
   -webkit-appearance:none;
-  padding:10px;
-  border:none;
-  background-color:rgb(148, 146, 146);
-  color:black;
+  background:burlywood;
+  text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+ color: burlywood;
   font-weight:600;
-  border-radius:5px;
-  width:15%;
-  height: 13%;
-  margin: 10px 10px;
+  width: 52%;
+  padding: 10px;
+  margin:15px 20%;
+  border-radius: 12px;
+  font-size: 20px;
 }
 button:hover {
-background-color: gray;
+background: rgb(223, 177, 118);
 color:rgb(17, 13, 235);
-width: 15.25%;
+width: 53%;
 height: 13.5%;
+padding: 10px;
+margin:10px 20%;
 }
 .link {
   display:flex;
   justify-content: center;
   margin:10px;
-  font-size:20px;
-  color: rgb(95, 95, 240)
+  font-size:30px;
+  color: blue;
 }
 .link:hover {
-  color:blue;
+  color:rgb(87, 87, 245);
 }
 label {
-  font-size: 25px;
+text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+ color: burlywood;
+  font-size: 30px;
 }
 </style>
