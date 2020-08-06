@@ -64,8 +64,17 @@ public class CardSqlDAO implements CardDAO {
 
 	@Override
 	public void createCard( Long id, Card card) {
-		String sqlCard = "INSERT into cards(front, back, card_creator_id, flipped) VALUES (?,?,?,?)";
-		jdbcTemplate.update(sqlCard, card.getFront(), card.getBack(), card.getUserId(), card.getFlipped());
+		String sqlCard = "INSERT into cards(front, back, card_creator_id) VALUES (?,?,?)";
+		jdbcTemplate.update(sqlCard, card.getFront(), card.getBack(), card.getUserId());
+		
+		sqlCard = "SELECT card_id from cards WHERE front = ? And back = ? And card_creator_id = ?";
+		SqlRowSet cardResults = jdbcTemplate.queryForRowSet(sqlCard, card.getFront(), card.getBack(), card.getUserId());
+		
+		while(cardResults.next()) {
+			card.setId(cardResults.getLong("card_id"));
+		}
+		sqlCard = "INSERT into card_deck(card_id, deck_id) VALUES (?, ?)";
+		jdbcTemplate.update(sqlCard, card.getId(), card.getDeckId());
 		
 	}
 
