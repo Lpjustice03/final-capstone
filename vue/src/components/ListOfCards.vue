@@ -1,10 +1,5 @@
 <template>
-   <div class="header">
-       <div class="cardButton">
-        <button type="submit" v-on:click="updateCard()"> Update Card </button>
-    
-        <button type="submit" v-on:click="addCard()"> Add A Card </button>
-       </div>
+  
 <div class= "list-of-cards">
     
      
@@ -21,7 +16,7 @@
     </div> 
            
 </div>
-</div>
+
 
 
 

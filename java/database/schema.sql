@@ -122,12 +122,53 @@ INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the n
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the capital of New York?', 'Answer: Albany', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the wintry-like biome called?', 'Answer: Tundra', 2);
 
+-- 7th Grade History
+INSERT INTO cards(front, back, card_creator_id) VALUES ('What was the minimum registered unemployment figure in the US throughout the 1920s?', 'Answer: 2 Million', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What nickname was given to the 1920s decade, suggesting a furious pace of life and rapid changes?', 'Answer: The Roaring Twenties', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A bill can also start in the _?', 'Answer: Senate', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: How many years is a President elected for?', 'Answer: 4 years', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which Amendment abolished slavery', 'Answer: 13', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Who is the father of the constitution?', 'Answer: James Madison', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A president must be at least _ years old.', 'Answer: 35', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A member of the House of Representatives must be at least_yeas old.', 'Answer: 25', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A senator must be at least _ years old', 'Answer: 30', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: When did women get the right to vote?', 'Answer: 1920', 2);
+
+-- 8th Grade History
+INSERT INTO cards(front, back, card_creator_id) VALUES ('What was the main economic activity in all colonies?', 'Answer: Farming', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is subsistence farming?', 'Answer: Producing enough to meet the families needs.', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What were the strict rules governing the behavior and punishment of slaves in the colonies?', 'Answer: The middle colonies', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is supply and demand?', 'Answer: Supply and Demand controls the prices of crops.', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which colonial region was known for its diverse population of German and Scotch-Irish citizens?', 'Answer: 13', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is a cash crop?', 'Answer: crops that could be sold in markets', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Where was the hub of the shipping trade in America?', 'Answer: New England', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What was the name of the slave transporting leg of the Triangular Trade?', 'Answer: The middle passage', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What day was the Declaration of Independence approved?', 'Answer: July 4, 1776', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What were Hessians?', 'Answer: Hired soldiers', 2);
+
+-- 6th Grade Science
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Coal, oil, and natural gas are all what types of fuel?', 'Answer: Fossil fuel', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the center of an atom called?', 'Answer: The nucleus', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Who proved that the Earth orbits the Sun?', 'Answer: Copernicus', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What do you call the process of breaking white light into colors?', 'Answer: Refraction', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which is a measurement of the amount of material contained in a particular object?', 'Answer: Mass', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Where would you find the substance chlorophyll?', 'Answer: Plants', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which of the following pH numbers indicates an alkali substance: 1 or 13?', 'Answer: 13', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the name for the largest part of the brain?', 'Answer: Cerebrum', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Name the process in which small particles of rocks are removed due to nature.', 'Answer: Erosion', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the name of a substance made up of two or more chemically bonded elements?', 'Answer: Compound', 2);
+
 
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('7th Grade Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('8th Grade Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade History', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('7th Grade History', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('8th Grade History', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade Science', 2);
 
+
+-- 6th Grade math
 INSERT INTO card_deck(card_id, deck_id) VALUES (1, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (2, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (3, 1);
@@ -139,6 +180,7 @@ INSERT INTO card_deck(card_id, deck_id) VALUES (8, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (9, 1);
 INSERT INTO card_deck(card_id, deck_id) VALUES (10, 1);
 
+-- 7Th Grade Math
 INSERT INTO card_deck(card_id, deck_id) VALUES (11, 2);
 INSERT INTO card_deck(card_id, deck_id) VALUES (12, 2);
 INSERT INTO card_deck(card_id, deck_id) VALUES (13, 2);
@@ -150,6 +192,8 @@ INSERT INTO card_deck(card_id, deck_id) VALUES (18, 2);
 INSERT INTO card_deck(card_id, deck_id) VALUES (19, 2);
 INSERT INTO card_deck(card_id, deck_id) VALUES (20, 2);
 
+
+-- 8Th Grade Math
 INSERT INTO card_deck(card_id, deck_id) VALUES (21, 3);
 INSERT INTO card_deck(card_id, deck_id) VALUES (22, 3);
 INSERT INTO card_deck(card_id, deck_id) VALUES (23, 3);
@@ -173,6 +217,43 @@ INSERT INTO card_deck(card_id, deck_id) VALUES (37, 4);
 INSERT INTO card_deck(card_id, deck_id) VALUES (38, 4);
 INSERT INTO card_deck(card_id, deck_id) VALUES (39, 4);
 INSERT INTO card_deck(card_id, deck_id) VALUES (40, 4);
+
+
+-- 7Th Grade History
+INSERT INTO card_deck(card_id, deck_id) VALUES (41, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (42, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (43, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (44, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (45, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (46, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (47, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (48, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (49, 5);
+INSERT INTO card_deck(card_id, deck_id) VALUES (50, 5);
+
+-- 8th Grade History
+INSERT INTO card_deck(card_id, deck_id) VALUES (51, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (52, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (53, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (54, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (55, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (56, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (57, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (58, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (59, 6);
+INSERT INTO card_deck(card_id, deck_id) VALUES (60, 6);
+
+-- 6th Grade Science
+INSERT INTO card_deck(card_id, deck_id) VALUES (61, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (62, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (63, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (64, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (65, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (66, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (67, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (68, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (69, 7);
+INSERT INTO card_deck(card_id, deck_id) VALUES (70, 7);
 
 
 
