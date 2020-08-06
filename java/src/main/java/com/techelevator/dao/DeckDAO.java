@@ -9,4 +9,6 @@ public interface DeckDAO {
 	List <Deck> getDecks();
 
 	Deck getDeck(Long id);
+	
+    void createDeck(Long id, Deck deck);
 }
