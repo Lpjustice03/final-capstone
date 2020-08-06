@@ -176,7 +176,7 @@ INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which part of
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the speed of a car that travelled 100 miles in .6 hours?', 'Answer: ', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: How do you find the number of neutrons in an atom?', 'Answer: You subtrct the atomic number from the mass number', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What do you call a mixture that appears to contain only one substance?', 'Answer: A homogenous mixture', 2);
-INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A piece of wood is floating on top of a pond of water.  Water has a density of 1 g/mL.  Is the woods density greater, less than, or equal to the water?,' 'Answer: Less than', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A piece of wood is floating on top of a pond of water.  Water has a density of 1 g/mL.  Is the woods density greater, less than, or equal to the water?', 'Answer: Less than', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Matter that has a definite volume but no definite shape is a ___', 'Answer: liquid', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: How many total number of atoms are in the compound NaOH?', 'Answer: 3', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Acceleration can be both positive and negative.  True or false?', 'Answer: True', 2);
