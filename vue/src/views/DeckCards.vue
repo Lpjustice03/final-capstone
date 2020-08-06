@@ -1,9 +1,9 @@
 <template>
   <div class="cards">
     <h1>Cards</h1>
-  
-    <list-of-cards v-bind:deck-id="parseInt($route.params.id)" />
     <add-card />
+    <list-of-cards v-bind:deck-id="parseInt($route.params.id)" />
+    
   </div>
 </template>
 

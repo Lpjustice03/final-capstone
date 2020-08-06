@@ -1,5 +1,10 @@
 <template> 
-
+<div class="header">
+       <div class="cardButton">
+        <button type="submit" v-on:click="updateCard()"> Update Card </button>
+    
+        <button type="submit" v-on:click="addCard()"> Add A Card </button>
+       </div>
 
 <form class="addCard" v-on:submit="saveCard">
    <div>
@@ -15,6 +20,7 @@
 </div>
 
 </form>
+</div>
 </template>
 
 
@@ -57,5 +63,31 @@ export default {
 
 
 <style scoped>
+.cardButton{
+      justify-content: center;
+      display:flex;
+}
+button{
+    border-radius: 5px;
+    border: 1px solid #cb84b0;
+    background-color: #8984cb;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+   button:hover{
+    background-color: #70a66f;
+  }
+  
+
+
 
 </style>
