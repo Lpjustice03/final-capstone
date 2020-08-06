@@ -1,5 +1,5 @@
 <template>
-  <div id="register" class="text-center">
+  <div id="register" class="text-center" >
     <form class="form-register" @submit.prevent="register">
       <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
       <div class="alert alert-danger" role="alert" v-if="registrationErrors">
@@ -32,10 +32,10 @@
         v-model="user.confirmPassword"
         required
       />
-      <router-link :to="{ name: 'login' }">Have an account?</router-link>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Create Account
       </button>
+      <router-link class="link" :to="{ name: 'login' }">Have an account?</router-link>
     </form>
   </div>
 </template>
@@ -90,4 +90,94 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+
+/* *, *:before, *:after {
+  box-sizing: border-box;
+  text-align: center;
+} */
+
+.text-center {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5%;
+  text-align: center;
+  background-image: url(../assets/graph.jpeg);
+  background-color: black; 
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0%;    
+}
+h1 {
+  text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+  font-size: 50px;
+  color:burlywood;
+}
+input[type=text] {
+  width: 60%;
+  padding: 10px;
+  margin:10px 20%;
+  border-radius: 12px;
+  opacity:1;
+}
+input[type=password] {
+  width: 60%;
+  padding: 10px;
+  margin:10px 20%;
+  border-radius: 12px;
+  
+}
+.border-customized-input {
+   border: 2px solid #eee;
+}
+button {
+  appearance:none;
+  -webkit-appearance:none;
+  background:burlywood;
+  text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+ color: burlywood;
+  font-weight:600;
+  width: 63%;
+  padding: 10px;
+  margin:15px 20%;
+  border-radius: 12px;
+  font-size: 20px;
+}
+button:hover {
+background: rgb(223, 177, 118);
+color:rgb(17, 13, 235);
+width: 64%;
+height: 13.5%;
+padding: 10px;
+margin:10px 20%;
+}
+.link {
+  display:flex;
+  justify-content: center;
+  margin:10px;
+  font-size:30px;
+  color: blue;
+}
+.link:hover {
+  color:rgb(87, 87, 245);
+}
+label {
+  text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
+  color:burlywood;
+  font-size: 25px;
+}
+</style>
+
+
