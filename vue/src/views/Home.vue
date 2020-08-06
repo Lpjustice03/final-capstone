@@ -1,11 +1,15 @@
 <template>
   <div class="home">
 
-
+    <div class="header">
     <h1>FlipDeck</h1>
-    <h2> Welcome to FlipDeck&#169; the coolest study tool around</h2>
-    <h3> makes simple learning tools that let you study anything. Start learning today with flashcards, games and learning tools — all for free!</h3>
-
+    <h2> Welcome to FlipDeck the coolest study tool around</h2>
+    <p> FlipDeck makes simple learning flash cards that let you study anything. Start learning today! Use the ever growing library of decks approved by top educators. Or create your own custom decks! — all for free!</p>
+     <router-link  v-bind:to="{name:'decks'}"> Try It Now!</router-link>
+    </div>
+    <div class="topright">
+      <router-link :to="{ name: 'register' }">Need an account?</router-link>
+    </div>
     
 
     
@@ -39,19 +43,22 @@ export default {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  opacity: 0.8;
+  
   background: url(../assets/heroImage.jpg)left / cover no-repeat;
   display: flex;
+  
 }
 
- h1, h2, h3 {
+ .header {
    font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
-  margin-top: 60px;
+  margin-top: 300px;
   display: flex;
-  align-content:bottom;
+  align-content:flex-end;
+  flex-wrap: wrap;
 }
+
 
 
 
