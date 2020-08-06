@@ -1,6 +1,5 @@
 <template> 
 
-
 <form class="addCard" v-on:submit="saveCard">
    <div>
 <label for="front">Question? </label>
