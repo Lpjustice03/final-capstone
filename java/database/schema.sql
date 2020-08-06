@@ -158,6 +158,33 @@ INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the n
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Name the process in which small particles of rocks are removed due to nature.', 'Answer: Erosion', 2);
 INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the name of a substance made up of two or more chemically bonded elements?', 'Answer: Compound', 2);
 
+-- 7th Grade Science 
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Acids are found in many common chemicals, including foods.  Do acids taste sour, soapy, salty, or sweet? ', 'Answer: Sour', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Morning dew is an example of which portion of the water cycle?', 'Answer: Condensation', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: The preserved remains of once living organisms is called what?', 'Answer: Fossils', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the probability of producing a tall plant from two hybrid tall plants?', 'Answer: 75%', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: `For every action, there is an equal and opposite reaction` is Newtons ___ Law', 'Answer: 3rd', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the negatively charged particle in an atom called?', 'Answer: Electron', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What are the three states that matter can exist in?', 'Answer: Solids, Liquids, and Gasses', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the most likely cause of wind blowing?', 'Answer: Differences in temperatures across the Earth', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What type of cooling produces an igneous rock that contains large crystals?', 'Answer: slow cooling', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What instrument is used to check temperatures?', 'Answer: thermometer', 2);
+
+-- 8th Grade Science
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A very large redwood tree is measured to be about 100 units tall.  What is the most scientifically appropriate unit to use?', 'Answer: meters', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Which part of the electromagnetic spectrum has the highest frequency, and highest energy level?', 'Answer: Gamma Rays', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the speed of a car that travelled 100 miles in .6 hours?', 'Answer: ', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: How do you find the number of neutrons in an atom?', 'Answer: You subtrct the atomic number from the mass number', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What do you call a mixture that appears to contain only one substance?', 'Answer: A homogenous mixture', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: A piece of wood is floating on top of a pond of water.  Water has a density of 1 g/mL.  Is the woods density greater, less than, or equal to the water?,' 'Answer: Less than', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Matter that has a definite volume but no definite shape is a ___', 'Answer: liquid', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: How many total number of atoms are in the compound NaOH?', 'Answer: 3', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: Acceleration can be both positive and negative.  True or false?', 'Answer: True', 2);
+INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the symbol for aluminum', 'Answer: Al', 2);
+
+
+
+
 
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade Math', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('7th Grade Math', 2);
@@ -166,6 +193,9 @@ INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade History', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('7th Grade History', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('8th Grade History', 2);
 INSERT INTO decks (deck_name, deck_user_id) VALUES ('6th Grade Science', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('7th Grade Science', 2);
+INSERT INTO decks (deck_name, deck_user_id) VALUES ('8th Grade Science', 2);
+
 
 
 -- 6th Grade math
@@ -256,5 +286,28 @@ INSERT INTO card_deck(card_id, deck_id) VALUES (69, 7);
 INSERT INTO card_deck(card_id, deck_id) VALUES (70, 7);
 
 
+-- 7th Grade Science
+INSERT INTO card_deck(card_id, deck_id) VALUES (71, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (72, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (73, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (74, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (75, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (76, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (77, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (78, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (79, 8);
+INSERT INTO card_deck(card_id, deck_id) VALUES (80, 8);
+
+-- 8th Grade Science
+INSERT INTO card_deck(card_id, deck_id) VALUES (81, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (82, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (83, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (84, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (85, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (86, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (87, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (88, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (89, 9);
+INSERT INTO card_deck(card_id, deck_id) VALUES (90, 9);
 
 COMMIT TRANSACTION; 
