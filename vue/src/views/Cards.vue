@@ -3,6 +3,7 @@
     <h1>Cards</h1>
   
     <list-of-cards />
+    
 
     
   </div>
@@ -12,12 +13,15 @@
 
 import ListOfCards from '@/components/ListOfCards.vue';
 
+
 export default {
   name: "Cards",
   components: {
-    ListOfCards
+    ListOfCards,
+  
     
   }
+
   
   
 
