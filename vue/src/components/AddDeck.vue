@@ -22,13 +22,19 @@ export default {
         return{
             deck:{
                 deckName: '',
-                userId: ''
+                description: 'the',
+                
             }
         };
     },
     methods:{
         saveDeck(){
-            deckService.addDeck(this.deck)
+            const newDeck ={
+                deckName: this.deck.deckName,
+                description: this.deck.description,
+               
+            };
+            deckService.addDeck(newDeck)
         }
     }
 

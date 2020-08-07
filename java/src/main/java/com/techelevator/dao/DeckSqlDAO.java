@@ -33,6 +33,18 @@ public class DeckSqlDAO implements DeckDAO {
 		}
 		return decks;
 	}
+	@Override
+	public List<Deck> getTrialDeck() {
+	List<Deck> decks = new ArrayList<>();
+	String sqlGetAllDecks = "SELECT * From decks where deck_is_trial = true ";
+	SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllDecks);
+	
+	while (results.next()) {
+		Deck deck = mapRowToDecks(results);
+		decks.add(deck);
+	}
+	return decks;
+	}
 	
 	@Override
 	public Deck getDeck(Long id) {
@@ -47,11 +59,13 @@ public class DeckSqlDAO implements DeckDAO {
 		
 	}
     @Override
-    	public void createDeck( Long id, Deck deck) {
-    		String sqlDeck = "INSERT into decks(deck_name, deck_user_id) VALUES (?,?)";
-    		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId());
+    	public void createDeck( Deck deck) {
+    		String sqlDeck = "INSERT into decks(deck_name, deck_user_id, deck_description) VALUES (?,?,?)";
+    		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId(), deck.getDescription());
     		
     	}
+    
+    
     
 	
 	private Deck mapRowToDecks(SqlRowSet results) {
@@ -82,6 +96,8 @@ public class DeckSqlDAO implements DeckDAO {
 		
 		return card;
 	}
+
+	
 }
 
 

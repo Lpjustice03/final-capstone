@@ -9,9 +9,16 @@ public class Deck {
 	private String deckName;
 	private List<Card> listOfCards;
 	private String description;
+	private boolean isTrial;
 	
 	
 	
+	public boolean isTrial() {
+		return isTrial;
+	}
+	public void setTrial(boolean isTrial) {
+		this.isTrial = isTrial;
+	}
 	public String getDescription() {
 		return description;
 	}

@@ -59,14 +59,14 @@ h1 {
   font-size: 6em;
   font-weight: 700;
   color: #f5f5f5;
-  text-shadow: 1px 1px 1px #6e1767,
-1px 2px 1px #6e1767,
-1px 3px 1px #6e1767,
-1px 4px 1px #6e1767,
-1px 5px 1px #6e1767,
-1px 6px 1px #6e1767,
-1px 7px 1px #6e1767,
-1px 8px 1px #6e1767,
+  text-shadow: 1px 1px 1px #a75aa0,
+1px 2px 1px #a75aa0,
+1px 3px 1px #a75aa0,
+1px 4px 1px #a75aa0,
+1px 5px 1px #a75aa0,
+1px 6px 1px #a75aa0,
+1px 7px 1px #a75aa0,
+1px 8px 1px #a75aa0,
 1px 18px 6px rgba(16,16,16,0.2),
 1px 22px 10px rgba(16,16,16,0.2),
 1px 25px 35px rgba(16,16,16,0.2),
@@ -78,10 +78,11 @@ h2 {
   margin-left: 170px;
   font-size: 30px;
   font-weight: 350;
-  text-shadow: 1px 1px 1px #6e1767,
-1px 2px 1px #6e1767,
-1px 3px 1px #6e1767,
-1px 4px 1px #6e1767;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px #a75aa0,
+1px 2px 1px #a75aa0,
+1px 3px 1px #a75aa0,
+1px 4px 1px #a75aa0;
 }
 
 p {
@@ -90,8 +91,9 @@ p {
   background: transparent;
   color: white;
   font-weight: 175;
-  text-shadow: 1px 1px 1px #6e1767,
-  1px 2px 1px #6e1767;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px #a75aa0,
+  1px 2px 1px #a75aa0;
 
 }
 

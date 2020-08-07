@@ -112,7 +112,7 @@ export default {
   margin:0%;    
 }
 h1 {
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C,px -1px 0 #23430C, -1px -1px 0 #23430C;
+  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
   font-size: 50px;
   color:burlywood;
 }
@@ -137,7 +137,7 @@ button {
   appearance:none;
   -webkit-appearance:none;
   background:burlywood;
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C,-1px -1px 0 #23430C;
+  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
  color: burlywood;
   font-weight:600;
   width: 63%;
@@ -148,7 +148,7 @@ button {
 }
 button:hover {
 background: rgb(223, 177, 118);
-color:rgb(17, 13, 235);
+color:#23430C;
 width: 64%;
 height: 13.5%;
 padding: 10px;
@@ -165,7 +165,7 @@ margin:10px 20%;
   color:rgb(87, 87, 245);
 }
 label {
-  text-shadow: -1px 1px 2px #23430C,  1px 1px 2px #23430C,  1px -1px 0 #23430C,  -1px -1px 0 #23430C;
+  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
   color:burlywood;
   font-size: 25px;
 }

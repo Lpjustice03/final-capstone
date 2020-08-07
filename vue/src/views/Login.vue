@@ -134,7 +134,7 @@ button {
 }
 button:hover {
 background: rgb(223, 177, 118);
-color:rgb(17, 13, 235);
+color:#23430C;
 width: 53%;
 height: 13.5%;
 padding: 10px;

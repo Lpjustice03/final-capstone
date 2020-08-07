@@ -57,7 +57,6 @@ created() {
 .submit{
   display: flex;
   justify-content: center;
-  
 }
 .deck:hover{
   transform: scale(1.1);
@@ -76,13 +75,14 @@ created() {
     cursor: pointer;
     position: relative;
     color: #fff;
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 35px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     will-change: transform;
     border-style: outset;
+    text-decoration: none;
   }
 
   p {
@@ -93,16 +93,17 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
+
   }
   button{
     border-radius: 5px;
-    border: 1px solid #cb84b0;
+    border: 1px solid #959717;
     background-color: #8984cb;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
     font-weight: 700;
-    color: #fff;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
      margin-right: 10px;
@@ -112,7 +113,8 @@ created() {
   }
   
   button:hover{
-    background-color: #70a66f;
+    background-color: #828f12;
+    border: 1px solid #8984cb
   }
    .deckButton{
       justify-content: center;

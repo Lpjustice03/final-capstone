@@ -8,7 +8,7 @@ import store from '../store/index'
 import Cards from '../views/Cards.vue'
 import Decks from '../views/Decks.vue'
 import DeckCards from '../views/DeckCards.vue'
-
+import AboutUs from '../views/AboutUs.vue'
 
 
 Vue.use(Router)
@@ -63,7 +63,7 @@ const router = new Router({
       name: "cards",
       component: Cards,
       meta: {
-        requiresAuth: false
+        requiresAuth: true
       }
       
     },
@@ -72,13 +72,21 @@ const router = new Router({
     name: "decks",
     component: Decks,
     meta: {
-      requiresAuth: false
+      requiresAuth: true
     }
   },
   {
     path: "/:id",
     name: "DeckCards",
     component: DeckCards,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+  path: "/aboutus",
+    name: "AboutUs",
+    component: AboutUs,
     meta: {
       requiresAuth: false
     }
@@ -91,7 +99,7 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
 
   // If it does and they are not logged in, send the user to "/login"
-  if (requiresAuth && store.state.token === 'false') {
+  if (requiresAuth && store.state.token === 'true') {
     next("/login");
   } else {
     // Else let them go to their next destination

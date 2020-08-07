@@ -10,7 +10,7 @@ public interface CardDAO {
 	
 	void updateCard(Card card, Long id);
 	
-	void createCard(Long id, Card card);
+	void createCard(Card card);
 	
 	void deleteCard(Long id);
 	

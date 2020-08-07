@@ -30,7 +30,7 @@ nav {
 }
 
 .menuLink {
-    font-family: fantasy;
+    font-family: Arial, Helvetica, sans-serif;    
     height: 15px;
     width: 150px;
     background-color:rgb(170, 168, 168);

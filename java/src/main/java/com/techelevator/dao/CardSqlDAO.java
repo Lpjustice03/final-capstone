@@ -63,7 +63,7 @@ public class CardSqlDAO implements CardDAO {
 
 
 	@Override
-	public void createCard( Long id, Card card) {
+	public void createCard(Card card) {
 		String sqlCard = "INSERT into cards(front, back, card_creator_id) VALUES (?,?,?)";
 		jdbcTemplate.update(sqlCard, card.getFront(), card.getBack(), card.getUserId());
 		

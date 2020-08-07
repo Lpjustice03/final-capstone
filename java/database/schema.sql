@@ -56,6 +56,7 @@ CREATE TABLE decks (
 	deck_name varchar (100) NOT NULL,
 	deck_user_id int NOT NULL,
 	deck_description varchar (1000) NOT NULL,
+	deck_is_trial boolean NOT NULL,
 	CONSTRAINT PK_deck_id PRIMARY KEY (deck_id),
 	CONSTRAINT FK_deck_user_id FOREIGN KEY (deck_user_id) REFERENCES users(user_id)
 );
@@ -187,15 +188,15 @@ INSERT INTO cards(front, back, card_creator_id) VALUES ('Question: What is the s
 
 
 
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('6th Grade Math', 2, 'Generic study questions for 6th grade math');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('7th Grade Math', 2, 'Generic study questions for 7th grade math');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('8th Grade Math', 2, 'Generic study questions for 8th grade math');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('6th Grade History', 2, 'Generic study questions for 6th grade history');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('7th Grade History', 2, 'Generic study questions for 7th grade history');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('8th Grade History', 2,'Generic study questions for 8th grade history');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('6th Grade Science', 2,'Generic study questions for 6th grade science');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('7th Grade Science', 2,'Generic study questions for 7th grade science');
-INSERT INTO decks (deck_name, deck_user_id, deck_description) VALUES ('8th Grade Science', 2,'Generic study questions for 8th grade science');
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade Math', 2, 'Generic study questions for 6th grade math', true);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade Math', 2, 'Generic study questions for 7th grade math', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade Math', 2, 'Generic study questions for 8th grade math', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade History', 2, 'Generic study questions for 6th grade history', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade History', 2, 'Generic study questions for 7th grade history', true);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade History', 2,'Generic study questions for 8th grade history', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade Science', 2,'Generic study questions for 6th grade science', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade Science', 2,'Generic study questions for 7th grade science', false);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade Science', 2,'Generic study questions for 8th grade science', true);
 
 
 
