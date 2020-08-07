@@ -99,10 +99,14 @@ export default {
 }
 
 h1 {
+<<<<<<< HEAD
   text-shadow: -1px 1px 2px #23430C,
 	1px 1px 2px #23430C,
 	1px -1px 0 #23430C,
 	-1px -1px 0 #23430C;
+=======
+  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
+>>>>>>> 028ec1cf0201c8354bdf94cf229af0a7930ce72b
   font-size: 50px;
   color:burlywood;
 }
@@ -126,10 +130,14 @@ button {
   appearance:none;
   -webkit-appearance:none;
   background:burlywood;
+<<<<<<< HEAD
   text-shadow: -1px 1px 2px #23430C,
 	1px 1px 2px #23430C,
 	1px -1px 0 #23430C,
 	-1px -1px 0 #23430C;
+=======
+  text-shadow: -1px 1px 2px #23430C,  1px 1px 2px #23430C,  1px -1px 0 #23430C, -1px -1px 0 #23430C;
+>>>>>>> 028ec1cf0201c8354bdf94cf229af0a7930ce72b
  color: burlywood;
   font-weight:600;
   width: 52%;
@@ -157,10 +165,14 @@ margin:10px 20%;
   color:rgb(87, 87, 245);
 }
 label {
+<<<<<<< HEAD
 text-shadow: -1px 1px 2px #23430C,
 	1px 1px 2px #23430C,
 	1px -1px 0 #23430C,
 	-1px -1px 0 #23430C;
+=======
+text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C,  -1px -1px 0 #23430C;
+>>>>>>> 028ec1cf0201c8354bdf94cf229af0a7930ce72b
  color: burlywood;
   font-size: 30px;
 }
