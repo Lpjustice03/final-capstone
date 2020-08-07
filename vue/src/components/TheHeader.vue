@@ -27,7 +27,7 @@ nav {
 }
 
 .menuLink {
-    font-family: fantasy;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     height: 30px;
     width: 150px;
     background-color:rgb(170, 168, 168);
@@ -37,7 +37,7 @@ nav {
 .menuLink:hover{
     height:35px;
     width: 160px;
-    background-color: green;
+    background-color: rgb(155, 4, 109);
     transition-duration: 0.2s;
     color: black;
 }
