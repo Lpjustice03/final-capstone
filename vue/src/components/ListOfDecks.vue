@@ -57,7 +57,7 @@ created() {
   
 }
 .deck:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
   .deck {
     display: flex;
@@ -65,7 +65,7 @@ created() {
     width: 250px;
     height: 300px;
     padding: 40px 25px;
-    background-color: #1fbd41;
+    background-color: #66ac75;
     border-radius: 7px;
     margin: 15px;
     text-align: center;
@@ -79,6 +79,7 @@ created() {
     -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     will-change: transform;
+    border-style: outset;
   }
 
   .list-of-decks{

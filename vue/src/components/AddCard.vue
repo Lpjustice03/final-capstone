@@ -23,7 +23,9 @@
 </template>
 
 <script>
+
 import cardService from "@/services/CardService.js";
+import AuthService from "@/services/AuthService.js";
 
 export default {
 name: "add-card",
@@ -33,8 +35,7 @@ card:{
 
         front: '',
         back: '',
-        deckId: 1,
-        userId: ''
+        deckId: ''
     }
     };
 
@@ -44,8 +45,8 @@ methods: {
         const newCard = {
             front: this.card.front,
             back: this.card.back,
-            userId: this.$store.userId,
-            deckId: this.card.deckId
+            userId: '',
+            deckId: Number(this.$router.params.deckId)
         };
         cardService.addCard(newCard)
         // .then((response) => {
