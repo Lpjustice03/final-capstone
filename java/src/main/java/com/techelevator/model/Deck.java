@@ -8,8 +8,16 @@ public class Deck {
 	private Long userId;
 	private String deckName;
 	private List<Card> listOfCards;
+	private String description;
 	
 	
+	
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
