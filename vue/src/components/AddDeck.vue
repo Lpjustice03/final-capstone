@@ -28,7 +28,11 @@ export default {
     },
     methods:{
         saveDeck(){
-            deckService.addDeck(this.deck)
+            const newDeck ={
+                deckName: this.deck.deckName,
+                userId: this.$store.state.user.currentUser
+            };
+            deckService.addDeck(newDeck)
         }
     }
 
