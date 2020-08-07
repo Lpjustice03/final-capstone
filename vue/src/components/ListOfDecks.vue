@@ -57,7 +57,6 @@ created() {
 .submit{
   display: flex;
   justify-content: center;
-  
 }
 .deck:hover{
   transform: scale(1.1);
