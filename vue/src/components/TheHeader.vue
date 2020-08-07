@@ -1,6 +1,7 @@
 <template>
 <div class="menu">
     <nav class="navBar"> 
+        <div class="doesThisWork"> Welcome (insert name here) </div> 
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
         <router-link class="menuLink" id="about" tag="button"> About us </router-link> 
@@ -26,23 +27,27 @@ nav {
     justify-content: flex-end; 
 }
 
+.doesThisWork{
+    text-align: center;
+}
+
 .menuLink {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
-    background-color:rgb(170, 168, 168);
+    background-color:rgb(209, 196, 129);
     color:black;
     border-color: black;
 }
 .menuLink:hover{
-    height:35px;
-    width: 160px;
-    background-color: rgb(155, 4, 109);
+    height:31px;
+    width: 151px;
+    background-color: #815b7e;
     transition-duration: 0.2s;
-    color: black;
+    color: rgb(209, 196, 129);
 }
 
 .menu {
-    background-color: rgb(170, 168, 168);
+    background-color: rgb(209, 196, 129);
 }
 </style>
