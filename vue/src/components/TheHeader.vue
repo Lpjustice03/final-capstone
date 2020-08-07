@@ -1,7 +1,6 @@
 <template>
 <div class="menu">
     <nav class="navBar"> 
-        <div class="doesThisWork"> Welcome (insert name here) </div> 
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
         <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
@@ -27,18 +26,14 @@ nav {
     justify-content: flex-end; 
 }
 
-.doesThisWork{
-    text-align: center;
-}
-
 .menuLink {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
     background-color:rgb(209, 196, 129);
     color:black;
-    border-color: black;
-    border-radius: 5px;
+    border: none;
+
 }
 .menuLink:hover{
     height:31px;
