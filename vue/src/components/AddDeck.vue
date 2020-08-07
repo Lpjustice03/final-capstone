@@ -22,7 +22,8 @@ export default {
         return{
             deck:{
                 deckName: '',
-                userId: ''
+                description: 'the',
+                
             }
         };
     },
@@ -30,7 +31,8 @@ export default {
         saveDeck(){
             const newDeck ={
                 deckName: this.deck.deckName,
-                userId: this.$store.state.user.currentUser
+                description: this.deck.description,
+               
             };
             deckService.addDeck(newDeck)
         }

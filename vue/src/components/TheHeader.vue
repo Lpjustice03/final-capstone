@@ -6,7 +6,9 @@
         <router-link class="menuLink" id="about" tag="button"> About us </router-link> 
         <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
         <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
+
     </nav>  
+    <p v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </p>
 </div>
 </template>
 
