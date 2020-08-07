@@ -25,7 +25,7 @@
 <script>
 
 import cardService from "@/services/CardService.js";
-import AuthService from "@/services/AuthService.js";
+
 
 export default {
 name: "add-card",
