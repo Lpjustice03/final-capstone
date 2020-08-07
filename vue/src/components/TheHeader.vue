@@ -3,9 +3,9 @@
     <nav class="navBar"> 
         <div class="doesThisWork"> Welcome (insert name here) </div> 
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
-        <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
-        <router-link class="menuLink" id="about" tag="button"> About us </router-link> 
+        <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
         <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
+        <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link> 
         <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
     </nav>  
 </div>
@@ -38,6 +38,7 @@ nav {
     background-color:rgb(209, 196, 129);
     color:black;
     border-color: black;
+    border-radius: 5px;
 }
 .menuLink:hover{
     height:31px;

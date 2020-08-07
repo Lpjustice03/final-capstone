@@ -1,31 +1,28 @@
 <template>
 <div class="header">
-<div class="cardButton">
-<button type="submit" v-on:click="updateCard()"> Update Card </button>
-
-    <button type="submit" v-on:click="addCard()"> Add A Card </button>
-   </div>
+ <div class="cardButton">
+  <button type="submit" v-on:click="updateCard()"> Update Card </button>
+  <button type="submit" v-on:click="addCard()" > Add A Card </button>
+ </div>
 <form class="addCard" v-on:submit="saveCard">
-<div>
-<label for="front">Question? </label>
-
-<input type="text" name="front" v-model="card.front" />
-<label for="back"> Answer: </label>
-<input type="text" name="back" v-model="card.back"/>
-</div>
-<div class="actions">
-<button type="submit"> Save
-</button>
-</div>
-
+  <div>
+    <label for="front">Question? </label>
+     <input type="text" name="front" v-model="card.front" />
+    <label for="back"> Answer: </label>
+     <input type="text" name="back" v-model="card.back"/>
+  </div>
+  <div class="actions">
+   <button type="submit"> Save</button>
+  </div>
 </form>
 </div>
 </template>
 
 <script>
 
+
 import cardService from "@/services/CardService.js";
-import AuthService from "@/services/AuthService.js";
+// import AuthService from "@/services/AuthService.js";
 
 export default {
 name: "add-card",
