@@ -60,6 +60,7 @@ public class DeckSqlDAO implements DeckDAO {
 	deck.setDeckName(results.getString("deck_name"));
 	deck.setUserId(results.getLong("deck_user_id"));
 	deck.setId(results.getLong("deck_id"));
+	deck.setDescription(results.getString("deck_description"));
 	
 	String sqlGetAllCards = "Select * From cards join card_deck on card_deck.card_id = cards.card_id Where card_deck.deck_id = ?";
 	SqlRowSet cardResults = jdbcTemplate.queryForRowSet(sqlGetAllCards, deck.getId());
