@@ -33,6 +33,7 @@ nav {
     background-color:rgb(170, 168, 168);
     color:black;
     border-color: black;
+    border-radius: 5px;
 }
 .menuLink:hover{
     height:35px;

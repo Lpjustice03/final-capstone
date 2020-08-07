@@ -74,7 +74,7 @@ created() {
     width: 250px;
     height: 245px;
     padding: 40px 25px;
-    background-color: #51aae5;
+    background-color: #5895bb;
     border-radius: 7px;
     margin: 25px;
     text-align: center;
@@ -88,6 +88,7 @@ created() {
     -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     will-change: transform;
+    border-style: outset;
   }
   .card:hover{
       transform: scale(1.2);

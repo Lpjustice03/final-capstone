@@ -3,7 +3,7 @@
     <div class="header">
     <h1>FLIPDECK</h1>
     <h2> Welcome to FlipDeck the coolest study tool around</h2>
-    <p> FlipDeck makes simpe learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
+    <p> FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
      <router-link class="tryIt" v-bind:to="{name:'decks'}"> Try It For Free!</router-link>
     </p>
     </div>
@@ -28,13 +28,12 @@ export default {
 <style scoped>
 
 .home{
+  background: url(../assets/heroImage.jpg)left / cover no-repeat;
   padding: 0;
   min-height: 100vh;
-  background: url(../assets/heroImage.jpg)left / cover no-repeat;
-  filter: grayscale(70%);
   display: flex;
-}
 
+}
 
  .header {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -50,27 +49,55 @@ export default {
 
 h1 {
   margin-top: 60px;
-  margin-left: 170px;
-  font-size: 60px;
-
+  margin-left: 0px;
+  font-size: 60px; 
+  position: flex;
+  justify-content: flex-start;
+  transform: translate(13%,20%);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6em;
+  font-weight: 700;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 1px #6e1767,
+1px 2px 1px #6e1767,
+1px 3px 1px #6e1767,
+1px 4px 1px #6e1767,
+1px 5px 1px #6e1767,
+1px 6px 1px #6e1767,
+1px 7px 1px #6e1767,
+1px 8px 1px #6e1767,
+1px 18px 6px rgba(16,16,16,0.2),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.2)
 }
 
 h2 {
   margin-top: 0px;
   margin-left: 170px;
   font-size: 30px;
-
+  font-weight: 350;
+  text-shadow: 1px 1px 1px #6e1767,
+1px 2px 1px #6e1767,
+1px 3px 1px #6e1767,
+1px 4px 1px #6e1767;
 }
 
 p {
   margin-left: 170px;
   font-size: 20px;
+  background: transparent;
+  color: white;
+  font-weight: 175;
+  text-shadow: 1px 1px 1px #6e1767,
+  1px 2px 1px #6e1767;
 
 }
 
 .tryIt {
   margin-left: 100px;
-  color: rgb(171, 184, 207);
+  color: rgb(248, 248, 248);
 }
 
 @media only screen and (max-width: 600px) {

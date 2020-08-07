@@ -62,6 +62,10 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
+            authService.getUserId(this.user).then((response) =>
+            {
+              this.$store.commit("SET_USER_ID", response.data)
+            });
             this.$router.push("/");
           }
         })
@@ -119,7 +123,7 @@ button {
   appearance:none;
   -webkit-appearance:none;
   background:burlywood;
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
+  text-shadow: -1px 1px 2px #23430C,  1px 1px 2px #23430C,  1px -1px 0 #23430C, -1px -1px 0 #23430C;
  color: burlywood;
   font-weight:600;
   width: 52%;
@@ -147,7 +151,7 @@ margin:10px 20%;
   color:rgb(87, 87, 245);
 }
 label {
-text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
+text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C,  -1px -1px 0 #23430C;
  color: burlywood;
   font-size: 30px;
 }

@@ -1,29 +1,28 @@
 <template>
 <div class="header">
 <div class="cardButton">
-<button type="submit" v-on:click="updateCard()"> Update Card </button>
-
-    <button type="submit" v-on:click="addCard()"> Add A Card </button>
+    <button type="submit" v-on:click="updateCard()"> Update Card </button>
+    <button type="submit" v-on:click="addCard(), openForm()" > Add A Card </button>
    </div>
-<form class="addCard" v-on:submit="saveCard">
-<div>
-<label for="front">Question? </label>
-
-<input type="text" name="front" v-model="card.front" />
-<label for="back"> Answer: </label>
-<input type="text" name="back" v-model="card.back"/>
-</div>
-<div class="actions">
-<button type="submit"> Save
-</button>
-</div>
-
+<form id="showForm" class="addCard" v-on:submit="saveCard">
+  <div>
+   <label for="front">Question? </label>
+    <input type="text" name="front" v-model="card.front" />
+   <label for="back"> Answer: </label>
+    <input type="text" name="back" v-model="card.back"/>
+  </div>
+  <div class="actions">
+   <button type="submit"> Save
+   </button>
+  </div>
 </form>
 </div>
 </template>
 
 <script>
+
 import cardService from "@/services/CardService.js";
+// import AuthService from "@/services/AuthService.js";
 
 export default {
 name: "add-card",
@@ -33,15 +32,20 @@ card:{
 
         front: '',
         back: '',
-        deckId: 1,
-        userId: 2
+        deckId: ''
     }
     };
 
 },
 methods: {
     saveCard() {
-        cardService.addCard(this.card)
+        const newCard = {
+            front: this.card.front,
+            back: this.card.back,
+            userId: '',
+            deckId: Number(this.$router.params.deckId)
+        };
+        cardService.addCard(newCard)
         // .then((response) => {
         //     if (response.status === 201) {
         //         this.$router.push(this.params.deckId);
@@ -49,7 +53,13 @@ methods: {
 
         // })
         
-    }
+    },
+    openForm() {
+    document.getElementById("showForm").style.display = "block";
+},
+    closeForm() {
+    document.getElementById("showForm").style.display = "none";
+}
 }
 }
 
