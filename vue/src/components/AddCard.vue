@@ -1,25 +1,25 @@
 <template>
 <div class="header">
-<div class="cardButton">
-    <button type="submit" v-on:click="updateCard()"> Update Card </button>
-    <button type="submit" v-on:click="addCard(), openForm()" > Add A Card </button>
-   </div>
-<form id="showForm" class="addCard" v-on:submit="saveCard">
+ <div class="cardButton">
+  <button type="submit" v-on:click="updateCard()"> Update Card </button>
+  <button type="submit" v-on:click="addCard()" > Add A Card </button>
+ </div>
+<form class="addCard" v-on:submit="saveCard">
   <div>
-   <label for="front">Question? </label>
-    <input type="text" name="front" v-model="card.front" />
-   <label for="back"> Answer: </label>
-    <input type="text" name="back" v-model="card.back"/>
+    <label for="front">Question? </label>
+     <input type="text" name="front" v-model="card.front" />
+    <label for="back"> Answer: </label>
+     <input type="text" name="back" v-model="card.back"/>
   </div>
   <div class="actions">
-   <button type="submit"> Save
-   </button>
+   <button type="submit"> Save</button>
   </div>
 </form>
 </div>
 </template>
 
 <script>
+
 
 import cardService from "@/services/CardService.js";
 // import AuthService from "@/services/AuthService.js";
@@ -53,13 +53,7 @@ methods: {
 
         // })
         
-    },
-    openForm() {
-    document.getElementById("showForm").style.display = "block";
-},
-    closeForm() {
-    document.getElementById("showForm").style.display = "none";
-}
+    }
 }
 }
 
