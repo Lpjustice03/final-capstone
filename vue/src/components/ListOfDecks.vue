@@ -11,7 +11,10 @@
    
     
      <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
-       <div class="deck"> {{deck.deckName}} </div>
+       <div class="deck"> {{deck.deckName}} 
+          <p> {{deck.description}} </p>
+       </div>
+      
       </router-link>
 
     </div>
@@ -65,7 +68,7 @@ created() {
     width: 250px;
     height: 300px;
     padding: 40px 25px;
-    background-color: #66ac75;
+    background-color: rgb(102, 172, 117);
     border-radius: 7px;
     margin: 15px;
     text-align: center;
@@ -75,11 +78,15 @@ created() {
     color: #fff;
     font-weight: 600;
     font-size: 30px;
-    -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     will-change: transform;
     border-style: outset;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   .list-of-decks{
