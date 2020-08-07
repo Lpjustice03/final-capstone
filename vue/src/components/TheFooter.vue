@@ -40,7 +40,7 @@ nav {
 .menuLink:hover{
     height:65px;
     width: 160px;
-    background-color: green;
+    background-color:rgb(155, 4, 109);
     transition-duration: 0.2s;
     color: black;
 

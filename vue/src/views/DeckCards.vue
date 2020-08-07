@@ -1,6 +1,5 @@
 <template>
   <div class="cards">
-    <h1>Cards</h1>
     <add-card />
     <list-of-cards v-bind:deck-id="parseInt($route.params.id)" />
     
