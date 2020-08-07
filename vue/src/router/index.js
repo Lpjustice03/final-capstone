@@ -8,7 +8,7 @@ import store from '../store/index'
 import Cards from '../views/Cards.vue'
 import Decks from '../views/Decks.vue'
 import DeckCards from '../views/DeckCards.vue'
-
+import AboutUs from '../views/AboutUs.vue'
 
 
 Vue.use(Router)
@@ -81,6 +81,14 @@ const router = new Router({
     component: DeckCards,
     meta: {
       requiresAuth: true
+    }
+  },
+  {
+  path: "/aboutus",
+    name: "AboutUs",
+    component: AboutUs,
+    meta: {
+      requiresAuth: false
     }
   }
   ]
