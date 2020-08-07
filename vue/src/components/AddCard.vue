@@ -34,14 +34,20 @@ card:{
         front: '',
         back: '',
         deckId: 1,
-        userId: 2
+        userId: ''
     }
     };
 
 },
 methods: {
     saveCard() {
-        cardService.addCard(this.card)
+        const newCard = {
+            front: this.card.front,
+            back: this.card.back,
+            userId: this.$store.userId,
+            deckId: this.card.deckId
+        };
+        cardService.addCard(newCard)
         // .then((response) => {
         //     if (response.status === 201) {
         //         this.$router.push(this.params.deckId);

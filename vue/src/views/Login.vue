@@ -62,6 +62,10 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
+            authService.getUserId(this.user).then((response) =>
+            {
+              this.$store.commit("SET_USER_ID", response.data)
+            });
             this.$router.push("/");
           }
         })
@@ -96,9 +100,9 @@ export default {
 
 h1 {
   text-shadow: -1px 1px 2px #23430C,
-				  1px 1px 2px #23430C,
-				  1px -1px 0 #23430C,
-				  -1px -1px 0 #23430C;
+	1px 1px 2px #23430C,
+	1px -1px 0 #23430C,
+	-1px -1px 0 #23430C;
   font-size: 50px;
   color:burlywood;
 }
@@ -123,9 +127,9 @@ button {
   -webkit-appearance:none;
   background:burlywood;
   text-shadow: -1px 1px 2px #23430C,
-				  1px 1px 2px #23430C,
-				  1px -1px 0 #23430C,
-				  -1px -1px 0 #23430C;
+	1px 1px 2px #23430C,
+	1px -1px 0 #23430C,
+	-1px -1px 0 #23430C;
  color: burlywood;
   font-weight:600;
   width: 52%;
@@ -154,9 +158,9 @@ margin:10px 20%;
 }
 label {
 text-shadow: -1px 1px 2px #23430C,
-				  1px 1px 2px #23430C,
-				  1px -1px 0 #23430C,
-				  -1px -1px 0 #23430C;
+	1px 1px 2px #23430C,
+	1px -1px 0 #23430C,
+	-1px -1px 0 #23430C;
  color: burlywood;
   font-size: 30px;
 }
