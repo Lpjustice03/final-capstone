@@ -1,6 +1,7 @@
 <template>
 <div class="menu">
     <nav class="navBar"> 
+        <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </div>
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
         <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
@@ -8,7 +9,6 @@
         <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
 
     </nav>  
-    <p v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </p>
 </div>
 </template>
 
@@ -28,6 +28,10 @@ nav {
     justify-content: flex-end; 
 }
 
+.Welcome {
+    transform: translate(-960%,20%);
+    font-family: Arial, Helvetica, sans-serif;
+}
 .menuLink {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
