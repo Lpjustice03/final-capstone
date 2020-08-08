@@ -1,10 +1,8 @@
 <template>
 <div class="header">
-    <div class="deckButton">
+    
  
- <button type="submit" v-on:click="updateDeck()"> Update Deck </button>
-  <button type="submit" v-on:click="addDeck()"> Add A Deck </button>
-  </div>
+ 
 <div class= "list-of-decks">
 
     <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
@@ -95,31 +93,7 @@ created() {
       flex-flow: row wrap;
 
   }
-  button{
-    border-radius: 5px;
-    border: 1px solid #959717;
-    background-color: #8984cb;
-    padding: 8px 15px;
-    outline: none;
-    font-size: 14px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: all 0.3s ease;
-     margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 25px;
- 
-  }
   
-  button:hover{
-    background-color: #828f12;
-    border: 1px solid #8984cb
-  }
-   .deckButton{
-      justify-content: center;
-      display:flex;
-  }
  @media screen and (max-width: width 600px)    {
      .list-of-decks{
          display:flex;

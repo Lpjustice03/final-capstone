@@ -36,7 +36,7 @@ public class DeckSqlDAO implements DeckDAO {
 	@Override
 	public List<Deck> getTrialDeck() {
 	List<Deck> decks = new ArrayList<>();
-	String sqlGetAllDecks = "SELECT * From decks where deck_id = 1 AND deck_id = 5 AND deck_id = 9";
+	String sqlGetAllDecks = "SELECT * From decks where deck_id = 1 or deck_id = 5 or deck_id = 9";
 	SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllDecks);
 	
 	while (results.next()) {
@@ -68,7 +68,6 @@ public class DeckSqlDAO implements DeckDAO {
     		}
     		else
     		{
-    			System.out.println(deck.getDeckType());
     			isPublic = false;
     		}
     		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId(), deck.getDescription(), isPublic);

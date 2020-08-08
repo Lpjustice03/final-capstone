@@ -1,10 +1,9 @@
 <template>
 <div class="header">
  <div class="cardButton">
-  <button type="submit" v-on:click="updateCard()"> Update Card </button>
-  <button type="submit" v-on:click="addCard()" > Add A Card </button>
+ <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Card </button>
  </div>
-<form class="addCard" v-on:submit="saveCard">
+<form class="addCard" v-on:submit="saveCard" v-show = "addForm">
   <div>
     <label for="front">Question? </label>
      <input type="text" name="front" v-model="card.front" />
@@ -14,6 +13,7 @@
   <div class="actions">
    <button type="submit"> Save</button>
   </div>
+  <input type="button" value="Cancel" v-on:click.prevent="resetForm" />
 </form>
 </div>
 </template>
@@ -28,6 +28,8 @@ export default {
 name: "add-card",
 data() {
 return{
+    addForm: false,
+    updateForm: false, 
 card:{
 
         front: '',
@@ -54,6 +56,11 @@ methods: {
 
         // })
         
+    },
+    resetForm() {
+      this.addForm = false;
+      this.updateForm = false;
+      this.card = {};
     }
 }
 }

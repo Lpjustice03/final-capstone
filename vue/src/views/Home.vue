@@ -57,9 +57,7 @@ export default {
     transform: translate(100%,20%);
 }
 
-.workpls {
-  
-}
+
 
 h1 {
   margin-top: 60px;

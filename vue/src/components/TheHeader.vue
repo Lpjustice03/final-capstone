@@ -35,6 +35,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end; 
+    transform: translate(58%, 0%);
 }
 
 .Welcome {
@@ -48,6 +49,7 @@ nav {
     background-color:rgb(209, 196, 129);
     color:black;
     border: none;
+    justify-content: flex-end; 
 
 }
 .menuLink:hover{
