@@ -7,22 +7,22 @@
 <form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
 
 
-<label for="name">Deck title </label>
+<label for="name">Deck title: </label>
 <input type="text" name="name" v-model="deck.deckName" />
-<label for="name"> Deck Description </label>
+<label for="name"> Deck Description: </label>
 <input type="text" name="name" v-model="deck.description" />
 
-<label for="public"> Deck type </label>
+<label for="public"> Deck type: </label>
 <select class="myList" v-model="deck.deckType">
         <option value="1"> Public </option>
         <option value="2"> Private </option>
 </select>
 
 <div class="actions">
-    <button type="submit"> Save 
-    </button>
+    <button id="save" type="submit"> Save </button>
+    <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
 </div>
-<input type="button" value="Cancel" v-on:click.prevent="resetForm" />
+
 </form>
 </div>
 </template>
@@ -66,6 +66,45 @@ export default {
 </script>
 
 <style>
+
+input[type=text] {
+    border-radius: 5px;
+}
+.actions {
+display: flex;
+justify-content: center;
+}
+
+.myList {
+    border-radius: 5px;
+}
+
+
+
+#save {
+    margin: 5%;
+    width: 30%;
+}
+
+#cancel {
+    width: 30%;
+    background-color: #351f33;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #959717;
+    font-size: 14px;
+    font-weight: 700;
+    margin:5%;
+}
+
+#cancel:hover {
+    background-color: #828f12;
+}
+
+label {
+    font-size: 20px;
+    color: #53224f;
+}
 
 button{
     border-radius: 5px;
