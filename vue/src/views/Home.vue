@@ -9,8 +9,8 @@
 
      <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    </div>
-   <div v-else>
-     <router-link class="tryIt"  v-bind:to="{name:'Decks'}"> Try It For Free!</router-link>
+   <div class="loggedIn" v-else>
+     <router-link class="tryIt"  v-bind:to="{name:'Decks'}"> Try It Now!</router-link>
    </div>
     
     </div>
@@ -52,6 +52,11 @@ export default {
   align-content:flex-end;
   flex-wrap: wrap;
   margin-right: 600px;
+}
+
+.tryIt {
+    transform: translate(100%,20%);
+
 }
 
 h1 {
