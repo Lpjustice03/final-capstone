@@ -31,3 +31,14 @@ export default {
 
 };
 </script>
+
+<style>
+#app {
+  margin-top: none;
+  margin-left: none;
+  margin-right: none;
+  margin-bottom: none;
+}
+
+
+</style>

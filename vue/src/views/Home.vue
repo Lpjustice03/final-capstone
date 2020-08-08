@@ -53,6 +53,14 @@ export default {
   margin-right: 600px;
 }
 
+.tryIt {
+    transform: translate(100%,20%);
+}
+
+.workpls {
+  
+}
+
 h1 {
   margin-top: 60px;
   margin-left: 0px;

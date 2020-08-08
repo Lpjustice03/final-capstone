@@ -6,7 +6,7 @@ import com.techelevator.model.Deck;
 
 public interface DeckDAO {
 	
-	List <Deck> getDecks();
+	List <Deck> getDecks(Long userId);
 
 	Deck getDeck(Long id);
 	

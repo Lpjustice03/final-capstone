@@ -10,9 +10,16 @@ public class Deck {
 	private List<Card> listOfCards;
 	private String description;
 	private boolean isTrial;
+	private int deckType;
 	
 	
 	
+	public int getDeckType() {
+		return deckType;
+	}
+	public void setDeckType(int deckType) {
+		this.deckType = deckType;
+	}
 	public boolean isTrial() {
 		return isTrial;
 	}

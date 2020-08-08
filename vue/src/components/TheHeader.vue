@@ -38,7 +38,7 @@ nav {
 }
 
 .Welcome {
-    transform: translate(-560%,20%);
+    transform: translate(-0%,20%);
     font-family: Arial, Helvetica, sans-serif;
 }
 .menuLink {
@@ -62,12 +62,52 @@ nav {
 
     background-color: rgb(209, 196, 129);
 
-}
-@media (max-width: px){
-    .Welcome {
-    transform: translate(30%,20%);
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 }
+@media only screen and (max-width: 600px){
+
+  .navBar {
+        grid-template-areas:
+        "header"
+        "header1"
+        "header2"
+        "header3"
+        "header4"
+        "header5";
+        grid-template-columns: 0.5fr;
+    }
+}
+
+.navBar {
+    display: grid;
+    grid-template-columns: .99fr 0fr 0fr 0fr 0fr;
+    grid-template-areas:
+    "header header1 header2 header3 header4 header5";
+    grid-gap: 20px;
+}
+
+
+.Welcome {
+    grid-area: header;
+}
+#home {
+    grid-area: header1;
+}
+
+#about {
+    grid-area: header2;
+}
+
+#decks {
+    grid-area: header3;
+}
+
+#logout {
+    grid-area: header4;
+}
+
+#login {
+    grid-area: header5;
+}
+
 </style>
