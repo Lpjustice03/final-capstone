@@ -66,7 +66,7 @@ export default {
             {
               this.$store.commit("SET_USER_ID", response.data)
             });
-            this.$router.push("/");
+            this.$router.push("/decks");
           }
         })
         .catch(error => {
@@ -99,9 +99,9 @@ export default {
 }
 
 h1 {
-  text-shadow: -1px 1px 2px  #815b7e, 1px 1px 2px  #815b7e, 1px -1px 0  #815b7e, -1px -1px 0  #815b7e;
+  text-shadow: -1px 1px 2px #53224f, 1px 1px 2px  #53224f, 1px -1px 0  #53224f, -1px -1px 0  #53224f;
   font-size: 50px;
-  color:burlywood;
+  color:rgb(209, 196, 129);
 }
 input[type=text] {
   width: 50%;
