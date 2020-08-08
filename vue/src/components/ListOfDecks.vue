@@ -67,12 +67,13 @@ created() {
     height: 300px;
     padding: 40px 25px;
     background-image: url(../assets/computerScreen.jpeg);
-    background-position: 50% -20%;
+    background-position: 50% 0%;
     background-color: rgb(102, 172, 117);
+    background-size: cover;
     border-radius: 7px;
     margin: 15px;
     text-align: center;
-    line-height: 27px;
+    line-height: 60px;
     cursor: pointer;
     position: relative;
     color: #fff;
