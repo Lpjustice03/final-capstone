@@ -62,11 +62,7 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
-            authService.getUserId(this.user).then((response) =>
-            {
-              this.$store.commit("SET_USER_ID", response.data)
-            });
-            this.$router.push("/");
+            this.$router.push("/decks");
           }
         })
         .catch(error => {

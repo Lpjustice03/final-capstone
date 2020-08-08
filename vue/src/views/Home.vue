@@ -9,9 +9,8 @@
 
      <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    </div>
-   <div v-else>
-     <router-link class="tryIt"  v-bind:to="{name:'Decks'}"> Try It For Free!</router-link>
-   </div>
+   
+   
     
     </div>
     

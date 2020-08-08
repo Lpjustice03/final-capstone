@@ -1,13 +1,22 @@
 <template>
 <div class="menu">
+    
     <nav class="navBar"> 
         <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </div>
+        <div v-if="$store.state.token == ''">
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
-        <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Try It Now!</router-link> 
+        <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'TrialPage'}"> Try it now! </router-link> 
         <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link> 
         <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">Register/Log In</router-link> 
-
+        </div>
+        <div class="try it" v-else>
+             <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
+         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
+            <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> decks </router-link>
+            <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
+        </div>
+        
     </nav>  
 </div>
 </template>
