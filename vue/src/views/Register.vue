@@ -112,9 +112,9 @@ export default {
   margin:0%;    
 }
 h1 {
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
+  text-shadow: -1px 1px 2px #815b7e, 1px 1px 2px #815b7e, 1px -1px 0 #815b7e, -1px -1px 0 #815b7e;
   font-size: 50px;
-  color:burlywood;
+  color:rgb(209, 196, 129);
 }
 input[type=text] {
   width: 60%;
@@ -136,9 +136,9 @@ input[type=password] {
 button {
   appearance:none;
   -webkit-appearance:none;
-  background:burlywood;
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
- color: burlywood;
+  background:rgb(209, 196, 129);
+  text-shadow: -1px 1px 2px #4e204a, 1px 1px 2px #4e204a, 1px -1px 0 #4e204a, -1px -1px 0 #4e204a;
+ color: rgb(209, 196, 129);
   font-weight:600;
   width: 63%;
   padding: 10px;
@@ -148,7 +148,7 @@ button {
 }
 button:hover {
 background: rgb(223, 177, 118);
-color:#23430C;
+color:rgb(209, 196, 129);
 width: 64%;
 height: 13.5%;
 padding: 10px;
@@ -159,14 +159,14 @@ margin:10px 20%;
   justify-content: center;
   margin:10px;
   font-size:30px;
-  color: blue;
+  color: #53224f;
 }
 .link:hover {
-  color:rgb(87, 87, 245);
+  color:#815b7e;
 }
 label {
-  text-shadow: -1px 1px 2px #23430C, 1px 1px 2px #23430C, 1px -1px 0 #23430C, -1px -1px 0 #23430C;
-  color:burlywood;
+  text-shadow: -1px 1px 2px #815b7e 1px 1px 2px #815b7e, 1px -1px 0 #815b7e, -1px -1px 0 #815b7e;
+  color:rgb(209, 196, 129);
   font-size: 25px;
 }
 </style>
