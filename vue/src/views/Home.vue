@@ -3,9 +3,16 @@
     <div class="header">
     <h1>FLIPDECK</h1>
     <h2> Welcome to FlipDeck the coolest study tool around</h2>
-    <p> FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
-     <router-link class="tryIt" v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
-    </p>
+    <p>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
+  </p>
+   <div v-if="$store.state.token == ''">
+
+     <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
+   </div>
+   <div v-else>
+     <router-link class="tryIt"  v-bind:to="{name:'Decks'}"> Try It For Free!</router-link>
+   </div>
+    
     </div>
     
       </div>

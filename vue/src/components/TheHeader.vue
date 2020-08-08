@@ -29,7 +29,7 @@ nav {
 }
 
 .Welcome {
-    transform: translate(-960%,20%);
+    transform: translate(-560%,20%);
     font-family: Arial, Helvetica, sans-serif;
 }
 .menuLink {
@@ -50,6 +50,15 @@ nav {
 }
 
 .menu {
+
     background-color: rgb(209, 196, 129);
+
+}
+@media only screen and(max-width: 600px){
+    .Welcome {
+    transform: translate(300%,20%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 }
 </style>
