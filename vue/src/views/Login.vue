@@ -1,8 +1,8 @@
 <template>
   <div id="login" class="text-center">
-    <!-- <img src= ../assets/artificial-intelligence.jpg id= "background-image"> -->
     <form class="form-signin" @submit.prevent="login">
-      <div><h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+      <div>
+        <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
       </div>
       <div
         class="alert alert-danger"
@@ -78,12 +78,6 @@ export default {
 </script>
 <style scoped>
 
-
-/* *, *:before, *:after {
-  text-align: center;
-  
-} */
-
 .text-center {
   height: 100%;
   padding: 8%;
@@ -99,6 +93,7 @@ h1 {
   font-size: 50px;
   color:rgb(209, 196, 129);
 }
+
 input[type=text] {
   width: 50%;
   padding: 10px;
@@ -106,15 +101,18 @@ input[type=text] {
   border-radius: 12px;
   opacity:1;
 }
+
 input[type=password] {
   width: 50%;
   padding: 10px;
   margin:10px 20%;
   border-radius: 12px;
 }
+
 .border-customized-input {
    border: 2px solid #eee;
 }
+
 button {
   appearance:none;
   -webkit-appearance:none;
@@ -128,14 +126,13 @@ button {
   border-radius: 12px;
   font-size: 20px;
 }
+
 button:hover {
 background:  #815b7e;
 color:rgb(209, 196, 129);
-width: 53%;
-height: 13.5%;
-padding: 10px;
-margin:10px 20%;
+
 }
+
 .link {
   display:flex;
   justify-content: center;
@@ -143,9 +140,11 @@ margin:10px 20%;
   font-size:30px;
   color:  #4e204a;
 }
+
 .link:hover {
   color: #815b7e;
 }
+
 label {
  text-shadow: -1px 1px 2px #4e204a, 1px 1px 2px #4e204a, 1px -1px 0 #4e204a,  -1px -1px 0  #4e204a;
  color: rgb(209, 196, 129);

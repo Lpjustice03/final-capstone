@@ -70,7 +70,7 @@ export default {
 button{
     border-radius: 5px;
     border: 1px solid #959717;
-    background-color: #8984cb;
+    background-color: #53224f;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -89,6 +89,7 @@ button{
     border: 1px solid #8984cb
   }
    .deckButton{
+       background-color: rgb(209, 196, 129);
       justify-content: center;
       display:flex;
   }

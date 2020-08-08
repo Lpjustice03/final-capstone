@@ -2,7 +2,7 @@
 <div class="menu">
 
     <nav class="navBar"> 
-        <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </div>
+        <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}}!</div>
         <div v-if="$store.state.token == ''">
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>

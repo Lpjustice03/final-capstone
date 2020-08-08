@@ -26,7 +26,13 @@ export default {
 };
 </script>
 <style scoped>
+.decks{
+  background-color: rgb(209, 196, 129);
+}
 .heroBanner {
+  font-size: 50px;
   text-align: center;
+  color: #53224f;
+  background-color: rgb(209, 196, 129);
 }
 </style>
