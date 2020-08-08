@@ -30,7 +30,7 @@ public class DeckSqlDaoIntegrationTest extends DAOIntegrationTest{
     	
     	boolean isEquals = false;
     	
-    	decks = deckSqlDAO.getDecks();
+    	decks = deckSqlDAO.getDecks((long)2);
     	if (decks.get(0).getId() == 1) {
     		isEquals = true;
     	}

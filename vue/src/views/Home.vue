@@ -10,7 +10,7 @@
      <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    </div>
    <div class="loggedIn" v-else>
-     <router-link class="tryIt"  v-bind:to="{name:'Decks'}"> Try It Now!</router-link>
+     <router-link class="workpls"  v-bind:to="{name:'Decks'}"> Try It Now!</router-link>
    </div>
     
     </div>
@@ -56,7 +56,10 @@ export default {
 
 .tryIt {
     transform: translate(100%,20%);
+}
 
+.workpls {
+  
 }
 
 h1 {

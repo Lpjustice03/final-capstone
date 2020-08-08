@@ -47,8 +47,10 @@ public class FlashCardController {
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "/decks", method = RequestMethod.GET)
-	public List<Deck> getDecks(){
-		return deckDao.getDecks();
+	public List<Deck> getDecks(Principal principal){
+		String userName = principal.getName();
+		Long userId = (long)userDao.findIdByUsername(userName);		
+		return deckDao.getDecks(userId);
 	}
 	@PreAuthorize("permitAll")
 	@RequestMapping(path = "/decks/trial", method = RequestMethod.GET)
@@ -86,7 +88,7 @@ public class FlashCardController {
 	@RequestMapping(path = "/decks/create", method = RequestMethod.POST)
 	public void createDeck(@RequestBody Deck deck, Principal principal) {
 		String userName = principal.getName();
-		Long userId = (long)userDao.findIdByUsername(userName);
+		Long userId = (long)userDao.findIdByUsername(userName);		
 		deck.setUserId(userId);
 		deckDao.createDeck(deck);
 	}

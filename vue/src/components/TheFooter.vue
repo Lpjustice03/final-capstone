@@ -33,21 +33,22 @@ nav {
     font-family: Arial, Helvetica, sans-serif;    
     height: 15px;
     width: 150px;
-    background-color:rgb(170, 168, 168);
+    background-color:rgb(209, 196, 129);
     color:black;
     border-color: black;
 }
 .menuLink:hover{
-    height:65px;
+    height:30px;
     width: 160px;
-    background-color:rgb(155, 4, 109);
+    background-color:#815b7e;
     transition-duration: 0.2s;
-    color: black;
+    color: rgb(209, 196, 129);
 
 }
 
 .footer {
-    background-color: rgb(170, 168, 168);
+    background-color: rgb(209, 196, 129);
+    margin-bottom: 0;
 }
 
 

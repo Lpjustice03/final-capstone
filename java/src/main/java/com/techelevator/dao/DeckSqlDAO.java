@@ -22,10 +22,10 @@ public class DeckSqlDAO implements DeckDAO {
 	}
 
 	@Override
-	public List<Deck> getDecks() {
+	public List<Deck> getDecks(Long userId) {
 		List<Deck> decks = new ArrayList<>();
-		String sqlGetAllDecks = "SELECT * From decks";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllDecks);
+		String sqlGetAllDecks = "SELECT * From decks WHERE deck_is_trial = true OR deck_user_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllDecks, userId);
 		
 		while (results.next()) {
 			Deck deck = mapRowToDecks(results);
@@ -36,7 +36,7 @@ public class DeckSqlDAO implements DeckDAO {
 	@Override
 	public List<Deck> getTrialDeck() {
 	List<Deck> decks = new ArrayList<>();
-	String sqlGetAllDecks = "SELECT * From decks where deck_is_trial = true ";
+	String sqlGetAllDecks = "SELECT * From decks where deck_id = 1 AND deck_id = 5 AND deck_id = 9";
 	SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllDecks);
 	
 	while (results.next()) {
@@ -60,8 +60,18 @@ public class DeckSqlDAO implements DeckDAO {
 	}
     @Override
     	public void createDeck( Deck deck) {
-    		String sqlDeck = "INSERT into decks(deck_name, deck_user_id, deck_description) VALUES (?,?,?)";
-    		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId(), deck.getDescription());
+    		String sqlDeck = "INSERT into decks(deck_name, deck_user_id, deck_description, deck_is_trial) VALUES (?,?,?, ?)";
+    		boolean isPublic;
+    		if (deck.getDeckType() == 1)
+    		{
+    			isPublic = true;
+    		}
+    		else
+    		{
+    			System.out.println(deck.getDeckType());
+    			isPublic = false;
+    		}
+    		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId(), deck.getDescription(), isPublic);
     		
     	}
     
