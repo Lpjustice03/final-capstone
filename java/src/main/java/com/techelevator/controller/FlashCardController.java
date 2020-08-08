@@ -38,6 +38,12 @@ public class FlashCardController {
 		
 		return cardDao.getCards();
 	}
+	@PreAuthorize("permitAll")
+	@RequestMapping(path = "/trial/cards", method = RequestMethod.GET)
+	public List<Card> getTrialCards(){
+		
+		return cardDao.getCards();
+	}
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "/decks", method = RequestMethod.GET)

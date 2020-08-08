@@ -4,7 +4,7 @@
    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
    
     
-     <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
+     <router-link v-bind:to="{name: 'TrialCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} 
           <p> {{deck.description}} </p>
        </div>
@@ -25,6 +25,9 @@ methods:{
         this.$store.commit("SET_DECKS", response.data);
     });
 }
+},
+created() {
+    this.getTrial();
 }
 
 }

@@ -9,7 +9,8 @@ import Cards from '../views/Cards.vue'
 import Decks from '../views/Decks.vue'
 import DeckCards from '../views/DeckCards.vue'
 import AboutUs from '../views/AboutUs.vue'
-
+import TrialPage from '../views/TrialPage.vue'
+import TrialCards from '../views/TrialCards.vue'
 
 Vue.use(Router)
 
@@ -83,6 +84,23 @@ const router = new Router({
       requiresAuth: true
     }
   },
+  {
+    path: "/deck/trial/:id",
+    name: "TrialCards",
+    component: TrialCards,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/decks/trial",
+    name: "TrialPage",
+    component: TrialPage,
+    meta: {
+      requiresAuth: false
+
+  }
+},
   {
   path: "/aboutus",
     name: "AboutUs",
