@@ -4,6 +4,14 @@
 
 <label for="name">Deck title </label>
 <input type="text" name="name" v-model="deck.deckName" />
+<label for="name"> Deck Description </label>
+<input type="text" name="name" v-model="deck.description" />
+
+<label for="public"> Deck type </label>
+<select class="myList" v-model="deck.deckType">
+        <option value="1"> Public </option>
+        <option value="2"> Private </option>
+</select>
 
 <div class="actions">
     <button type="submit"> Save 
@@ -22,7 +30,8 @@ export default {
         return{
             deck:{
                 deckName: '',
-                description: 'the',
+                description: '',
+                deckType: ''
                 
             }
         };
@@ -32,6 +41,7 @@ export default {
             const newDeck ={
                 deckName: this.deck.deckName,
                 description: this.deck.description,
+                deckType: this.deck.deckType
                
             };
             deckService.addDeck(newDeck)
