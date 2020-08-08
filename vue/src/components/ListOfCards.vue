@@ -12,6 +12,8 @@
     <div v-for="card in filterCards" v-bind:key="card.id" >
 
     <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
+      <button class="correct">Correct!</button>
+      <button class="incorrect">Incorrect!</button>
     
     </div> 
            
@@ -70,6 +72,7 @@ created() {
   }
   .card {
     display: flex;
+    justify-content: center;
     flex-direction:column;
     width: 250px;
     height: 245px;
@@ -137,6 +140,23 @@ color:#51aae5;
   
   button:hover{
     background-color: #70a66f;
+  }
+  .correct {
+      background-color: darkgreen;
+      border-radius: 20px;
+      margin-top: 5%;
+      margin-left: 21%;
+  }
+  .correct:hover{
+      background-color: #70a66f;
+  }
+  .incorrect {
+      margin-top: 5%;
+      background-color: red;
+      border-radius: 20px;
+  }
+  .incorrect:hover{
+      background-color: #f35656;
   }
   
   

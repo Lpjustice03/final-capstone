@@ -112,7 +112,7 @@ export default {
   margin:0%;    
 }
 h1 {
-  text-shadow: -1px 1px 2px #815b7e, 1px 1px 2px #815b7e, 1px -1px 0 #815b7e, -1px -1px 0 #815b7e;
+  text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
   font-size: 50px;
   color:rgb(209, 196, 129);
 }
@@ -137,7 +137,7 @@ button {
   appearance:none;
   -webkit-appearance:none;
   background:rgb(209, 196, 129);
-  text-shadow: -1px 1px 2px #4e204a, 1px 1px 2px #4e204a, 1px -1px 0 #4e204a, -1px -1px 0 #4e204a;
+  text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
  color: rgb(209, 196, 129);
   font-weight:600;
   width: 63%;
@@ -147,12 +147,12 @@ button {
   font-size: 20px;
 }
 button:hover {
-background: rgb(223, 177, 118);
+background: #815b7e;
 color:rgb(209, 196, 129);
-width: 64%;
-height: 13.5%;
-padding: 10px;
-margin:10px 20%;
+/* width: 64%;
+height: 13.5%; */
+/* padding: 10px;
+margin:10px 20%; */
 }
 .link {
   display:flex;
@@ -165,7 +165,7 @@ margin:10px 20%;
   color:#815b7e;
 }
 label {
-  text-shadow: -1px 1px 2px #815b7e 1px 1px 2px #815b7e, 1px -1px 0 #815b7e, -1px -1px 0 #815b7e;
+  text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
   color:rgb(209, 196, 129);
   font-size: 25px;
 }
