@@ -22,7 +22,7 @@
     </div>
     </form>
     </div>    
-    </div>       
+    </div>                 
 </div>
 
 </template>
@@ -33,8 +33,8 @@ import cardService from "@/services/CardService.js";
 
 export default {
 name: "list-of-cards",
-    
- data() {
+
+data() {
 return{
     updateForm: false, 
 card:{
@@ -63,7 +63,7 @@ methods:{
         });
 },
     updateCard(){
-        const card = {
+const card = {
                 id: this.cardId,
                 front: this.card.front,
                 back: this.card.back,
@@ -86,7 +86,7 @@ created() {
 resetForm() {
       this.updateForm = false;
       this.card = {};
-    }
+      }
 
 
 }
