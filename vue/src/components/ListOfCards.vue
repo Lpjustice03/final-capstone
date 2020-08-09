@@ -226,11 +226,7 @@ color:#5895bb;
     .Pretext {
     color: #000000;
     opacity: .2;
-<<<<<<< HEAD
-    margin-right: 5px;
-=======
     
->>>>>>> 323e04c31c3886dff3aa7fb2cfaaee6906aeedd1
 }
     
 
