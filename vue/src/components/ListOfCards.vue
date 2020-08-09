@@ -3,20 +3,18 @@
   
 <div class= "list-of-cards">   
      <div class="cardButton">
-        <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
+         
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
         <div>
             <label for="front">Question? </label>
             <input type="text" name="front" v-model="update.front" />
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
-
+            <label for="updateCard">Card to update:</label>
             <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
             </select>
-
-
-    </div>
+        </div>
     <div class="actions">
       <button id="save" type="submit"> Save</button>
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
@@ -28,13 +26,18 @@
     <div v-for="card in filterCards" v-bind:key="card.id" >
 
     <div class="card" v-on:click="toggleCard (card)"> 
-        <h1>  {{card.flipped ? "Answer" : "Question"}} </h1>
-        {{card.flipped ? card.back : card.front}} 
-       
+        <h1 class="Pretext">  {{card.flipped ? "Answer" : "Question"}}  </h1>
+        {{card.flipped ? card.back : card.front}}
+      <div class="answerButtons" v-show="card.flipped = card.flipped">
+        <button class="correct" >Correct!</button>
+        <button class="incorrect">Incorrect!</button> 
+      </div>
         </div> 
-         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
-      <!-- <button class="correct">Correct!</button>
-      <button class="incorrect">Incorrect!</button> -->
+        <div class="updeleteButtons">
+        <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
+        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
+        </div>
+      
     </div>       
 </div>
 
@@ -131,7 +134,7 @@ created() {
     padding: 40px 25px;
     background-color: #5895bb;
     border-radius: 7px;
-    margin: 25px;
+    /* margin: 25px; */
     text-align: center;
     line-height: 27px;
     cursor: pointer;
@@ -153,9 +156,13 @@ created() {
 
   .card:active {
 transform: rotateY(180deg);
-transition: transform .5s;
-color:#51aae5;
+transition: transform .3s;
+color:#5895bb;
 
+}
+.updeleteButtons {
+    display:flex;
+    justify-content: center;
 }
 
   .list-of-cards{
@@ -182,8 +189,8 @@ color:#51aae5;
 
   button{
     border-radius: 5px;
-    border: 1px solid #cb84b0;
-    background-color: #8984cb;
+    border: 1px solid  #8984cb;
+    background-color: #53224f;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -202,10 +209,22 @@ color:#51aae5;
   }
 
   .correct {
+      display: flex;
+      justify-content: center;
+      font-size: 50%;
+      width: 80px;
+      height: 20px;
       background-color: darkgreen;
-      border-radius: 20px;
-      margin-top: 5%;
-      margin-left: 21%;
+     
+  }
+
+  .answerButtons {
+      display:flex;
+      justify-content: center;
+      position: fixed;
+      margin-top: 100%;
+      margin-left: 10%;
+
   }
 
   .correct:hover{
@@ -213,16 +232,23 @@ color:#51aae5;
   }
   
   .incorrect {
-      margin-top: 5%;
+      
+      font-size: 50%;
+      width: 80px;
+      height: 20px;
       background-color: red;
-      border-radius: 20px;
+      
   }
 
   .incorrect:hover{
       background-color: #f35656;
   }
-    .pretext {
+    .Pretext {
     color: #000000;
     opacity: .2;
+    
 }
+    
+
+
 </style>
