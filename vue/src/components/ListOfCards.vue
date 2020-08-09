@@ -26,7 +26,10 @@
     <div class="action">    
     </div>
     <div v-for="card in filterCards" v-bind:key="card.id" >
-    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
+
+    <div class="card" v-on:click="toggleCard (card)"> 
+        <h1>  {{card.flipped ? "Answer" : "Question"}} </h1>
+        {{card.flipped ? card.back : card.front}} </div> 
       <!-- <button class="correct">Correct!</button>
       <button class="incorrect">Incorrect!</button> -->
     </div>       
