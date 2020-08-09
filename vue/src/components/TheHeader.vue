@@ -44,7 +44,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
-    color: black;
+    color: #53224f;
     font-size: 20px;
 
 }
@@ -53,7 +53,7 @@ nav {
     height: 30px;
     width: 150px;
     background-color:rgb(209, 196, 129);
-    color:black;
+    color:#53224f;
     border: none;
     justify-content: flex-end; 
 

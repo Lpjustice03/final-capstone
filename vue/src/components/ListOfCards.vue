@@ -1,26 +1,14 @@
 <template>
   
-<div class= "list-of-cards">
-    
-     
-    <div class="action">
-       
-        
+<div class= "list-of-cards">   
+    <div class="action">    
     </div>
-    
-
     <div v-for="card in filterCards" v-bind:key="card.id" >
-
     <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
-      <button class="correct">Correct!</button>
-      <button class="incorrect">Incorrect!</button>
-    
-    </div> 
-           
+      <!-- <button class="correct">Correct!</button>
+      <button class="incorrect">Incorrect!</button> -->
+    </div>           
 </div>
-
-
-
 
 </template>
 
@@ -70,6 +58,7 @@ created() {
      display:flex;
      flex-direction: column; 
   }
+
   .card {
     display: flex;
     justify-content: center;
@@ -93,34 +82,41 @@ created() {
     will-change: transform;
     border-style: outset;
   }
+
   .card:hover{
       transform: scale(1.2);
     
   }
+
   .card:active {
 transform: rotateY(180deg);
 transition: transform .5s;
 color:#51aae5;
 
 }
+
   .list-of-cards{
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
+      background-color: rgb(209, 196, 129);
   } 
+
   .cardButton{
       justify-content: center;
       display:flex;
   }
+
+
  @media screen and (max-width: width 600px)    {
      .list-of-cards{
          display:flex;
       justify-content: center;
       flex-flow: row wrap;
 
-     }
-     
+     }  
  }
+
   button{
     border-radius: 5px;
     border: 1px solid #cb84b0;
@@ -141,23 +137,26 @@ color:#51aae5;
   button:hover{
     background-color: #70a66f;
   }
+
   .correct {
       background-color: darkgreen;
       border-radius: 20px;
       margin-top: 5%;
       margin-left: 21%;
   }
+
   .correct:hover{
       background-color: #70a66f;
   }
+  
   .incorrect {
       margin-top: 5%;
       background-color: red;
       border-radius: 20px;
   }
+
   .incorrect:hover{
       background-color: #f35656;
   }
-  
-  
+    
 </style>

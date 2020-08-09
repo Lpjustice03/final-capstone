@@ -1,29 +1,21 @@
 <template>
 <div class="deckButton">
- 
- 
- <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
-
-<form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
-
-
-<label for="name">Deck title: </label>
-<input type="text" name="name" v-model="deck.deckName" />
-<label for="name"> Deck Description: </label>
-<input type="text" name="name" v-model="deck.description" />
-
-<label for="public"> Deck type: </label>
-<select class="myList" v-model="deck.deckType">
+  <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
+   <form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
+   <label for="name">Deck title: </label>
+   <input type="text" name="name" v-model="deck.deckName" />
+   <label for="name"> Deck Description: </label>
+   <input type="text" name="name" v-model="deck.description" />
+   <label for="public"> Deck type: </label>
+   <select class="myList" v-model="deck.deckType">
         <option value="1"> Public </option>
         <option value="2"> Private </option>
-</select>
-
-<div class="actions">
+   </select>
+   <div class="actions">
     <button id="save" type="submit"> Save </button>
     <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
-</div>
-
-</form>
+   </div>
+  </form>
 </div>
 </template>
 

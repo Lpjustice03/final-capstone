@@ -2,9 +2,9 @@
 <div class="footer">
 
     <nav class="navBar">
-       <p class="menuLink"> Tech Elevator </p>
-       <p class="menuLink"> Instagram </p>
-       <p class="menuLink"> FaceBook </p>
+       <img src="../assets/facebook.png" />
+       <img src="../assets/instagram.png" />
+       <img src="../assets/twitter.png" />      
     </nav>
 
 
@@ -22,19 +22,25 @@ export default {
 </script>
 
 <style scoped>
-nav {
+
+.navBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: flex-end 
+    /* align-content: flex-end; */
 }
 
-.menuLink {
+img {
+    margin-left: 55px;
+    margin-right: 55px;
+}
+/* .menuLink {
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;    
     height: 15px;
     width: 150px;
     background-color:rgb(209, 196, 129);
-    color:black;
+    color:#53224f;
     border-color: black;
 }
 .menuLink:hover{
@@ -44,7 +50,7 @@ nav {
     transition-duration: 0.2s;
     color: rgb(209, 196, 129);
 
-}
+} */
 
 .footer {
     background-color: rgb(209, 196, 129);
