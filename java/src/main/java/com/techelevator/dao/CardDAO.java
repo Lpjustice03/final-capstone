@@ -8,7 +8,7 @@ public interface CardDAO {
 	
 	List<Card> getCards();
 	
-	void updateCard(Card card, Long id);
+	void updateCard(Card card, int id);
 	
 	void createCard(Card card);
 	

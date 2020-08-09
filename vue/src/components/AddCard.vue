@@ -35,6 +35,7 @@ card:{
         front: '',
         back: '',
         deckId: this.$route.params.id
+
         
     }
     };

@@ -1,20 +1,21 @@
 <template>
   
+  
 <div class= "list-of-cards">   
-    <div class="action">    
-    </div>
-    <div v-for="card in filterCards" v-bind:key="card.id" >
-    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
-      <!-- <button class="correct">Correct!</button>
-      <button class="incorrect">Incorrect!</button> -->
-    <div class="cardButton">
-    <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
-    <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
-    <div>
-       <label for="front">Question? </label>
-         <input type="text" name="front" v-model="card.front" />
-       <label for="back"> Answer: </label>
-         <input type="text" name="back" v-model="card.back"/>
+     <div class="cardButton">
+        <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
+        <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
+        <div>
+            <label for="front">Question? </label>
+            <input type="text" name="front" v-model="update.front" />
+            <label for="back"> Answer: </label>
+            <input type="text" name="back" v-model="update.back"/>
+
+            <select v-model="update.id">
+                <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
+            </select>
+
+
     </div>
     <div class="actions">
       <button id="save" type="submit"> Save</button>
@@ -22,6 +23,12 @@
     </div>
     </form>
     </div>    
+    <div class="action">    
+    </div>
+    <div v-for="card in filterCards" v-bind:key="card.id" >
+    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
+      <!-- <button class="correct">Correct!</button>
+      <button class="incorrect">Incorrect!</button> -->
     </div>       
 </div>
 
@@ -37,11 +44,12 @@ name: "list-of-cards",
  data() {
 return{
     updateForm: false, 
-card:{
+update:{
 
-        front: "",
-        back: "",
-        deckId: this.$route.params.id
+        front: '',
+        back: '',
+        deckId: this.$route.params.id,
+        id: ''
         
     }
     };
@@ -63,14 +71,14 @@ methods:{
         });
 },
     updateCard(){
-        const card = {
-                id: this.cardId,
-                front: this.card.front,
-                back: this.card.back,
-                deckId: this.deckId,
+        const updatedCard = {
+                id: this.update.id,
+                front: this.update.front,
+                back: this.update.back,
+                deckId: this.update.deckId
             
             };
-            cardService.update(card, card.id)
+            cardService.update(updatedCard);
 
     },
     addCard(){
@@ -79,14 +87,16 @@ methods:{
 toggleCard: function(card) {
       card.flipped = !card.flipped;
     },
+
+    resetForm() {
+      this.updateForm = false;
+      this.card = {};
+    }
 },
 created() {
     this.getCards();
 },
-resetForm() {
-      this.updateForm = false;
-      this.card = {};
-    }
+
 
 
 }

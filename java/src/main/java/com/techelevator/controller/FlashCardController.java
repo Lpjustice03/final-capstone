@@ -65,9 +65,13 @@ public class FlashCardController {
 	}
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
-	@RequestMapping(path = "cards/{id}", method = RequestMethod.PUT)
-	public void updateCard(@RequestBody Card card, @PathVariable Long id) {
-		cardDao.updateCard(card, id);
+	@RequestMapping(path = "/cards/update", method = RequestMethod.PUT)
+	public void updateCard(@RequestBody Card card) {
+		System.out.println("back: " + card.getBack());
+		System.out.println("front: " + card.getFront());
+		System.out.println("deckId: " + card.getDeckId());
+		System.out.println("cardId: " + card.getId());
+		cardDao.updateCard(card, card.getId());
 	}
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "cards/{id}", method = RequestMethod.DELETE)

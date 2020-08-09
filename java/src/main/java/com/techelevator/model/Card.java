@@ -5,7 +5,7 @@ import java.util.List;
 public class Card {
 	
 	
-	private Long id;
+	private int id;
 	private Long userId;
 	private String front;
 	private String back;
@@ -21,7 +21,7 @@ public class Card {
 	public void setDeckId(long deckId) {
 		this.deckId = deckId;
 	}
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public Boolean getFlipped() {
@@ -34,7 +34,7 @@ public class Card {
 		this.userId = userId;
 	}
 	
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 	public Long getUserId() {

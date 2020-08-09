@@ -14,8 +14,8 @@ addCard(card) {
     return axios.post(`/cards/create`, card)
 },
 
-update(card, id) {
-    return axios.put(`/cards/${id}`, card)
+update(card) {
+    return axios.put('/cards/update', card)
 }
 
 }
