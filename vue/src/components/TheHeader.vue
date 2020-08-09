@@ -1,8 +1,8 @@
 <template>
 <div class="menu">
-    
+
     <nav class="navBar"> 
-        <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}} </div>
+        <div class="Welcome" v-if="$store.state.token != ''"> Welcome {{$store.state.user.username}}!</div>
         <div v-if="$store.state.token == ''">
         <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
         <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
@@ -18,6 +18,7 @@
         </div>
         
     </nav>  
+
 </div>
 </template>
 
@@ -35,19 +36,24 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end; 
-    transform: translate(58%, 0%);
 }
 
+
 .Welcome {
-    transform: translate(-0%,20%);
+    transform: translate(5%, 15%);
     font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 150px;
+    color: #53224f;
+    font-size: 20px;
+
 }
 .menuLink {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
     background-color:rgb(209, 196, 129);
-    color:black;
+    color:#53224f;
     border: none;
     justify-content: flex-end; 
 
@@ -61,11 +67,12 @@ nav {
 }
 
 .menu {
-
+    height: 30px;
     background-color: rgb(209, 196, 129);
 
 
 }
+
 @media only screen and (max-width: 600px){
 
   .navBar {
@@ -80,36 +87,5 @@ nav {
     }
 }
 
-.navBar {
-    display: grid;
-    grid-template-columns: .99fr 0fr 0fr 0fr 0fr;
-    grid-template-areas:
-    "header header1 header2 header3 header4 header5";
-    grid-gap: 20px;
-}
-
-
-.Welcome {
-    grid-area: header;
-}
-#home {
-    grid-area: header1;
-}
-
-#about {
-    grid-area: header2;
-}
-
-#decks {
-    grid-area: header3;
-}
-
-#logout {
-    grid-area: header4;
-}
-
-#login {
-    grid-area: header5;
-}
 
 </style>

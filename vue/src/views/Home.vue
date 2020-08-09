@@ -82,7 +82,8 @@ h1 {
 1px 18px 6px rgba(16,16,16,0.2),
 1px 22px 10px rgba(16,16,16,0.2),
 1px 25px 35px rgba(16,16,16,0.2),
-1px 30px 60px rgba(16,16,16,0.2)
+1px 30px 60px rgba(16,16,16,0.2);
+
 }
 
 h2 {

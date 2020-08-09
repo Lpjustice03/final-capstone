@@ -49,6 +49,7 @@ created() {
 </script>
 <style scoped>
 .header {
+  background-color: rgb(209, 196, 129);
      display:flex;
      flex-direction: column; 
   }
@@ -65,11 +66,14 @@ created() {
     width: 250px;
     height: 300px;
     padding: 40px 25px;
+    background-image: url(../assets/computerScreen.jpeg);
+    background-position: 50% 0%;
     background-color: rgb(102, 172, 117);
+    background-size: cover;
     border-radius: 7px;
     margin: 15px;
     text-align: center;
-    line-height: 27px;
+    line-height: 60px;
     cursor: pointer;
     position: relative;
     color: #fff;
@@ -88,6 +92,8 @@ created() {
   }
 
   .list-of-decks{
+    background-color: rgb(209, 196, 129);
+    background-size: cover;
       display:flex;
       justify-content: center;
       flex-flow: row wrap;

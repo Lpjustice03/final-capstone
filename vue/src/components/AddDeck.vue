@@ -1,29 +1,21 @@
 <template>
 <div class="deckButton">
- 
- 
- <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
-
-<form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
-
-
-<label for="name">Deck title </label>
-<input type="text" name="name" v-model="deck.deckName" />
-<label for="name"> Deck Description </label>
-<input type="text" name="name" v-model="deck.description" />
-
-<label for="public"> Deck type </label>
-<select class="myList" v-model="deck.deckType">
+  <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
+   <form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
+   <label for="name">Deck title: </label>
+   <input type="text" name="name" v-model="deck.deckName" />
+   <label for="name"> Deck Description: </label>
+   <input type="text" name="name" v-model="deck.description" />
+   <label for="public"> Deck type: </label>
+   <select class="myList" v-model="deck.deckType">
         <option value="1"> Public </option>
         <option value="2"> Private </option>
-</select>
-
-<div class="actions">
-    <button type="submit"> Save 
-    </button>
-</div>
-<input type="button" value="Cancel" v-on:click.prevent="resetForm" />
-</form>
+   </select>
+   <div class="actions">
+    <button id="save" type="submit"> Save </button>
+    <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
+   </div>
+  </form>
 </div>
 </template>
 
@@ -67,10 +59,49 @@ export default {
 
 <style>
 
+input[type=text] {
+    border-radius: 5px;
+}
+.actions {
+display: flex;
+justify-content: center;
+}
+
+.myList {
+    border-radius: 5px;
+}
+
+
+
+#save {
+    margin: 5%;
+    width: 30%;
+}
+
+#cancel {
+    width: 30%;
+    background-color: #351f33;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #959717;
+    font-size: 14px;
+    font-weight: 700;
+    margin:5%;
+}
+
+#cancel:hover {
+    background-color: #828f12;
+}
+
+label {
+    font-size: 20px;
+    color: #53224f;
+}
+
 button{
     border-radius: 5px;
     border: 1px solid #959717;
-    background-color: #8984cb;
+    background-color: #53224f;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -89,6 +120,7 @@ button{
     border: 1px solid #8984cb
   }
    .deckButton{
+       background-color: rgb(209, 196, 129);
       justify-content: center;
       display:flex;
   }
