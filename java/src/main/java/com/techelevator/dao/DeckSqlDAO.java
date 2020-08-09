@@ -98,7 +98,7 @@ public class DeckSqlDAO implements DeckDAO {
 	private Card mapRowToCards(SqlRowSet results) {
 		Card card = new Card();
 		//card.setCategories(null);
-		card.setId(results.getLong("card_id"));
+		card.setId(results.getInt("card_id"));
 		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));

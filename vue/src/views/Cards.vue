@@ -12,7 +12,7 @@
 <script>
 
 import ListOfCards from '@/components/ListOfCards.vue';
-import AddCard from '@/components/AddDeck.vue';
+import AddCard from '@/components/AddCard.vue';
 
 export default {
   name: "Cards",

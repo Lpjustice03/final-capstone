@@ -60,7 +60,7 @@ const router = new Router({
       }
     },
     {
-      path: "/cards",
+      path: "/decks/:id/cards",
       name: "cards",
       component: Cards,
       meta: {
@@ -77,7 +77,7 @@ const router = new Router({
     }
   },
   {
-    path: "/:id",
+    path: "/decks/:id/cards",
     name: "DeckCards",
     component: DeckCards,
     meta: {

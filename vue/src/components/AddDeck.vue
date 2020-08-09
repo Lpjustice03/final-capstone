@@ -28,7 +28,7 @@ export default {
     data() {
         return{
            addForm: false,
-           updateForm: false, 
+            
             deck:{
                 deckName: '',
                 description: '',
@@ -49,7 +49,7 @@ export default {
         },
         resetForm() {
       this.addForm = false;
-      this.updateForm = false;
+     
       this.deck = {};
     }
     }
