@@ -3,14 +3,14 @@
   
 <div class= "list-of-cards">   
      <div class="cardButton">
-        <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
+         
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
         <div>
             <label for="front">Question? </label>
             <input type="text" name="front" v-model="update.front" />
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
-
+            <label for="updateCard">Card to update:</label>
             <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
             </select>
@@ -29,12 +29,14 @@
 
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1 class="Pretext">  {{card.flipped ? "Answer" : "Question"}}  </h1>
-        {{card.flipped ? card.back : card.front}} 
-       
+        {{card.flipped ? card.back : card.front}}
+        <!-- <button class="correct">Correct!</button>
+      <button class="incorrect">Incorrect!</button>  -->
         </div> 
-         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
-      <!-- <button class="correct">Correct!</button>
-      <button class="incorrect">Incorrect!</button> -->
+        <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
+        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
+         
+      
     </div>       
 </div>
 
@@ -131,7 +133,7 @@ created() {
     padding: 40px 25px;
     background-color: #5895bb;
     border-radius: 7px;
-    margin: 25px;
+    /* margin: 25px; */
     text-align: center;
     line-height: 27px;
     cursor: pointer;
@@ -154,7 +156,7 @@ created() {
   .card:active {
 transform: rotateY(180deg);
 transition: transform .5s;
-color:#51aae5;
+color:#5895bb;
 
 }
 
@@ -224,9 +226,13 @@ color:#51aae5;
     .Pretext {
     color: #000000;
     opacity: .2;
+<<<<<<< HEAD
     margin-right: 5px;
+=======
+    
+>>>>>>> 323e04c31c3886dff3aa7fb2cfaaee6906aeedd1
 }
-
+    
 
 
 </style>
