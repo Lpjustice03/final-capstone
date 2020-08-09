@@ -1,22 +1,13 @@
 <template>
 <div class="header">
-    
- 
- 
 <div class= "list-of-decks">
-
     <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-   
-    
      <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} 
           <p> {{deck.description}} </p>
        </div>
-      
       </router-link>
-
     </div>
-
     </div>
 </div>
 </template>
