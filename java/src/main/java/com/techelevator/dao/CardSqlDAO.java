@@ -37,7 +37,7 @@ public class CardSqlDAO implements CardDAO {
 	private Card mapRowToCard(SqlRowSet results) {
 		Card card = new Card();
 		//card.setCategories(null);
-		card.setId(results.getLong("card_id"));
+		card.setId(results.getInt("card_id"));
 		card.setUserId(results.getLong("card_creator_id"));
 		card.setFront(results.getString("front"));
 		card.setBack(results.getString("back"));
@@ -55,7 +55,7 @@ public class CardSqlDAO implements CardDAO {
 
 
 	@Override
-	public void updateCard( Card card, Long id) {
+	public void updateCard( Card card, int id) {
 		String sqlUpdateCard = "UPDATE cards set front = ?, back = ? WHERE card_id = ?";
 		jdbcTemplate.update(sqlUpdateCard, card.getFront(), card.getBack(), id);
 		
@@ -71,7 +71,7 @@ public class CardSqlDAO implements CardDAO {
 		SqlRowSet cardResults = jdbcTemplate.queryForRowSet(sqlCard, card.getFront(), card.getBack(), card.getUserId());
 		
 		while(cardResults.next()) {
-			card.setId(cardResults.getLong("card_id"));
+			card.setId(cardResults.getInt("card_id"));
 		}
 		sqlCard = "INSERT into card_deck(card_id, deck_id) VALUES (?, ?)";
 		jdbcTemplate.update(sqlCard, card.getId(), card.getDeckId());
