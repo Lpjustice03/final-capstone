@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <div class="header">
-    <h1>FLIPDECK</h1>
-    <h2> Welcome to FlipDeck the coolest study tool around</h2>
+    <body>
+        <div class="box">
+            <div class="inner">
+                <span>FlipDeck</span>
+            </div>
+            <div class="inner">
+                <span>FlipDeck</span>
+            </div>
+        </div>
+        <div class="paragraph">
     <p>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
   </p>
+  
    <div v-if="$store.state.token == ''">
 
      <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
+
    </div>
+   </div>
+    </body>
+    
    
    
     
-    </div>
+    
     
       </div>
 </template>
@@ -107,9 +119,16 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 1px 1px 1px #a75aa0,
   1px 2px 1px #a75aa0;
+  position:flex;
+  
 
 }
-
+.paragraph{
+  margin-top: 30px;
+  flex-flow: row wrap;
+  text-align:center;
+  align-items:space-around;
+}
 .tryIt {
   margin-left: 100px;
   color: rgb(248, 248, 248);
@@ -154,7 +173,71 @@ p {
 
 }
 
+body {
 
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box {
+  display: flex;
+  
+  align-content:flex-end;
+  
+  
+    
+}
+
+.box .inner {
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box .inner:first-child {
+    background-color: rgb(205, 188, 92);
+    color: rgb(10, 5, 5);
+    transform-origin: left;
+    transform: perspective(300px) rotateY(-67.3deg);
+    opacity: 0.4;
+}
+
+.box .inner:last-child {
+    background-color: rgb(119, 102, 8);
+    color: rgb(7, 4, 0);
+    transform-origin: right;
+    transform: perspective(300px) rotateY(67.3deg);
+    opacity: 0.4;
+}
+
+.box .inner span {
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+    animation-delay: 2.5s;
+    left: -100%;
+    opacity: 0.4;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+    
+    to {
+        left: -100%;
+    }
+}
 
 
 
