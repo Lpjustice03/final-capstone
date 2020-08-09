@@ -91,7 +91,6 @@ methods:{
 
     },
     deleteCard(card){
-        
         cardService.delete(card.id);
         this.$router.push(`/decks/ ${this.route.params.deckId}/cards`);
          
@@ -227,7 +226,7 @@ color:#5895bb;
     .Pretext {
     color: #000000;
     opacity: .2;
-    /* margin-bottom: 40%; */
+    
 }
     
 
