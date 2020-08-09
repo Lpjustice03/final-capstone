@@ -10,7 +10,11 @@ public interface DeckDAO {
 
 	Deck getDeck(Long id);
 	
+	void updateDeck(Deck deck, Long id);
+	
 	List <Deck> getTrialDeck(); 
 	
     void createDeck(Deck deck);
+    
+    void deleteDeck(Long id);
 }

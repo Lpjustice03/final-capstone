@@ -15,7 +15,7 @@ addCard(card) {
 },
 
 update(card) {
-    return axios.put('/cards/update', card)
+    return axios.put(`/cards/update`, card)
 },
 delete(id) {
     return axios.delete(`/cards/${id}`)

@@ -1,23 +1,41 @@
 <template>
 <div class="header">
-    
- 
- 
 <div class= "list-of-decks">
 
-    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-   
+  <div class="deckButton">
+        <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Deck </button>  
+        <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
+        <div>
+            <label for="deckName">Name of Deck </label>
+            <input type="text" name="deckName" v-model="update.deckName" />
+            <label for="description"> Description: </label>
+            <input type="text" name="description" v-model="update.description"/>
+            <label for="deckType"> Type of Deck: </label>
+            <input type="text" name="deckType" v-model="update.deckType"/>
+
+            <select v-model="update.id">
+                <option v-for="deck in this.$store.state.decks" v-bind:key="deck.id" v-bind:value="deck.id"> {{deck.deckName}} </option>
+            </select>
+
+        </div>
     
-     <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
-       <div class="deck"> {{deck.deckName}} 
-          <p> {{deck.description}} </p>
-       </div>
-      
-      </router-link>
-
+   
+    <div class="actions">
+      <button id="save" type="submit"> Save</button>
+      <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
+     </form>
+  </div>
 
-    </div>
+
+<div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
+<router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
+<div class="deck"> {{deck.deckName}}
+<p> {{deck.description}} </p>
+</div>
+</router-link>
+</div>
+</div>
 </div>
 </template>
 
@@ -27,22 +45,50 @@ import deckService from "@/services/DeckService.js";
 
 export default {
 name: "list-of-decks",
+
+data() {
+return{
+    updateForm: false, 
+update:{
+
+        deckName: '',
+        description: '',
+        deckType: ''
+        
+    }
+    };
+
+},
+
 methods:{
-    getDecks() {
-   deckService.list().then(response =>{
-        this.$store.commit("SET_DECKS", response.data);
-    });
-}
-
+getDecks() {
+deckService.list().then(response =>{
+this.$store.commit("SET_DECKS", response.data);
+});
 },
+
 updateDeck(){
+  const updatedDeck ={
+    id: this.update.id,
+    deckName: this.update.deckName,
+    description: this.update.description,
+    deckType: this.update.deckType
+  };
+
+  deckService.update(updatedDeck);
+  this.$router.push(`/decks/`);
 
 },
-addDeck(){
 
+resetForm() {
+      this.updateForm = false;
+      this.deck = {};
+    }
 },
+
+
 created() {
-    this.getDecks();
+this.getDecks();
 }
 
 }
