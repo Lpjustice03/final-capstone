@@ -224,6 +224,7 @@ color:#51aae5;
     .Pretext {
     color: #000000;
     opacity: .2;
+    margin-right: 5px;
 }
 
 
