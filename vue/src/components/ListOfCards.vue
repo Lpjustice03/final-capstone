@@ -7,7 +7,22 @@
     <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
       <!-- <button class="correct">Correct!</button>
       <button class="incorrect">Incorrect!</button> -->
-    </div>           
+    <div class="cardButton">
+    <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
+    <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
+    <div>
+       <label for="front">Question? </label>
+         <input type="text" name="front" v-model="card.front" />
+       <label for="back"> Answer: </label>
+         <input type="text" name="back" v-model="card.back"/>
+    </div>
+    <div class="actions">
+      <button id="save" type="submit"> Save</button>
+      <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
+    </div>
+    </form>
+    </div>    
+    </div>       
 </div>
 
 </template>
@@ -18,6 +33,22 @@ import cardService from "@/services/CardService.js";
 
 export default {
 name: "list-of-cards",
+    
+ data() {
+return{
+    updateForm: false, 
+card:{
+
+        front: "",
+        back: "",
+        deckId: this.$route.params.id
+        
+    }
+    };
+
+},
+
+
 computed: {
     filterCards() {
         return this.$store.state.cards.filter( card => {
@@ -32,6 +63,14 @@ methods:{
         });
 },
     updateCard(){
+        const card = {
+                id: this.cardId,
+                front: this.card.front,
+                back: this.card.back,
+                deckId: this.deckId,
+            
+            };
+            cardService.update(card, card.id)
 
     },
     addCard(){
@@ -43,7 +82,11 @@ toggleCard: function(card) {
 },
 created() {
     this.getCards();
-}
+},
+resetForm() {
+      this.updateForm = false;
+      this.card = {};
+    }
 
 
 }

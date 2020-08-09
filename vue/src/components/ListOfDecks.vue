@@ -97,6 +97,7 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
+      
 
   }
   
@@ -105,7 +106,7 @@ created() {
          display:flex;
       justify-content: center;
       flex-flow: row wrap;
-
+      
      }
  }
   

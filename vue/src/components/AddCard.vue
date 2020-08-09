@@ -13,6 +13,7 @@
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
     </form>
+
 </div>
 
 </template>
@@ -56,7 +57,7 @@ methods: {
         // })
         
     },
-
+       
     
 
     resetForm() {
