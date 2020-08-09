@@ -49,10 +49,10 @@ methods: {
             deckId: this.card.deckId
             
         };
-        cardService.addCard(newCard)
+        cardService.addCard(newCard);
         // .then((response) => {
         //     if (response.status === 201) {
-        //         this.$router.push(this.params.deckId);
+               this.$router.push(this.params.deckId);
         //     }
 
         // })

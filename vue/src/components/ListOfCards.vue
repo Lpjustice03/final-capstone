@@ -29,7 +29,10 @@
 
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1>  {{card.flipped ? "Answer" : "Question"}} </h1>
-        {{card.flipped ? card.back : card.front}} </div> 
+        {{card.flipped ? card.back : card.front}} 
+       
+        </div> 
+         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
       <!-- <button class="correct">Correct!</button>
       <button class="incorrect">Incorrect!</button> -->
     </div>       
@@ -85,7 +88,10 @@ methods:{
             this.$router.push(`/decks/${updatedCard.deckId}/cards`);
 
     },
-    addCard(){
+    deleteCard(card){
+        cardService.delete(card.id);
+        this.$router.push(`/decks/ ${this.route.params.deckId}/cards`);
+         
 
     },
 toggleCard: function(card) {
