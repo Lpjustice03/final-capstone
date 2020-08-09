@@ -3,8 +3,8 @@
   <div>
     <div class="about-section">
   <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>We are the coolest people alive.</p>
+  <p> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create this super awesome app. </p>
+  <p>We are the coolest people alive so you should get to know us.</p>
 </div>
     <h2 class="nam">Our Team</h2>
     <div class="row">
@@ -16,31 +16,38 @@
         <h2>Omer Ali</h2>
         <p class="title">Just another guy</p>
         <p>Greatest Man ALive.</p>
+        <p> h</p>
+        <p> h</p>
+        <p> h</p>
+
+
         <p>Omer.ali17@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
-  </div>
   </div>
 
 <div class="column">
     <div class="card">
      <img src="../assets/Lance.jpeg" alt="Jane" style="width:100%">
             <div class="container">
-        <h2>Lance Justice </h2>
+        <div class="cardProp">
+        <h2 class="names">Lance Justice </h2>
         <p class="title">The Vue Guy</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p class="emails">mike@example.com</p>
         <p><button class="button">Contact</button></p>
+        </div>
       </div>
     </div>
   </div>
-
+</div>
+<div class="row">
 <div class="column">
     <div class="card">
       <img src="../assets/Eric.jpeg" alt="Jane" style="width:100%">
       <div class="container">
-        <h2>Eric</h2>
+        <h2>Erik Leopard</h2>
         <p class="title">The Css Guy</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
@@ -55,16 +62,16 @@
     <div class="card">
       <img src="../assets/Mike.jpeg" alt="Jane" style="width:100%">
       <div class="container">
-        <h2>Erik</h2>
+        <h2>Mike Finegan</h2>
         <p class="title">The Everything Guy</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
+        <p> Hello, I'm Michael Finegan. This is a generic description about who I am and Why I'm 'The Everything Guy.'</p>
+        <p>mfinegan96@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
 </div>
-
+</div>
 
 
 </body>
@@ -82,10 +89,13 @@ export default {
 
 <style scoped>
 
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   display: flex;
+  background-color: #B0B7BC
+;
 }
 
 html {
@@ -106,7 +116,10 @@ html {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
+  background-color: #FAD6A5;
+  justify-content: flex-start;
 }
+
 
 .about-section {
   padding: 50px;
@@ -126,7 +139,7 @@ html {
 }
 
 .title {
-  color: grey;
+  color: rgba(15, 16, 124, 0.781);
 }
 
 .button {
@@ -138,7 +151,8 @@ html {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 33%;
+  justify-content: center;
 }
 
 .button:hover {
@@ -151,10 +165,16 @@ html {
     display: block;
   }
 }
+
 h2{
   text-align: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
 
 </style>
 
