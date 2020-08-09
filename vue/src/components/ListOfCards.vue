@@ -4,15 +4,21 @@
     <div class="action">    
     </div>
     <div v-for="card in filterCards" v-bind:key="card.id" >
-    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
+       
+       
+    <div class="card" v-on:click="toggleCard (card)">  {{card.flipped ? card.back : card.front}}  </div> 
+    
       <!-- <button class="correct">Correct!</button>
       <button class="incorrect">Incorrect!</button> -->
     <div class="cardButton">
     <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button>  
     <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
     <div>
-       <label for="front">Question? </label>
+       <label for="front">Question? </label> 
+       
+                   
          <input type="text" name="front" v-model="card.front" />
+        
        <label for="back"> Answer: </label>
          <input type="text" name="back" v-model="card.back"/>
     </div>
@@ -201,5 +207,8 @@ color:#51aae5;
   .incorrect:hover{
       background-color: #f35656;
   }
-    
+    .pretext {
+    color: #000000;
+    opacity: .2;
+}
 </style>
