@@ -11,12 +11,15 @@
 
     <div v-for="card in filterCards" v-bind:key="card.id" >
 
-    <div class="card" v-on:click="toggleCard (card)"> {{card.flipped ? card.back : card.front}} </div> 
-      <button class="correct">Correct!</button>
-      <button class="incorrect">Incorrect!</button>
-    
-    </div> 
-           
+    <div class="card" v-on:click="toggleCard (card)"> 
+        <h1>  {{card.flipped ? "Answer" : "Question"}} </h1>
+        {{card.flipped ? card.back : card.front}} 
+       
+        </div> 
+         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
+      <!-- <button class="correct">Correct!</button>
+      <button class="incorrect">Incorrect!</button> -->
+    </div>       
 </div>
 
 
@@ -46,7 +49,10 @@ methods:{
     updateCard(){
 
     },
-    addCard(){
+    deleteCard(card){
+        cardService.delete(card.id);
+        this.$router.push(`/decks/ ${this.route.params.deckId}/cards`);
+         
 
     },
 toggleCard: function(card) {
@@ -150,14 +156,14 @@ color:#51aae5;
   .correct:hover{
       background-color: #70a66f;
   }
-  .incorrect {
+  /* .incorrect {
       margin-top: 5%;
       background-color: red;
       border-radius: 20px;
   }
   .incorrect:hover{
       background-color: #f35656;
-  }
+  } */
   
   
 </style>

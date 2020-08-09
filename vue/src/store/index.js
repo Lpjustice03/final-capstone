@@ -58,6 +58,7 @@ export default new Vuex.Store({
     },
     SET_DECKS(state, data){
       state.decks = data;
-    }
+    },
+    
   }
 })
