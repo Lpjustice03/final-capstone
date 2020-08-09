@@ -12,7 +12,7 @@
     <div v-for="card in filterCards" v-bind:key="card.id" >
 
     <div class="card" v-on:click="toggleCard (card)"> 
-        <h1>  {{card.flipped ? "Answer" : "Question"}} </h1>
+        <h1 class="Pretext">  {{card.flipped ? "Answer" : "Question"}}  </h1>
         {{card.flipped ? card.back : card.front}} 
        
         </div> 
@@ -156,14 +156,8 @@ color:#51aae5;
   .correct:hover{
       background-color: #70a66f;
   }
-  /* .incorrect {
-      margin-top: 5%;
-      background-color: red;
-      border-radius: 20px;
-  }
-  .incorrect:hover{
-      background-color: #f35656;
-  } */
-  
-  
+ 
+
+
+
 </style>
