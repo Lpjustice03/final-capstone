@@ -82,6 +82,7 @@ methods:{
             
             };
             cardService.update(updatedCard);
+            this.$router.push(`/decks/${updatedCard.deckId}/cards`);
 
     },
     addCard(){
@@ -214,5 +215,8 @@ color:#51aae5;
   .incorrect:hover{
       background-color: #f35656;
   }
-    
+    .pretext {
+    color: #000000;
+    opacity: .2;
+}
 </style>
