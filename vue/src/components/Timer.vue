@@ -1,44 +1,37 @@
 <template>
-  <div class="cards">
-      <div>
+    <div>
         <div class="resetBlock">
         <button class="beginStudy" v-on:click="toggleTimer"> {{isRunning ? 'Stop Study Session' : 'Begin Study Session'}} </button>
+        <div class="row">
         <div class="time"> Hr: {{hour}} </div> 
         <div class="time"> Min: {{minute}}  </div> 
         <div class="time"> Sec: {{second}} </div>    
+        <!-- <div class="time"> {{hour}} : {{minute}} : {{second}} </div>  -->
+        </div>
+        <div class="row">
         <div class="counter">Correct: {{this.$store.state.counterCorrect}}  </div>
         <div class="counter">  Total: {{this.$store.state.counterTotal}} </div>
-    </div>
-  </div>
-    <add-card />
-    <list-of-cards v-bind:deck-id="parseInt($route.params.id)" />
-    
+        </div>
+        </div>
   </div>
 </template>
 
 <script>
-
-import ListOfCards from '@/components/ListOfCards.vue';
-import AddCard from '@/components/AddCard.vue';
-
 export default {
-  name: "DeckCards",
-  data () {
+    name: 'timer',
+
+data () {
     return {
-       time: 0,
-    hour: 0,
-    minute: 0,
-    second: 0,
-    interval: null,
-    isRunning: false,
+      time: 0,
+      hour: 0,
+      minute: 0,
+      second: 0,
+      interval: null,
+      isRunning: false
     }
   },
-  components: {
-    ListOfCards,
-    AddCard
-  },
   methods: {
-    addCorrect(){
+      addCorrect(){
         this.$store.state.counterCorrect = this.$store.state.counterCorrect + 1;
         this.$store.state.counterTotal = this.$store.state.counterTotal + 1;
     },
@@ -80,14 +73,12 @@ export default {
         this.second = this.time % 60;
     }
   }
-  
-  
-
 };
+
 </script>
 
-<style scoped>
-  .resetBlock {
+<style>
+.resetBlock {
       flex-direction: column;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
@@ -95,9 +86,9 @@ export default {
   }
 
   .counter {
-      margin-left: 30%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    margin-left: 1%;
   }
 
   button{
@@ -124,9 +115,17 @@ export default {
   .beginStudy {
       display:flex;
       justify-content: center;
-      position: fixed;
       font-family: Arial, Helvetica, sans-serif;
+      width: 10%;
+      height: auto;
 }
 
-</style>
+.row {
+    display: flex;
+    flex-direction: row;
+}
 
+.time {
+    margin-left: 1%;
+}
+</style>

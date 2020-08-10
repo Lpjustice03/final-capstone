@@ -1,11 +1,13 @@
 <template>
   <div class="cards">
     <h1 class="title">Cards</h1>
+  <timer />
     <add-card />
     <list-of-cards />
     
 
     
+
   </div>
 </template>
 
@@ -13,14 +15,19 @@
 
 import ListOfCards from '@/components/ListOfCards.vue';
 import AddCard from '@/components/AddCard.vue';
+ import Timer from '@/components/Timer.vue';
 
 export default {
   name: "Cards",
+
   components: {
     ListOfCards,
-      AddCard
+      AddCard,
+       Timer
     
   }
+
+
 
   
   
@@ -38,4 +45,6 @@ export default {
   color: #53224f;
   background-color: rgb(209, 196, 129);
 }
+
+
 </style>

@@ -61,7 +61,7 @@ export default {
     transform: translate(100%,20%);
 }
 .tryIt:hover {
-  color: #753d71;
+  color: #411d3e;
 }
 
 
@@ -78,14 +78,14 @@ h1 {
   font-size: 6em;
   font-weight: 700;
   color: #f5f5f5;
-  text-shadow: 1px 1px 1px #a75aa0,
-1px 2px 1px #a75aa0,
-1px 3px 1px #a75aa0,
-1px 4px 1px #a75aa0,
-1px 5px 1px #a75aa0,
-1px 6px 1px #a75aa0,
-1px 7px 1px #a75aa0,
-1px 8px 1px #a75aa0,
+  text-shadow: 1px 1px 1px #662861,
+1px 2px 1px #662861,
+1px 3px 1px #662861,
+1px 4px 1px #662861,
+1px 5px 1px #662861,
+1px 6px 1px #662861,
+1px 7px 1px #662861,
+1px 8px 1px #662861,
 1px 18px 6px rgba(16,16,16,0.2),
 1px 22px 10px rgba(16,16,16,0.2),
 1px 25px 35px rgba(16,16,16,0.2),
@@ -99,10 +99,10 @@ h2 {
   font-size: 30px;
   font-weight: 350;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 1px #a75aa0,
-1px 2px 1px #a75aa0,
-1px 3px 1px #a75aa0,
-1px 4px 1px #a75aa0;
+  text-shadow: 1px 1px 1px #662861,
+1px 2px 1px #662861,
+1px 3px 1px #662861,
+1px 4px 1px #662861;
 }
 
 p {
@@ -112,8 +112,8 @@ p {
   color: white;
   font-weight: 175;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 1px #a75aa0,
-  1px 2px 1px #a75aa0;
+  text-shadow: 1px 1px 1px #662861,
+  1px 2px 1px #662861;
   position:flex;
   
 
@@ -129,8 +129,8 @@ p {
   font-size: 25px;
   margin-left: 100px;
   color: rgb(248, 248, 248);
-  text-shadow: 1px 1px 1px #a75aa0,
-1px 2px 1px #a75aa0;
+  text-shadow: 1px 1px 1px #662861,
+1px 2px 1px #662861;
 
 }
 
@@ -206,52 +206,50 @@ body {
     background-color: rgb(205, 188, 92, 0.3);
     color: black;
     transform-origin: left;
-    transform: perspective(300px) rotateY(-67.3deg);
-    /* opacity: .8; */
+    transform: perspective(300px) rotateY(-67.3deg) ;
     text-shadow: 1px 1px 1px #a75aa0,
-1px 2px 1px #a75aa0,
-1px 3px 1px #a75aa0,
-1px 4px 1px #a75aa0,
-1px 18px 6px rgba(16,16,16,0.2),
-1px 22px 10px rgba(16,16,16,0.2),
-1px 25px 35px rgba(16,16,16,0.2),
-1px 30px 60px rgba(16,16,16,0.2);
+                 1px 2px 1px #a75aa0,
+                 1px 3px 1px #a75aa0,
+                 1px 4px 1px #a75aa0,
+                 1px 18px 6px rgba(16,16,16,0.2),
+                1px 22px 10px rgba(16,16,16,0.2),
+                1px 25px 35px rgba(16,16,16,0.2),
+                1px 30px 60px rgba(16,16,16,0.2);
 }
 
 .box .inner:last-child {
     background-color: rgb(119, 102, 8, 0.3);
     color: black;
     transform-origin: right;
-    transform: perspective(300px) rotateY(67.3deg);
-    /* opacity: .8; */
+    transform: perspective(300px) rotateY(67.3deg) rotateX(180deg);
     text-shadow: 1px 1px 1px #a75aa0,
-1px 2px 1px #a75aa0,
-1px 3px 1px #a75aa0,
-1px 4px 1px #a75aa0,
-1px 18px 6px rgba(16,16,16,0.2),
-1px 22px 10px rgba(16,16,16,0.2),
-1px 25px 35px rgba(16,16,16,0.2),
-1px 30px 60px rgba(16,16,16,0.2);
+                 1px 2px 1px #a75aa0,
+                 1px 3px 1px #a75aa0,
+                 1px 4px 1px #a75aa0,
+                 1px -18px 6px rgba(16,16,16,0.2),
+                1px -22px 10px rgba(16,16,16,0.2),
+                1px -25px 35px rgba(16,16,16,0.2),
+                1px -30px 60px rgba(16,16,16,0.2);
 }
 
 .box .inner span {
     position: absolute;
-    animation: marquee 5s linear infinite;
+    animation: marquee 8s linear infinite;
 }
 
 .box .inner:first-child span {
-    animation-delay: 2.5s;
+    animation-delay: 4s;
     left: -100%;
     /* opacity: 1; */
 }
 
 @keyframes marquee {
     from {
-        left: 100%;
+        left: -100%;
     }
     
     to {
-        left: -100%;
+        left: 100%;
     }
 }
 
