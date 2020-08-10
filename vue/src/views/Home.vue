@@ -61,7 +61,7 @@ export default {
     transform: translate(100%,20%);
 }
 .tryIt:hover {
-  color: #a75aa0;
+  color: #753d71;
 }
 
 
@@ -107,7 +107,7 @@ h2 {
 
 p {
   margin-left: 170px;
-  font-size: 20px;
+  font-size: 25px;
   background: transparent;
   color: white;
   font-weight: 175;
@@ -126,8 +126,12 @@ p {
   align-items:space-around;
 }
 .tryIt {
+  font-size: 25px;
   margin-left: 100px;
   color: rgb(248, 248, 248);
+  text-shadow: 1px 1px 1px #a75aa0,
+1px 2px 1px #a75aa0;
+
 }
 
 @media only screen and (max-width: 600px) {
