@@ -12,8 +12,9 @@
         <div class="paragraph">
     <p>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
     </p>
-  <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
+  
    <div v-if="$store.state.token == ''">
+     <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    </div>
    </div>
     </body>
