@@ -44,7 +44,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
-    color: #53224f;
+    color: white;
     font-size: 20px;
 
 }
@@ -52,8 +52,8 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
-    background-color:rgb(209, 196, 129);
-    color:#53224f;
+    background-color:#6B7A8F;
+    color:white;
     border: none;
     justify-content: flex-end; 
 
@@ -61,14 +61,14 @@ nav {
 .menuLink:hover{
     height:31px;
     width: 151px;
-    background-color: #815b7e;
+    background-color: #F7882F;
     transition-duration: 0.2s;
-    color: rgb(209, 196, 129);
+    color: #6B7A8F;
 }
 
 .menu {
     height: 30px;
-    background-color: rgb(209, 196, 129);
+    background-color: #6B7A8F;
 
 
 }

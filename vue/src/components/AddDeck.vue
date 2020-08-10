@@ -95,13 +95,13 @@ justify-content: center;
 
 label {
     font-size: 20px;
-    color: #53224f;
+    color: white;
 }
 
 button{
     border-radius: 5px;
     border: 1px solid #959717;
-    background-color: #53224f;
+    background-color: #F7882F;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -120,7 +120,7 @@ button{
     border: 1px solid #8984cb
   }
    .deckButton{
-       background-color: rgb(209, 196, 129);
+       background-color: #DCC7AA;
       justify-content: center;
       display:flex;
   }
