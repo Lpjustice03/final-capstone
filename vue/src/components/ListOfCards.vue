@@ -153,14 +153,14 @@ created() {
     width: 250px;
     height: 245px;
     padding: 40px 25px;
-    background-color: #5895bb;
+    background-color: #946c00b0;
     border-radius: 7px;
     /* margin: 25px; */
     text-align: center;
     line-height: 27px;
     cursor: pointer;
     position: relative;
-    color: #fff;
+    color: rgb(2, 2, 2);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -192,7 +192,7 @@ color:#5895bb;
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
-      background-color: rgb(209, 196, 129);
+      background-color: #DCC7AA ;
   } 
 
   .cardButton{
