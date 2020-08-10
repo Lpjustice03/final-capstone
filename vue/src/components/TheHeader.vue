@@ -13,7 +13,7 @@
         <div class="try it" v-else>
              <router-link class="menuLink" id="home" tag="button" v-bind:to="{ name: 'home' }">Home</router-link>
          <router-link class="menuLink" id="about" tag="button" v-bind:to="{ name: 'AboutUs' }"> About us </router-link>
-            <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> decks </router-link>
+            <router-link class="menuLink" id="decks" tag="button" v-bind:to="{name:'decks'}"> Decks </router-link>
             <router-link class="menuLink" id="logout" tag="button" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link>
         </div>
         
