@@ -92,8 +92,9 @@ methods:{
 
     },
     deleteCard(card){
+        
         cardService.delete(card.id);
-        this.$router.push(`/decks/ ${this.route.params.deckId}/cards`);
+        this.$router.go(`/decks/deckId/cards`);
          
 
     },
