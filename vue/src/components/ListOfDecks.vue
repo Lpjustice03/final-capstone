@@ -41,6 +41,11 @@
 <p> {{deck.description}} </p>
 </div>
 </router-link>
+
+ <div class="updeleteButtons"> 
+        <button id="delete" type="submit" v-on:click="deleteDeck(deck)"> DELETE </button>
+        </div>
+
 </div>
 </div>
 </div>
@@ -83,10 +88,14 @@ updateDeck(){
   };
 
   deckService.update(updatedDeck);
-  this.$router.push(`/decks/`);
+  this.$router.go(`/decks/`);
 
 },
 
+deleteDeck(deck){
+       deckService.delete(deck.id);
+        this.$router.go(`/decks/`);
+},
 resetForm() {
       this.updateForm = false;
       this.deck = {};

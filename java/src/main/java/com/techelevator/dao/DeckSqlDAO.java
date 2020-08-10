@@ -103,6 +103,8 @@ public class DeckSqlDAO implements DeckDAO {
     			isPublic = false;
     		}
     		jdbcTemplate.update(sqlDeck, deck.getDeckName(), deck.getUserId(), deck.getDescription(), isPublic);
+    		sqlDeck = "INSERT into card_deck(card_id, deck_id) VALUES (?,?)";
+    		jdbcTemplate.update(sqlDeck, deck.getUserId(), deck.getUserId());
     		
     	}
     
