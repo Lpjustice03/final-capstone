@@ -161,6 +161,7 @@ color:#5895bb;
 
 }
 .updeleteButtons {
+    margin-top: 5%;
     display:flex;
     justify-content: center;
 }
