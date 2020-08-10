@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <h1 class="title">Cards</h1>
-  <timer />
+    <timer />
     <add-card />
     <list-of-cards />
     
@@ -37,6 +37,7 @@ export default {
 <style scoped>
 .cards {
   background-color: rgb(209, 196, 129);
+  margin-top: -34px;
 }
 
 .title {

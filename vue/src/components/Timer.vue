@@ -1,17 +1,24 @@
 <template>
     <div>
         <div class="resetBlock">
+        <div class=row>
         <button class="beginStudy" v-on:click="toggleTimer"> {{isRunning ? 'Stop Study Session' : 'Begin Study Session'}} </button>
+        <button class="beginStudy" v-on:click="resetCounter"> Reset </button>
+        </div>
         <div class="row">
         <div class="time"> Hr: {{hour}} </div> 
         <div class="time"> Min: {{minute}}  </div> 
         <div class="time"> Sec: {{second}} </div>    
+
         <!-- <div class="time"> {{hour}} : {{minute}} : {{second}} </div>  -->
         </div>
         <div class="row">
         <div class="counter">Correct: {{this.$store.state.counterCorrect}}  </div>
         <div class="counter">  Total: {{this.$store.state.counterTotal}} </div>
+        
+
         </div>
+
         </div>
   </div>
 </template>
@@ -71,7 +78,7 @@ data () {
             this.hour = this.hour + 1;
         }
         this.second = this.time % 60;
-    }
+    },
   }
 };
 
@@ -109,7 +116,7 @@ data () {
     font-family: Arial, Helvetica, sans-serif;
   }
    button:hover{
-    background-color: #70a66f;
+    background-color: rgb(194, 109, 41);
   }
 
   .beginStudy {

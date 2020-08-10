@@ -2,7 +2,7 @@
 <body>
   <div>
     <div class="about-section">
-  <h1>About Us Page</h1>
+  <h1>About Us</h1>
   <p> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create this super awesome app. </p>
   <p>We are the coolest people alive so you should get to know us.</p>
 </div>
@@ -94,8 +94,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   display: flex;
-  background-color: #B0B7BC
-;
+  background-color: #DCC7AA;
 }
 
 html {
@@ -116,16 +115,17 @@ html {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
-  background-color: #FAD6A5;
+  background-color: #6B7A8F;
   justify-content: flex-start;
+  color: white;
 }
 
 
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
-  color: white;
+  background-color: rgb(214, 182, 137);
+  color: black;
 }
 
 .container {
@@ -139,7 +139,7 @@ html {
 }
 
 .title {
-  color: rgba(15, 16, 124, 0.781);
+  color: #F7C331;
 }
 
 .button {
@@ -168,6 +168,7 @@ html {
 
 h2{
   text-align: center;
+
 }
 
 .row {
