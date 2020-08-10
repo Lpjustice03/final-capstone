@@ -28,15 +28,15 @@
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
-      <div class="answerButtons" v-show="card.flipped = card.flipped">
-        <button class="correct" >Correct!</button>
-        <button class="incorrect">Incorrect!</button> 
-      </div>
         </div> 
         <div class="updeleteButtons">
         <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
-        </div>
+        </div>  
+        <div class="answerButtons" v-show="card.flipped = card.flipped">
+        <button class="correct" v-on:click="addCorrect(card)">Correct!</button>
+        <button class="incorrect" v-on:click="addTotal(card)">Incorrect!</button> 
+      </div>
       
     </div>       
 </div>
@@ -105,6 +105,17 @@ toggleCard: function(card) {
     resetForm() {
       this.updateForm = false;
       this.card = {};
+    },
+
+    addCorrect(card) {
+        this.$store.state.counterCorrect = this.$store.state.counterCorrect + 1;
+        this.$store.state.counterTotal = this.$store.state.counterTotal + 1;
+        this.toggleCard(card);
+    },
+    
+    addTotal(card) {
+        this.$store.state.counterTotal = this.$store.state.counterTotal + 1;
+        this.toggleCard(card);
     }
 },
 created() {
@@ -121,6 +132,13 @@ created() {
 </script>
 
 <style scoped>
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    justify-content: center;
+}
+
 .header {
      display:flex;
      flex-direction: column; 
@@ -141,6 +159,7 @@ created() {
     cursor: pointer;
     position: relative;
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 20px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
@@ -175,14 +194,16 @@ color:#5895bb;
   } 
 
   .cardButton{
-      justify-content: center;
-      display:flex;
+        justify-content: center;
+        display:flex;
+        font-family: Arial, Helvetica, sans-serif;
+
   }
 
 
  @media screen and (max-width: width 600px)    {
      .list-of-cards{
-         display:flex;
+      display:flex;
       justify-content: center;
       flex-flow: row wrap;
 
@@ -204,6 +225,8 @@ color:#5895bb;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
   }
   
   button:hover{
@@ -213,19 +236,23 @@ color:#5895bb;
   .correct {
       display: flex;
       justify-content: center;
-      font-size: 50%;
-      width: 80px;
-      height: 20px;
+      font-size: 75%;
+      width: 100px;
+      height: 30px;
       background-color: darkgreen;
-     
+      font-family: Arial, Helvetica, sans-serif;
   }
+.beginStudy {
+      display:flex;
+      justify-content: center;
+      position: fixed;
+      font-family: Arial, Helvetica, sans-serif;
+}
 
   .answerButtons {
       display:flex;
       justify-content: center;
-      position: fixed;
-      margin-top: 100%;
-      margin-left: 10%;
+      font-family: Arial, Helvetica, sans-serif;
 
   }
 
@@ -235,9 +262,9 @@ color:#5895bb;
   
   .incorrect {
       
-      font-size: 50%;
-      width: 80px;
-      height: 20px;
+      font-size: 75%;
+      width: 100px;
+      height: 30px;
       background-color: red;
       
   }
