@@ -44,6 +44,10 @@ created() {
     height: 300px;
     padding: 40px 25px;
     background-color: rgb(102, 172, 117);
+    background-image: url(../assets/computerScreen.jpeg);
+    background-position: 50% 0%;
+    background-color: rgb(102, 172, 117);
+    background-size: cover;
     border-radius: 7px;
     margin: 15px;
     text-align: center;

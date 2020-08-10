@@ -1,8 +1,10 @@
 <template>
   
   
-<div class= "list-of-cards">   
+<div class= "list-of-cards"> 
+      
      <div class="cardButton">
+         
          
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
         <div>
@@ -21,18 +23,18 @@
     </div>
     </form>
     </div>    
-    <div class="action">    
+    <div class="action">         
     </div>
     <div v-for="card in filterCards" v-bind:key="card.id" >
-
+<div class="updeleteButtons">
+        <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
+        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
+        </div> 
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
         </div> 
-        <div class="updeleteButtons">
-        <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
-        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
-        </div>  
+         
         <div class="answerButtons" v-show="card.flipped = card.flipped">
         <button class="correct" v-on:click="addCorrect(card)">Correct!</button>
         <button class="incorrect" v-on:click="addTotal(card)">Incorrect!</button> 
