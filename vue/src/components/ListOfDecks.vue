@@ -18,6 +18,10 @@
             </select>
 
         </div>
+        <select v-model="update.deckType">
+<option value="1"> Public </option>
+<option value="2"> Private </option>
+</select>
     
    
     <div class="actions">
