@@ -97,7 +97,25 @@ public class FlashCardController {
 		deckDao.createDeck(deck);
 	}
 	
+	@PreAuthorize("hasRole('ROLE_USER')")
+	@RequestMapping(path = "/decks/update", method = RequestMethod.PUT)
+	public void updateDeck(@RequestBody Deck deck) {
+		
+		System.out.println(deck.getDeckName());
+		System.out.println(deck.getDeckType());
+		System.out.println(deck.getDescription());
+		System.out.println(deck.getId());
+		
+		deckDao.updateDeck(deck, deck.getId());
+	}
 	
+	@PreAuthorize("hasRole('ROLE_USER')")
+	@RequestMapping(path = "decks/{id}", method = RequestMethod.DELETE)
+	public void deleteDeck(@PathVariable Long id) {
+		System.out.println(id);
+		deckDao.deleteDeck(id);
+	
+	}
 	
 
 }

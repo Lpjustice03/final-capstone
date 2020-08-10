@@ -58,6 +58,38 @@ public class DeckSqlDAO implements DeckDAO {
 		return deck;
 		
 	}
+	
+	@Override
+	public void updateDeck(Deck deck, Long id) {
+		String sqlUpdateDeck = "UPDATE decks set deck_name = ?, deck_description = ?, deck_is_trial = ? WHERE deck_id = ?";
+		boolean deckType;
+		if(deck.getDeckType() == 1) {
+			deckType = true;
+		}
+		else {
+			deckType = false;
+		}
+		jdbcTemplate.update(sqlUpdateDeck, deck.getDeckName(), deck.getDescription(),deckType, id);
+		
+	}
+	
+	@Override
+	public void deleteDeck(Long id) {
+		String sqlDelete = "SELECT from card_deck where deck_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlDelete, id);
+		sqlDelete = "DELETE from card_deck where deck_id = ?";
+		jdbcTemplate.update(sqlDelete, id);
+		while(results.next()) {
+			Long cardId = results.getLong("card_id");
+			sqlDelete = "DELETE from cards where card_id = ?";
+			jdbcTemplate.update(sqlDelete, cardId);
+		}
+		sqlDelete = "DELETE from decks where deck_id = ?";
+		jdbcTemplate.update(sqlDelete, id);
+		
+		
+	}
+	
     @Override
     	public void createDeck( Deck deck) {
     		String sqlDeck = "INSERT into decks(deck_name, deck_user_id, deck_description, deck_is_trial) VALUES (?,?,?, ?)";
