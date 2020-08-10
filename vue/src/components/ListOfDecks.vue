@@ -5,7 +5,7 @@
   <div class="deckButton">
         <button type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Deck </button>  
         <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
-        <div>
+        <div class="deckform">
             <label for="deckName">Name of Deck </label>
             <input type="text" name="deckName" v-model="update.deckName" />
             <label for="description"> Description: </label>
@@ -105,6 +105,11 @@ this.getDecks();
   background-color: rgb(209, 196, 129);
      display:flex;
      flex-direction: column; 
+  }
+  .deckform{
+    justify-content: center;
+display:flex;
+
   }
 .submit{
   display: flex;
