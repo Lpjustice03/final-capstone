@@ -1,56 +1,41 @@
 <template>
-<div class="header">
-<div class= "list-of-decks">
-
-  <!-- <div class="deckButton">
-        <button class="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Deck </button>  
+  <div class= "list-of-decks">
+    <div class="deckButton">
+      <button class="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Deck </button>  
         <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
         <div>
-            <label for="deckName">Name of Deck </label>
+            <label for="deckName">Name of Deck: </label>
               <input type="text" name="deckName" v-model="update.deckName" />
             <label for="description"> Description: </label>
               <input type="text" name="description" v-model="update.description"/>
             <label for="deckType"> Type of Deck: </label>
               <input type="text" name="deckType" v-model="update.deckType"/>
-            <select v-model="update.id">
+            <select v-model="update.id">Deck to update:
                 <option v-for="deck in this.$store.state.decks" v-bind:key="deck.id" v-bind:value="deck.id"> {{deck.deckName}} </option>
             </select>
-
         </div>
-    
-   
-    <div class="actions">
-      <button id="save" type="submit"> Save</button>
-      <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
-    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-     <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
-       <div class="deck"> {{deck.deckName}} 
-          <p> {{deck.description}} </p>
-       </div>
-      </router-link>
+        <div class="actions">
+          <button id="save" type="submit"> Save</button>
+          <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
+           <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
+             <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
+              <!-- <div class="deck"> {{deck.deckName}} 
+               <p> {{deck.description}} </p>
+              </div> -->
+             </router-link>
+           </div>
+        </div>
+        </form>
     </div>
-    </div>
-     </form>
-  </div> -->
+</div>
 
-
-<div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-<router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
-<div class="deck"> {{deck.deckName}}
-<p> {{deck.description}} </p>
-</div>
-</router-link>
-</div>
-</div>
-</div>
 </template>
 
 <script>
-
 import deckService from "@/services/DeckService.js";
 
 export default {
-name: "list-of-decks",
+name: "update-deck",
 
 data() {
 return{
@@ -99,6 +84,7 @@ this.getDecks();
 
 }
 </script>
+
 <style scoped>
 
 .header {
@@ -107,10 +93,7 @@ this.getDecks();
      flex-direction: column; 
   }
 
-  .updateButton { 
-      color:white;
-      margin-bottom: 100%;
-  }
+  
 
 .submit{
   display: flex;

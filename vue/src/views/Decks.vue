@@ -3,6 +3,7 @@
     <h1 class="heroBanner">Decks</h1>
   
     <add-deck/>
+    <update-deck />
     <list-of-decks />
     
   </div>
@@ -12,12 +13,14 @@
 
 import ListOfDecks from '@/components/ListOfDecks.vue';
 import AddDeck from '@/components/AddDeck.vue';
+import UpdateDeck from '@/components/UpdateDeck.vue';
 
 export default {
   name: "Decks",
   components: {
     ListOfDecks,
-    AddDeck
+    AddDeck,
+    UpdateDeck
     
   }
   
