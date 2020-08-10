@@ -11,21 +11,12 @@
         </div>
         <div class="paragraph">
     <p>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
-  </p>
-  
+    </p>
+  <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    <div v-if="$store.state.token == ''">
-
-     <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
-
    </div>
    </div>
     </body>
-    
-   
-   
-    
-    
-    
       </div>
 </template>
 
@@ -67,6 +58,9 @@ export default {
 
 .tryIt {
     transform: translate(100%,20%);
+}
+.tryIt:hover {
+  color: #a75aa0;
 }
 
 
@@ -124,7 +118,8 @@ p {
 
 }
 .paragraph{
-  margin-top: 30px;
+  margin-top: 10%;
+  margin-right: 10%;
   flex-flow: row wrap;
   text-align:center;
   align-items:space-around;
@@ -183,8 +178,8 @@ body {
 }
 
 .box {
+  margin-top: 10%;
   display: flex;
-  
   align-content:flex-end;
   
   
@@ -203,19 +198,35 @@ body {
 }
 
 .box .inner:first-child {
-    background-color: rgb(205, 188, 92);
-    color: rgb(10, 5, 5);
+    background-color: rgb(205, 188, 92, 0.3);
+    color: black;
     transform-origin: left;
     transform: perspective(300px) rotateY(-67.3deg);
-    opacity: 0.4;
+    /* opacity: .8; */
+    text-shadow: 1px 1px 1px #a75aa0,
+1px 2px 1px #a75aa0,
+1px 3px 1px #a75aa0,
+1px 4px 1px #a75aa0,
+1px 18px 6px rgba(16,16,16,0.2),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.2);
 }
 
 .box .inner:last-child {
-    background-color: rgb(119, 102, 8);
-    color: rgb(7, 4, 0);
+    background-color: rgb(119, 102, 8, 0.3);
+    color: black;
     transform-origin: right;
     transform: perspective(300px) rotateY(67.3deg);
-    opacity: 0.4;
+    /* opacity: .8; */
+    text-shadow: 1px 1px 1px #a75aa0,
+1px 2px 1px #a75aa0,
+1px 3px 1px #a75aa0,
+1px 4px 1px #a75aa0,
+1px 18px 6px rgba(16,16,16,0.2),
+1px 22px 10px rgba(16,16,16,0.2),
+1px 25px 35px rgba(16,16,16,0.2),
+1px 30px 60px rgba(16,16,16,0.2);
 }
 
 .box .inner span {
@@ -226,7 +237,7 @@ body {
 .box .inner:first-child span {
     animation-delay: 2.5s;
     left: -100%;
-    opacity: 0.4;
+    /* opacity: 1; */
 }
 
 @keyframes marquee {
