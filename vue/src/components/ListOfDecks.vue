@@ -1,43 +1,39 @@
 <template>
-<div class="header">
+
 <div class= "list-of-decks">
 
-  <!-- <div class="deckButton">
-        <button class="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Deck </button>  
+   <div class="deckButton">
+          
         <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
         <div>
             <label for="deckName">Name of Deck </label>
               <input type="text" name="deckName" v-model="update.deckName" />
             <label for="description"> Description: </label>
               <input type="text" name="description" v-model="update.description"/>
-            <label for="deckType"> Type of Deck: </label>
-              <input type="text" name="deckType" v-model="update.deckType"/>
-            <select v-model="update.id">
+            
+              
+              <select v-model="update.deckType">
+              <option value="1"> Public </option>
+                <option value="2"> Private </option>
+                </select> 
+             <!-- <select v-model="update.id">
                 <option v-for="deck in this.$store.state.decks" v-bind:key="deck.id" v-bind:value="deck.id"> {{deck.deckName}} </option>
-            </select>
+            </select>  -->
 
         </div>
-        <select v-model="update.deckType">
+        <!-- <select v-model="update.deckType">
 <option value="1"> Public </option>
 <option value="2"> Private </option>
-</select>
+</select> -->
     
    
     <div class="actions">
       <button id="save" type="submit"> Save</button>
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
-    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-     <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
-       <div class="deck"> {{deck.deckName}} 
-          <p> {{deck.description}} </p>
-       </div>
-      </router-link>
-    </div>
-    </div>
-     </form>
-  </div> -->
-
-
+      
+      </div>
+      </form>
+      </div>
 <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
 <router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
 <div class="deck"> {{deck.deckName}}
@@ -46,12 +42,13 @@
 </router-link>
 
  <div class="updeleteButtons"> 
+        <button class="updateButton" type="submit" v-on:click="update1(deck)"  v-show = "!updateForm"> Update Deck </button>
         <button id="delete" type="submit" v-on:click="deleteDeck(deck)"> DELETE </button>
         </div>
 
 </div>
 </div>
-</div>
+
 </template>
 
 <script>
@@ -68,8 +65,8 @@ update:{
 
         deckName: '',
         description: '',
-        deckType: ''
-        
+        deckType: '',
+        deckId: ''
     }
     };
 
@@ -82,16 +79,24 @@ this.$store.commit("SET_DECKS", response.data);
 });
 },
 
+update1(deck){
+  this.updateForm = true;
+  this.update.deckId = deck.id;
+  this.update.deckName = deck.deckName;
+  this.update.description = deck.description;
+  this.deckType = deck.deckType
+},
+
 updateDeck(){
   const updatedDeck ={
-    id: this.update.id,
+    id: this.update.deckId,
     deckName: this.update.deckName,
     description: this.update.description,
     deckType: this.update.deckType
   };
 
   deckService.update(updatedDeck);
-  this.$router.go(`/decks/`);
+  this.$router.push(`/decks/`);
 
 },
 
@@ -167,6 +172,11 @@ this.getDecks();
       
 
   }
+  .deckButton{
+      justify-content: center;
+      display:flex;
+  }
+  
   
  @media screen and (max-width: width 600px)    {
      .list-of-decks{
