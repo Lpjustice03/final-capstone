@@ -1,6 +1,16 @@
 <template>
+
   <div class="decks">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Permanent+Marker" />
+    
     <h1 class="heroBanner">Decks</h1>
+    <div id="backbutton" >
+      <h2> GO BACK</h2>
+     <router-link to="/">  
+
+     <img src='@/assets/black-arrow.png' />
+     </router-link>
+    </div>
   
     <add-deck/>
     <!-- <update-deck /> -->
@@ -29,6 +39,18 @@ export default {
 };
 </script>
 <style scoped>
+
+img{
+  background-size: cover;
+  height: 50px;
+  margin:0px; 
+}
+h2{
+  color: black;
+  font-family: "Permanent Marker";
+}
+
+
 .decks{
   background-color: #DCC7AA;
   margin-top: -34px;
@@ -41,6 +63,7 @@ h1{
   font-size: 50px;
   color: #ffffff;
   text-align: center;
+  text-shadow: 2px 2px #6e6e6e;
  
 }
 

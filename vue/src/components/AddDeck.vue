@@ -1,6 +1,6 @@
 <template>
 <div class="deckButton">
-  <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
+  <button id="deckb" type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Deck </button>
    <form class="addDeck" v-on:submit="saveDeck" v-show = "addForm">
    <label for="name">Deck title: </label>
    <input type="text" name="name" v-model="deck.deckName" />
@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 
 input[type=text] {
     border-radius: 5px;
@@ -76,6 +76,9 @@ justify-content: center;
 #save {
     margin: 5%;
     width: 30%;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 }
 
 #cancel {
@@ -89,6 +92,12 @@ justify-content: center;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+}
+#deckb{
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+
 }
 
 #cancel:hover {
@@ -113,9 +122,7 @@ button{
      margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 25px;
-    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
-    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
-    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+   
  
   }
   

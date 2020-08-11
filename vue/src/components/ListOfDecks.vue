@@ -1,8 +1,10 @@
 <template>
 
 <div class= "list-of-decks">
+  
 
    <div class="deckButton">
+    
           
         <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
         <div>
@@ -119,6 +121,9 @@ this.getDecks();
 </script>
 <style scoped>
 
+
+
+
 .header {
   background-color: rgb(209, 196, 129);
      display:flex;
@@ -199,6 +204,7 @@ text-decoration: none;
   -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+  
 }
   
   

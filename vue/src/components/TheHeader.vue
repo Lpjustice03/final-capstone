@@ -61,8 +61,6 @@ nav {
 
 }
 .menuLink:hover{
-    height:41px;
-    width: 181px;
     background-color: #F7882F;
     transition-duration: 0.2s;
     color: #6B7A8F;
