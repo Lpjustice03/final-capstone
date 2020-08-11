@@ -10,12 +10,13 @@
             </div>
         </div>
         <div class="paragraph">
-    <p>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
-    </p>
-  
-   <div v-if="$store.state.token == ''">
-     <router-link class="tryIt"  v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
+    <div>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
+    <div v-if="$store.state.token == ''">
+     <router-link class="tryIt" tag="button" v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
    </div>
+    </div>
+  
+   
    </div>
     </body>
       </div>
@@ -40,94 +41,39 @@ export default {
 .home{
   background: url(../assets/heroImage.jpg)left / cover no-repeat;
   padding: 0;
-  min-height: 100vh;
+  min-height: 92vh;
   display: flex;
 
-}
-
- .header {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: left;
-  color: #ffffff;
-  margin-top: 250px;
-  display: flex;
-  flex-direction: column;
-  align-content:flex-end;
-  flex-wrap: wrap;
-  margin-right: 600px;
 }
 
 .tryIt {
-    transform: translate(100%,20%);
+    margin-right: 20%;
+    margin-top: 2%;
+    opacity: 0.8;
 }
 .tryIt:hover {
-  color: #411d3e;
+  background-color: #F7C331;
 }
 
-
-
-h1 {
-  margin-top: 60px;
-  margin-left: 0px;
-  font-size: 60px; 
-  position: flex;
-  justify-content: flex-start;
-  transform: translate(13%,20%);
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 6em;
-  font-weight: 700;
-  color: #f5f5f5;
-  text-shadow: 1px 1px 1px #662861,
-1px 2px 1px #662861,
-1px 3px 1px #662861,
-1px 4px 1px #662861,
-1px 5px 1px #662861,
-1px 6px 1px #662861,
-1px 7px 1px #662861,
-1px 8px 1px #662861,
-1px 18px 6px rgba(16,16,16,0.2),
-1px 22px 10px rgba(16,16,16,0.2),
-1px 25px 35px rgba(16,16,16,0.2),
-1px 30px 60px rgba(16,16,16,0.2);
-
-}
-
-h2 {
-  margin-top: 0px;
+.paragraph {
   margin-left: 170px;
-  font-size: 30px;
-  font-weight: 350;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 1px #662861,
-1px 2px 1px #662861,
-1px 3px 1px #662861,
-1px 4px 1px #662861;
-}
-
-p {
-  margin-left: 170px;
-  font-size: 25px;
-  background: transparent;
+  font-size: 35px;
+  background: rgb(107, 122, 143, .5);
   color: white;
   font-weight: 175;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px 1px #662861,
-  1px 2px 1px #662861;
+  text-shadow: 1px 1px 1px black,
+                1px 2px 1px black;
   position:flex;
-  
-
-}
-.paragraph{
   margin-top: 10%;
   margin-right: 10%;
   flex-flow: row wrap;
   text-align:center;
-  align-items:space-around;
+  font-weight: 600;
 }
 .tryIt {
-  font-size: 25px;
-  margin-left: 100px;
+  font-size: 35px;
+  margin-right: 5%;
   color: rgb(248, 248, 248);
   text-shadow: 1px 1px 1px #662861,
 1px 2px 1px #662861;
@@ -139,29 +85,6 @@ p {
       margin-left: 10px;
       font-size: 15px;
     }
-
-    h2 {
-      margin-left: 10px;
-      font-size: 20px;
-    }
-
-  h1 {
-    margin-top: 20px;
-    margin-left: 10px;
-    font-size:30px;
-    text-align: center;
-}
- .header {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: left;
-  color: #ffffff;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-content:flex-end;
-  flex-wrap: wrap;
-  margin-right: 20px;
-}
 
 .home{
   padding: 0;
@@ -208,10 +131,10 @@ body {
     color: black;
     transform-origin: left;
     transform: perspective(300px) rotateY(-67.3deg) ;
-    text-shadow: 1px 1px 1px #a75aa0,
-                 1px 2px 1px #a75aa0,
-                 1px 3px 1px #a75aa0,
-                 1px 4px 1px #a75aa0,
+    text-shadow: 1px 1px 1px #F7C331,
+                 1px 2px 1px #F7C331,
+                 1px 3px 1px #F7C331,
+                 1px 4px 1px #F7C331,
                  1px 18px 6px rgba(16,16,16,0.2),
                 1px 22px 10px rgba(16,16,16,0.2),
                 1px 25px 35px rgba(16,16,16,0.2),
@@ -223,10 +146,10 @@ body {
     color: black;
     transform-origin: right;
     transform: perspective(300px) rotateY(67.3deg) rotateX(180deg);
-    text-shadow: 1px 1px 1px #a75aa0,
-                 1px 2px 1px #a75aa0,
-                 1px 3px 1px #a75aa0,
-                 1px 4px 1px #a75aa0,
+    text-shadow: 1px 1px 1px #F7C331,
+                 1px 2px 1px #F7C331,
+                 1px 3px 1px #F7C331,
+                 1px 4px 1px #F7C331,
                  1px -18px 6px rgba(16,16,16,0.2),
                 1px -22px 10px rgba(16,16,16,0.2),
                 1px -25px 35px rgba(16,16,16,0.2),
@@ -241,7 +164,7 @@ body {
 .box .inner:first-child span {
     animation-delay: 4s;
     left: -100%;
-    /* opacity: 1; */
+    
 }
 
 @keyframes marquee {

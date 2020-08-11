@@ -7,7 +7,6 @@
   <p>We are the coolest people alive so you should get to know us.</p>
 </div>
     <h2 class="nam">Our Team</h2>
-
     <div class="row">
   <div class="column">
     <div class="card">
@@ -46,12 +45,12 @@
 <div class="row">
 <div class="column">
     <div class="card">
-      <img src="../assets/Erik.jpeg" alt="Jane" style="width:100%">
+      <img src="../assets/Eric.jpeg" alt="Jane" style="width:100%">
       <div class="container">
         <h2>Erik Leopard</h2>
-        <p class="title">The CSS Guy</p>
+        <p class="title">The Css Guy</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>ErikLeopard3@gmail.com</p>
+        <p>john@example.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -95,7 +94,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   display: flex;
-  background-color: rgb(253, 239, 219);
+  background-color: #DCC7AA;
 }
 
 html {
@@ -125,7 +124,7 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: rgb(253, 239, 219);
+  background-color: rgb(214, 182, 137);
   color: black;
 }
 

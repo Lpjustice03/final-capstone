@@ -21,5 +21,9 @@ export default {
 </script>
 
 <style>
-
+.trialCards {
+   
+    background-color: #DCC7AA;
+    min-height: 90vh;
+}
 </style>
