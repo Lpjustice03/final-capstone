@@ -86,12 +86,13 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   margin:0%;  
+  
 }
 
 h1 {
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px  #53224f, 1px -1px 0  #53224f, -1px -1px 0  #53224f;
   font-size: 50px;
-  color:rgb(209, 196, 129);
+  color:#F7C331;
 }
 
 input[type=text] {
@@ -100,6 +101,8 @@ input[type=text] {
   margin:10px 20%;
   border-radius: 12px;
   opacity:1;
+   margin-left: 25%;
+margin-right: 30%;
 }
 
 input[type=password] {
@@ -107,6 +110,8 @@ input[type=password] {
   padding: 10px;
   margin:10px 20%;
   border-radius: 12px;
+   margin-left: 25%;
+margin-right: 30%;
 }
 
 .border-customized-input {
@@ -118,17 +123,19 @@ button {
   -webkit-appearance:none;
   background: rgb(209, 196, 129);
   text-shadow: -1px 1px 2px  #4e204a,  1px 1px 2px  #4e204a,  1px -1px 0 #4e204a, -1px -1px 0 #4e204a;
-  color:rgb(209, 196, 129);
+  color:#F7C331;
   font-weight:600;
   width: 52%;
   padding: 10px;
   margin:15px 20%;
   border-radius: 12px;
   font-size: 20px;
+ margin-left: 25%;
+margin-right: 30%;
 }
 
 button:hover {
-background:  #815b7e;
+background:  #F7882F;;
 color:rgb(209, 196, 129);
 
 }
@@ -147,7 +154,8 @@ color:rgb(209, 196, 129);
 
 label {
  text-shadow: -1px 1px 2px #4e204a, 1px 1px 2px #4e204a, 1px -1px 0 #4e204a,  -1px -1px 0  #4e204a;
- color: rgb(209, 196, 129);
+ color: #F7C331;
   font-size: 30px;
+  
 }
 </style>
