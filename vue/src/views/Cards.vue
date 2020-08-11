@@ -36,7 +36,7 @@ export default {
 </script>
 <style scoped>
 .cards {
-  background-color: rgb(209, 196, 129);
+  background-color: #DCC7AA; 
   margin-top: -34px;
 }
 
@@ -44,7 +44,7 @@ export default {
   font-size: 50px;
   text-align: center;
   color: #53224f;
-  background-color: rgb(209, 196, 129);
+  background-color: #DCC7AA ;
 }
 
 

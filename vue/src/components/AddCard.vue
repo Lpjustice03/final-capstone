@@ -133,7 +133,7 @@ button{
 .cardButton{
 justify-content: center;
 display:flex;
-background-color: rgb(209, 196, 129);
+background-color: #DCC7AA ;
 }
 
 </style>
