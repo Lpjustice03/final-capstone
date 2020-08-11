@@ -135,7 +135,7 @@ margin-right: 30%;
 button {
   appearance:none;
   -webkit-appearance:none;
-  background: rgb(209, 196, 129);
+  background: #F7882F;
   text-shadow: -1px 1px 2px  #4e204a,  1px 1px 2px  #4e204a,  1px -1px 0 #4e204a, -1px -1px 0 #4e204a;
   color:#F7C331;
   font-weight:600;
@@ -149,8 +149,8 @@ margin-right: 30%;
 }
 
 button:hover {
-background:  #F7882F;;
-color:rgb(209, 196, 129);
+background:  #F7C331;;
+color:#F7882F;
 
 }
 
