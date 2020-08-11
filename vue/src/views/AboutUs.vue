@@ -57,7 +57,8 @@
       <div class="container">
         <h2>Mike Finegan</h2>
         <p class="title">The Everything Guy</p>
-        <p> Hello, I'm Michael Finegan. This is a generic description about who I am and Why I'm 'The Everything Guy.'</p>
+        <p> I graduated from OSU with a degree in Economics but my passion for technology led me to Tech Elevator.  After three months of hard work and perseverence, I'm happy that I made this decision.
+        </p>
         <p>mfinegan96@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
@@ -127,7 +128,7 @@ html {
 
 .container {
   padding: 0 16px;
-  height: 275px;
+  height: 400px;
 }
 
 
