@@ -12,7 +12,7 @@
         <div class="counter">Correct: {{this.$store.state.counterCorrect}}  </div>
         <div class="counter">  Total: {{this.$store.state.counterTotal}} </div>
         </div>
-        </div>
+        </div>      
   </div>
 </template>
 
