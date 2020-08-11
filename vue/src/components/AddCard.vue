@@ -90,7 +90,7 @@ justify-content: center;
 
 #cancel {
     width: 30%;
-    background-color: #351f33;
+    background-color: #F7C331;
     border-radius: 5px;
     color: white;
     border: 1px solid #959717;
@@ -100,7 +100,7 @@ justify-content: center;
 }
 
 #cancel:hover {
-    background-color: #F7C331;
+    background-color: #F7882F;
 }
 
 label {
@@ -111,7 +111,7 @@ label {
 button{
     border-radius: 5px;
     border: 1px solid #959717;
-    background-color: #351f33;
+    background-color: #F7C331;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -127,7 +127,7 @@ button{
   }
 
   button:hover{
-    background-color: #F7C331;
+    background-color: #F7882F;
     border: 1px solid #8984cb
   }
 .cardButton{
