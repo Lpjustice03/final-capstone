@@ -148,12 +148,13 @@ created() {
 
   .card {
     display: flex;
-    justify-content: center;
+    margin: 15px;
     flex-direction:column;
-    width: 250px;
-    height: 245px;
+    width: 400px;
+    height: 300px;
     padding: 40px 25px;
-    background-color: #946c00b0;
+     background-image: url(../assets/noteCard.png);
+  background-size: cover;
     border-radius: 7px;
     /* margin: 25px; */
     text-align: center;
@@ -161,7 +162,7 @@ created() {
     cursor: pointer;
     position: relative;
     color: rgb(2, 2, 2);
-    font-family: Arial, Helvetica, sans-serif;
+   font-family: "Lucida Console", Courier, monospace;
     font-weight: 600;
     font-size: 20px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
@@ -169,6 +170,7 @@ created() {
     box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     will-change: transform;
     border-style: outset;
+
   }
 
   .card:hover{
@@ -178,7 +180,7 @@ created() {
 
   .card:active {
 transform: rotateY(180deg);
-transition: transform .3s;
+transition: transform .25s;
 color:#5895bb;
 
 }
@@ -193,6 +195,7 @@ color:#5895bb;
       justify-content: center;
       flex-flow: row wrap;
       background-color: #DCC7AA ;
+      
   } 
 
 
@@ -278,7 +281,7 @@ color:#5895bb;
   }
     .Pretext {
     color: #000000;
-    opacity: .2;
+    opacity: .5;
     text-align: left;
    position: flex;
    left:20px;
