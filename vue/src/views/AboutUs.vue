@@ -30,7 +30,9 @@
         <div class="cardProp">
         <h2 class="names">Lance Justice </h2>
         <p class="title">The Vue Guy</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem. some more text that describes me. wait wait wait... im sorry..</p>
+        <p>I am a dynamic figure, often seen scaling walls and my enemies. I don't perspire. I translate ethnic slurs for Cuban refugees, I write award-winning operas, I manage time efficiently.
+ I woo women with my sensuous and godlike trombone playing, I have won bullfights in San Juan, cliff-diving competitions in Sri Lanka, and spelling bees at the Kremlin.
+ I am an expert in stucco, a veteran in love, and an outlaw in Peru.</p>
         <p class="emails">lance@example.com</p>
         <p><button class="button">Contact</button></p>
         </div>
@@ -128,7 +130,7 @@ html {
 
 .container {
   padding: 0 16px;
-  height: 400px;
+  height: 500px;
 }
 
 
