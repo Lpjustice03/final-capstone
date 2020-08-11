@@ -40,18 +40,20 @@ nav {
 
 
 .Welcome {
-    transform: translate(5%, 15%);
+    transform: translate(0%, 35%);
     font-family: Arial, Helvetica, sans-serif;
     height: 30px;
     width: 150px;
     color: white;
     font-size: 20px;
+    margin-right: 30%;
 
 }
 .menuLink {
     font-family: Arial, Helvetica, sans-serif;
-    height: 30px;
-    width: 150px;
+    font-size: 20px;
+    height: 40px;
+    width: 180px;
     background-color:#6B7A8F;
     color:white;
     border: none;
@@ -59,15 +61,15 @@ nav {
 
 }
 .menuLink:hover{
-    height:31px;
-    width: 151px;
+    height:41px;
+    width: 181px;
     background-color: #F7882F;
     transition-duration: 0.2s;
     color: #6B7A8F;
 }
 
 .menu {
-    height: 30px;
+    height: 40px;
     background-color: #6B7A8F;
 
 

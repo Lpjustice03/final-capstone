@@ -1,6 +1,7 @@
 <template>
+<div>
   <list-of-trial/>
-
+</div>
 </template>
 
 <script>
@@ -14,6 +15,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

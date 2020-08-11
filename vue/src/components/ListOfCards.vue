@@ -188,7 +188,7 @@ created() {
   .card:active {
 transform: rotateY(180deg);
 transition: transform .25s;
-color:#5895bb;
+color:white;
 
 }
 .updeleteButtons {

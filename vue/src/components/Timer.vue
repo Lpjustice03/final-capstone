@@ -85,7 +85,7 @@ data () {
 
 </script>
 
-<style>
+<style scoped>
 .resetBlock {
       flex-direction: column;
       font-family: Arial, Helvetica, sans-serif;

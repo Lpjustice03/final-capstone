@@ -73,6 +73,8 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
+      min-height: 90vh;
+      background-color: #DCC7AA
 
   }
 
