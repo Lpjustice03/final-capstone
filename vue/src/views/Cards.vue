@@ -1,9 +1,13 @@
 <template>
   <div class="cards">
     <h1 class="title">Cards</h1>
-    <timer />
-    <add-card />
+
+      <timer />
+
+      <add-card />
+
     <list-of-cards />
+
     
 
     
@@ -36,7 +40,7 @@ export default {
 </script>
 <style scoped>
 .cards {
-  background-color: rgb(209, 196, 129);
+  background-color: rgb(214, 182, 137);
   margin-top: -34px;
 }
 
@@ -44,8 +48,10 @@ export default {
   font-size: 50px;
   text-align: center;
   color: #53224f;
-  background-color: rgb(209, 196, 129);
+  background-color: rgb(214, 182, 137);
 }
+
+
 
 
 </style>

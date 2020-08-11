@@ -4,11 +4,13 @@
         <div class=row>
         <button class="beginStudy" v-on:click="toggleTimer"> {{isRunning ? 'Stop Study Session' : 'Begin Study Session'}} </button>
         <button class="beginStudy" v-on:click="resetCounter"> Reset </button>
+
+    
+
         </div>
         <div class="row">
-        <div class="time"> Hr: {{hour}} </div> 
-        <div class="time"> Min: {{minute}}  </div> 
-        <div class="time"> Sec: {{second}} </div>    
+        <div class="time"> {{hour}} : {{minute}} : {{second}} </div> 
+ 
 
         <!-- <div class="time"> {{hour}} : {{minute}} : {{second}} </div>  -->
         </div>
@@ -56,7 +58,6 @@ data () {
     toggleTimer() {
         if (this.isRunning) {
             clearInterval(this.interval);
-            // Insert method to add to database here/service
             this.resetCounter();
             this.minute = 0;
             this.second = 0;
@@ -90,6 +91,7 @@ data () {
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       align-content: flex-start;
+      background-color: rgb(214, 182, 137);
   }
 
   .counter {
@@ -101,7 +103,7 @@ data () {
   button{
     border-radius: 5px;
     border: 1px solid  #8984cb;
-    background-color: #53224f;
+    background-color: #F7C331;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -116,7 +118,7 @@ data () {
     font-family: Arial, Helvetica, sans-serif;
   }
    button:hover{
-    background-color: rgb(194, 109, 41);
+    background-color: #F7C331;
   }
 
   .beginStudy {
@@ -125,6 +127,11 @@ data () {
       font-family: Arial, Helvetica, sans-serif;
       width: 10%;
       height: auto;
+      background-color: #F7C331;
+}
+
+.beginStudy:hover{
+    background-color: #F7882F;
 }
 
 .row {
@@ -135,4 +142,5 @@ data () {
 .time {
     margin-left: 1%;
 }
+
 </style>

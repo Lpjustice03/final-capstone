@@ -100,7 +100,7 @@ justify-content: center;
 }
 
 #cancel:hover {
-    background-color: #828f12;
+    background-color: #F7C331;
 }
 
 label {
@@ -111,7 +111,7 @@ label {
 button{
     border-radius: 5px;
     border: 1px solid #959717;
-    background-color: #53224f;
+    background-color: #351f33;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -127,13 +127,13 @@ button{
   }
 
   button:hover{
-    background-color: #828f12;
+    background-color: #F7C331;
     border: 1px solid #8984cb
   }
 .cardButton{
 justify-content: center;
 display:flex;
-background-color: rgb(209, 196, 129);
+background-color: rgb(214, 182, 137);
 }
 
 </style>

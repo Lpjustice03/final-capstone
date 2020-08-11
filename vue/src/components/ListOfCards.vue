@@ -195,6 +195,8 @@ color:#5895bb;
       background-color: #DCC7AA ;
   } 
 
+
+
   .cardButton{
         justify-content: center;
         display:flex;
@@ -215,7 +217,7 @@ color:#5895bb;
   button{
     border-radius: 5px;
     border: 1px solid  #8984cb;
-    background-color: #53224f;
+    background-color: #F7882F;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -232,7 +234,7 @@ color:#5895bb;
   }
   
   button:hover{
-    background-color: #70a66f;
+    background-color: #F7C331;
   }
 
   .correct {
