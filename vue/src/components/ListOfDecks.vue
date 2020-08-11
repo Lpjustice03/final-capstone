@@ -35,7 +35,7 @@
       </form>
       </div>
 <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-<router-link v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
+<router-link id="link" v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
 <div class="deck"> {{deck.deckName}}
 <p> {{deck.description}} </p>
 </div>
@@ -156,7 +156,7 @@ this.getDecks();
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     will-change: transform;
     border-style: outset;
-    text-decoration: none;
+    
   }
 
   p {
@@ -172,17 +172,33 @@ this.getDecks();
       
 
   }
-  .deckButton{
+  .updeleteButtons{
       justify-content: center;
       display:flex;
+  }
+  button:hover{
+    background-color: #F7C331;
   }
 
 .updateButton {
   background-color: #F7882F;
+  -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 }
+#link{
+text-decoration: none;
+
+}
+#delete:hover{
+    background-color: #F7C331;
+  }
 
 #delete {
   background-color: #F7882F;
+  -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 }
   
   

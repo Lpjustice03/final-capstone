@@ -35,11 +35,13 @@ export default {
   color: #F7C331
 
 }
-.heroBanner {
+  
+h1{
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
+  color: #ffffff;
   text-align: center;
-  color: #53224f;
-  background-color: #DCC7AA;
+ 
 }
 
 

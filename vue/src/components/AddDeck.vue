@@ -80,17 +80,19 @@ justify-content: center;
 
 #cancel {
     width: 30%;
-    background-color: #351f33;
+    background-color:#F7882F;
     border-radius: 5px;
     color: white;
-    border: 1px solid #959717;
     font-size: 14px;
     font-weight: 700;
     margin:5%;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 }
 
 #cancel:hover {
-    background-color: #828f12;
+    background-color: #F7C331;
 }
 
 label {
@@ -100,7 +102,6 @@ label {
 
 button{
     border-radius: 5px;
-    border: 1px solid #959717;
     background-color: #F7882F;
     padding: 8px 15px;
     outline: none;
@@ -112,12 +113,15 @@ button{
      margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 25px;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
  
   }
   
   button:hover{
-    background-color: #828f12;
-    border: 1px solid #8984cb
+    background-color:  #F7C331;
+    
   }
    .deckButton{
        background-color: #DCC7AA;
