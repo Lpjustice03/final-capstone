@@ -164,7 +164,7 @@ this.getDecks();
   }
 
   .list-of-decks{
-    background-color: rgb(209, 196, 129);
+    background-color: #DCC7AA;
     background-size: cover;
       display:flex;
       justify-content: center;
@@ -176,6 +176,14 @@ this.getDecks();
       justify-content: center;
       display:flex;
   }
+
+.updateButton {
+  background-color: #F7882F;
+}
+
+#delete {
+  background-color: #F7882F;
+}
   
   
  @media screen and (max-width: width 600px)    {

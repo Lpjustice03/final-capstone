@@ -1,18 +1,31 @@
 <template>
     <div>
         <div class="resetBlock">
+        <div class=row>
         <button class="beginStudy" v-on:click="toggleTimer"> {{isRunning ? 'Stop Study Session' : 'Begin Study Session'}} </button>
+        <button class="beginStudy" v-on:click="resetCounter"> Reset </button>
+
+    
+
+        </div>
         <div class="row">
-        <div class="time"> Hr: {{hour}} </div> 
-        <div class="time"> Min: {{minute}}  </div> 
-        <div class="time"> Sec: {{second}} </div>    
+        <div class="time"> {{hour}} : {{minute}} : {{second}} </div> 
+ 
+
         <!-- <div class="time"> {{hour}} : {{minute}} : {{second}} </div>  -->
         </div>
         <div class="row">
         <div class="counter">Correct: {{this.$store.state.counterCorrect}}  </div>
         <div class="counter">  Total: {{this.$store.state.counterTotal}} </div>
+        
+
         </div>
+<<<<<<< HEAD
         </div>      
+=======
+
+        </div>
+>>>>>>> 998243e3e8f04e200bdb266460bba3b026db6bb8
   </div>
 </template>
 
@@ -49,7 +62,6 @@ data () {
     toggleTimer() {
         if (this.isRunning) {
             clearInterval(this.interval);
-            // Insert method to add to database here/service
             this.resetCounter();
             this.minute = 0;
             this.second = 0;
@@ -71,7 +83,7 @@ data () {
             this.hour = this.hour + 1;
         }
         this.second = this.time % 60;
-    }
+    },
   }
 };
 
@@ -83,6 +95,7 @@ data () {
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       align-content: flex-start;
+      background-color: rgb(214, 182, 137);
   }
 
   .counter {
@@ -94,7 +107,7 @@ data () {
   button{
     border-radius: 5px;
     border: 1px solid  #8984cb;
-    background-color: #53224f;
+    background-color: #F7C331;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -109,7 +122,7 @@ data () {
     font-family: Arial, Helvetica, sans-serif;
   }
    button:hover{
-    background-color: #70a66f;
+    background-color: #F7C331;
   }
 
   .beginStudy {
@@ -118,6 +131,11 @@ data () {
       font-family: Arial, Helvetica, sans-serif;
       width: 10%;
       height: auto;
+      background-color: #F7C331;
+}
+
+.beginStudy:hover{
+    background-color: #F7882F;
 }
 
 .row {
@@ -128,4 +146,5 @@ data () {
 .time {
     margin-left: 1%;
 }
+
 </style>

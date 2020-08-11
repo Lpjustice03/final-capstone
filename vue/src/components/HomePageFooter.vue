@@ -15,7 +15,7 @@
 <script>
 export default {
     
-  name: "the-footer",
+  name: "home-page-footer",
   components: {
   }
 };
@@ -53,7 +53,7 @@ img {
 } */
 
 .footer {
-    background-color: #6B7A8F;
+    background-color: black;
     margin-bottom: 0;
 }
 
