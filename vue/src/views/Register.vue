@@ -106,7 +106,7 @@ export default {
   text-align: center;
   background-image: url(../assets/Learn.jpg);
   background-color: black; 
-   min-height: 75vh;
+   min-height: 72vh;
   background-repeat: no-repeat;
   background-size: cover;
   margin:0%;    
@@ -159,10 +159,10 @@ margin:10px 20%; */
   justify-content: center;
   margin:10px;
   font-size:30px;
-  color: #53224f;
+  color: #f1efead5;
 }
 .link:hover {
-  color:#815b7e;
+  color:#F7882F;
 }
 label {
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;

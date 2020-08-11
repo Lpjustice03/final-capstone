@@ -159,11 +159,11 @@ color:#F7882F;
   justify-content: center;
   margin:10px;
   font-size:30px;
-  color:  #4e204a;
+  color:  #F7C331;
 }
 
 .link:hover {
-  color: #815b7e;
+  color: #F7882F;
 }
 
 label {
