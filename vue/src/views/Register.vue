@@ -104,9 +104,9 @@ export default {
   height: 100%;
   padding: 5%;
   text-align: center;
-  background-image: url(../assets/graph.jpeg);
+  background-image: url(../assets/Learn.jpg);
   background-color: black; 
-  
+   min-height: 75vh;
   background-repeat: no-repeat;
   background-size: cover;
   margin:0%;    

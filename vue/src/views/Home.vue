@@ -10,9 +10,9 @@
             </div>
         </div>
         <div class="paragraph">
-    <div>FlipDeck makes simple learning flash cards that let you study anything.  Start learning today!  Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
+    <div>FlipDeck makes simple learning flash cards that let you study anything. Use the ever growing library of decks approved by top educators or create your own custom decks! — all for free! 
     <div v-if="$store.state.token == ''">
-     <router-link class="tryIt" tag="button" v-bind:to="{name:'TrialPage'}"> Try It For Free!</router-link>
+     <router-link class="tryIt" tag="button" v-bind:to="{name:'TrialPage'}"> Try It Now!</router-link>
    </div>
     </div>
   
@@ -58,7 +58,7 @@ export default {
 .paragraph {
   margin-left: 170px;
   font-size: 35px;
-  background: rgb(107, 122, 143, .5);
+  background: rgb(107, 122, 143, .3);
   color: white;
   font-weight: 175;
   font-family: Arial, Helvetica, sans-serif;
