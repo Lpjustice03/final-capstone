@@ -1,4 +1,5 @@
 <template>
+<div class="loginPage">
   <div id="login" class="text-center">
     <form class="form-signin" @submit.prevent="login">
       <div>
@@ -37,6 +38,7 @@
         <router-link class="link" :to="{ name: 'register' }">Need an account?</router-link>
     </form>
   </div>
+</div>
 </template>
 
 <script>
@@ -77,17 +79,29 @@ export default {
 };
 </script>
 <style scoped>
-
-.text-center {
+.loginPage{
   height: 100%;
   padding: 8%;
   text-align: center;
-  background-image: url(../assets/login.jpeg); 
+  background-image: url(../assets/books.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  margin:0%;  
+  min-height: 63vh;
+}
+
+/* .text-center {
+  height: 100%;
+  padding: 8%;
+  text-align: center;
+  background-image: url(../assets/books.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin:0%;  
   
-}
+} */
 
 h1 {
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px  #53224f, 1px -1px 0  #53224f, -1px -1px 0  #53224f;
@@ -121,7 +135,7 @@ margin-right: 30%;
 button {
   appearance:none;
   -webkit-appearance:none;
-  background: rgb(209, 196, 129);
+  background: #F7882F;
   text-shadow: -1px 1px 2px  #4e204a,  1px 1px 2px  #4e204a,  1px -1px 0 #4e204a, -1px -1px 0 #4e204a;
   color:#F7C331;
   font-weight:600;
@@ -135,8 +149,8 @@ margin-right: 30%;
 }
 
 button:hover {
-background:  #F7882F;;
-color:rgb(209, 196, 129);
+background:  #F7C331;;
+color:#F7882F;
 
 }
 
