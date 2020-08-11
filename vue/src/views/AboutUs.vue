@@ -3,24 +3,20 @@
   <div>
     <div class="about-section">
   <h1>About Us</h1>
-  <p> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create this super awesome app. </p>
-  <p>We are the coolest people alive so you should get to know us.</p>
+  <p class="description"> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create this super awesome app. 
+  Using everything we have learned here at Tech Elevator, we combined back-end code(Java, SQL), with front-end code(HTML,CSS). Using CSS, we were able to experiment with different looks and feels, for the ultimate user experience.
+  Thanks for using the app,and we hope you enjoy it!</p>
 </div>
-    <h2 class="nam">Our Team</h2>
+    <h2 class="name">Our Team</h2>
     <div class="row">
   <div class="column">
     <div class="card">
- <img src="../assets/Omer Ali.jpg" alt="Jane" style="width:100%">
-      <!-- images -->
+ <img src="../assets/Omer Ali.jpg" alt="Omer" style="width:100%">
       <div class="container">
         <h2>Omer Ali</h2>
-        <p class="title">Just another guy</p>
-        <p>Greatest Man ALive.</p>
-        <p> h</p>
-        <p> h</p>
-        <p> h</p>
-
-
+        <p class="title">The Vue Guy</p>
+        <p class="title"></p>
+        <p>Greatest Man ALive. and also the provider of the unlimited zoom. Karim has nothing on me, bro. I am also going to be a father soon. </p>
         <p>Omer.ali17@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
@@ -29,13 +25,13 @@
 
 <div class="column">
     <div class="card">
-     <img src="../assets/Lance.jpeg" alt="Jane" style="width:100%">
+     <img src="../assets/Lance.jpeg" alt="Lance" style="width:100%">
             <div class="container">
         <div class="cardProp">
         <h2 class="names">Lance Justice </h2>
         <p class="title">The Vue Guy</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="emails">mike@example.com</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem. some more text that describes me. wait wait wait... im sorry..</p>
+        <p class="emails">lance@example.com</p>
         <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -45,26 +41,24 @@
 <div class="row">
 <div class="column">
     <div class="card">
-      <img src="../assets/Eric.jpeg" alt="Jane" style="width:100%">
+      <img src="../assets/Erik.jpeg" alt="Erik" style="width:100%">
       <div class="container">
         <h2>Erik Leopard</h2>
-        <p class="title">The Css Guy</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
+        <p class="title">The Old Guy</p>
+        <p>I am a proud father of 2 beautiful children. They are what has motivated me to make this career change, and pick this project to work on.</p>
+        <p>erikleopard3@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
   </div>
-
-
-
   <div class="column">
     <div class="card">
-      <img src="../assets/Mike.jpeg" alt="Jane" style="width:100%">
+      <img src="../assets/Mike.jpeg" alt="Mike" style="width:100%">
       <div class="container">
         <h2>Mike Finegan</h2>
         <p class="title">The Everything Guy</p>
-        <p> Hello, I'm Michael Finegan. This is a generic description about who I am and Why I'm 'The Everything Guy.'</p>
+        <p> I graduated from OSU with a degree in Economics but my passion for technology led me to Tech Elevator.  After three months of hard work and perseverence, I'm happy that I made this decision.
+        </p>
         <p>mfinegan96@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
@@ -118,6 +112,8 @@ html {
   background-color: #6B7A8F;
   justify-content: flex-start;
   color: white;
+  text-shadow: 1px 1px 1px black,
+                1px 2px 1px black;
 }
 
 
@@ -125,12 +121,16 @@ html {
   padding: 50px;
   text-align: center;
   background-color: rgb(214, 182, 137);
-  color: black;
+  color: white;
+  text-shadow: 1px 1px 1px black,
+                1px 2px 1px black;
 }
 
 .container {
   padding: 0 16px;
+  height: 400px;
 }
+
 
 .container::after, .row::after {
   content: "";
@@ -143,12 +143,15 @@ html {
 }
 
 .button {
+  position: relative;
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  text-shadow: 1px 1px 1px black,
+                1px 2px 1px black;
+  background-color: #F7882F;
   text-align: center;
   cursor: pointer;
   width: 33%;
@@ -156,7 +159,7 @@ html {
 }
 
 .button:hover {
-  background-color: #555;
+  background-color: #F7C331;
 }
 
 @media screen and (max-width: 650px) {
@@ -175,6 +178,11 @@ h2{
   display: flex;
   justify-content: center;
   justify-items: center;
+}
+.name {
+color: white;
+  text-shadow: 1px 1px 1px black,
+                1px 2px 1px black;
 }
 
 </style>

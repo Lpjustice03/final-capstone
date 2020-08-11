@@ -41,7 +41,7 @@ created() {
     display: flex;
     flex-direction:column;
     width: 250px;
-    height: 300px;
+    height: 400px;
     padding: 40px 25px;
     background-color: rgb(102, 172, 117);
     background-image: url(../assets/computerScreen.jpeg);
@@ -49,6 +49,7 @@ created() {
     background-color: rgb(102, 172, 117);
     background-size: cover;
     border-radius: 7px;
+    margin-top: 50px;
     margin: 15px;
     text-align: center;
     line-height: 27px;
@@ -68,13 +69,17 @@ created() {
   p {
     font-size: 20px;
   }
+.deck.list-of-trial{
 
+  margin-top: 300px;
+}
   .list-of-trial{
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
-      min-height: 90vh;
-      background-color: #DCC7AA
+      min-height: 100vh;
+      background-color: #DCC7AA;
+     
 
   }
 

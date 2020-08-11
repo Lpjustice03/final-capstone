@@ -104,9 +104,9 @@ export default {
   height: 100%;
   padding: 5%;
   text-align: center;
-  background-image: url(../assets/graph.jpeg);
+  background-image: url(../assets/Learn.jpg);
   background-color: black; 
-  
+   min-height: 72vh;
   background-repeat: no-repeat;
   background-size: cover;
   margin:0%;    
@@ -114,7 +114,7 @@ export default {
 h1 {
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
   font-size: 50px;
-  color:rgb(209, 196, 129);
+  color:#F7C331;
 }
 input[type=text] {
   width: 60%;
@@ -136,9 +136,9 @@ input[type=password] {
 button {
   appearance:none;
   -webkit-appearance:none;
-  background:rgb(209, 196, 129);
+  background:#F7882F;
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
- color: rgb(209, 196, 129);
+ color: #F7C331;
   font-weight:600;
   width: 63%;
   padding: 10px;
@@ -147,8 +147,8 @@ button {
   font-size: 20px;
 }
 button:hover {
-background: #815b7e;
-color:rgb(209, 196, 129);
+background: #F7C331;
+color:#F7882F;
 /* width: 64%;
 height: 13.5%; */
 /* padding: 10px;
@@ -159,14 +159,14 @@ margin:10px 20%; */
   justify-content: center;
   margin:10px;
   font-size:30px;
-  color: #53224f;
+  color: #f1efead5;
 }
 .link:hover {
-  color:#815b7e;
+  color:#F7882F;
 }
 label {
   text-shadow: -1px 1px 2px #53224f, 1px 1px 2px #53224f, 1px -1px 0 #53224f, -1px -1px 0 #53224f;
-  color:rgb(209, 196, 129);
+  color:#F7C331;
   font-size: 25px;
 }
 </style>

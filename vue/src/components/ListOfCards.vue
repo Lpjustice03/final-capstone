@@ -24,21 +24,25 @@
     </form>
     </div>    
     <div class="action">         
+    
     </div>
+
     <div v-for="card in filterCards" v-bind:key="card.id" >
-<div class="updeleteButtons">
-        <button id="updateButton" type="submit" v-on:click="update1(card)" v-show = "!updateForm"> Update Card </button> 
-        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
-        </div> 
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
+        <footer v-show="card.flipped" id="tick-mark" class="x">
+            <span class="x"> X </span> </footer>
         </div> 
-         
+        <div class="updeleteButtons" v-show="!card.flipped">
+        <button id="updateButton" type="submit" v-on:click="update1(card)" v-show = "!updateForm"> Update Card </button> 
+        <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
+        </div> 
         <div class="answerButtons" v-show="card.flipped = card.flipped">
-        <button class="correct" v-on:click="addCorrect(card)">Correct!</button>
+        <button class="correct" v-on:click="addCorrect(card)" >Correct!</button>
         <button class="incorrect" v-on:click="addTotal(card)">Incorrect!</button> 
       </div>
+
       
     </div>       
 </div>
@@ -119,6 +123,7 @@ toggleCard: function(card) {
     addCorrect(card) {
         this.$store.state.counterCorrect = this.$store.state.counterCorrect + 1;
         this.$store.state.counterTotal = this.$store.state.counterTotal + 1;
+
         this.toggleCard(card);
     },
     
@@ -250,11 +255,10 @@ color:white;
   .correct {
       display: flex;
       justify-content: center;
-      font-size: 75%;
-      width: 100px;
-      height: 30px;
       background-color: darkgreen;
       font-family: Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+        margin-top: 10px;
   }
 .beginStudy {
       display:flex;
@@ -275,10 +279,7 @@ color:white;
   }
   
   .incorrect {
-      
-      font-size: 75%;
-      width: 100px;
-      height: 30px;
+      margin-top: 10px;
       background-color: red;
       
   }
@@ -295,10 +296,51 @@ color:white;
      vertical-align: text-top;
      top: 40px;
      font-size: 24px;
-     
-    
-    
+    }
+
+
+#tick-mark {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
 }
+
+#tick-mark::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: green;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+#tick-mark::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: green;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+    
+.x {
+  color: red;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+    
     
 
 

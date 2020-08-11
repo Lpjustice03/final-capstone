@@ -1,11 +1,16 @@
 <template>
   <div class="cards">
-    <h1 class="title">Cards</h1>
+    <h1 class="title"> Cardz </h1>
 
+
+<div class="headingRow">
+    <div class="timer">
       <timer />
-
+    </div>
+    <div class="add">
       <add-card />
-
+      </div>
+</div>
     <list-of-cards />
 
     
@@ -27,9 +32,9 @@ export default {
   components: {
     ListOfCards,
       AddCard,
-       Timer
-    
+       Timer    
   }
+
 
 
 
@@ -47,11 +52,23 @@ export default {
 .title {
   font-size: 50px;
   text-align: center;
-  color: #53224f;
+  color: white;
   background-color: rgb(214, 182, 137);
 }
 
+.headingRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.timer {
+  width: 170%;
+}
+
+.add {
+  width: 15%;
+}
 
 
 </style>
