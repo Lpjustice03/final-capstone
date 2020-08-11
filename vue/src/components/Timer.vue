@@ -20,12 +20,8 @@
         
 
         </div>
-<<<<<<< HEAD
-        </div>      
-=======
 
         </div>
->>>>>>> 998243e3e8f04e200bdb266460bba3b026db6bb8
   </div>
 </template>
 
