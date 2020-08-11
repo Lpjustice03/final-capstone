@@ -13,9 +13,9 @@
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
             <label for="updateCard">Card to update:</label>
-            <select v-model="update.id">
+            <!-- <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
-            </select>
+            </select> -->
         </div>
     <div class="actions">
       <button id="save" type="submit"> Save</button>
@@ -27,7 +27,7 @@
     </div>
     <div v-for="card in filterCards" v-bind:key="card.id" >
 <div class="updeleteButtons">
-        <button id="updateButton" type="submit" v-on:click="updateForm = true" v-show = "!updateForm"> Update Card </button> 
+        <button id="updateButton" type="submit" v-on:click="update1(card)" v-show = "!updateForm"> Update Card </button> 
         <button id="delete" type="submit" v-on:click="deleteCard(card)"> DELETE </button>
         </div> 
     <div class="card" v-on:click="toggleCard (card)"> 
@@ -67,7 +67,6 @@ update:{
 
 },
 
-
 computed: {
     filterCards() {
         return this.$store.state.cards.filter( card => {
@@ -80,6 +79,14 @@ methods:{
         cardService.list().then(response =>{
         this.$store.commit("SET_CARDS", response.data);
         });
+},
+
+update1(card){
+  this.updateForm = true;
+  this.update.id = card.id;
+  this.update.front = card.front;
+  this.update.back = card.back;
+  this.this.$route.params.id
 },
     updateCard(){
         const updatedCard = {
