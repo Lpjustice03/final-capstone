@@ -11,6 +11,7 @@ import DeckCards from '../views/DeckCards.vue'
 import AboutUs from '../views/AboutUs.vue'
 import TrialPage from '../views/TrialPage.vue'
 import TrialCards from '../views/TrialCards.vue'
+import StudySession from '../views/StudySession.vue'
 
 Vue.use(Router)
 
@@ -108,7 +109,16 @@ const router = new Router({
     meta: {
       requiresAuth: false
     }
-  }
+  },
+  {
+    path: "/studysession",
+      name: "StudySession",
+      component: StudySession,
+      meta: {
+        requiresAuth: false
+      }
+    },
+  
   ]
 })
 
