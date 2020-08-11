@@ -32,8 +32,8 @@
         <p class="title">The Vue Guy</p>
         <p>I am a dynamic figure, often seen scaling walls and my enemies. I don't perspire. I translate ethnic slurs for Cuban refugees, I write award-winning operas, I manage time efficiently.
  I woo women with my sensuous and godlike trombone playing, I have won bullfights in San Juan, cliff-diving competitions in Sri Lanka, and spelling bees at the Kremlin.
- I am an expert in stucco, a veteran in love, and an outlaw in Peru.</p>
-        <p class="emails">lance@example.com</p>
+ I am an expert in stucco, a veterampln in love, and an outlaw in Peru.</p>
+        <p class="emails">lpjustice03@gmail.com</p>
         <p><button class="button">Contact</button></p>
         </div>
       </div>
