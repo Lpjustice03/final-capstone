@@ -46,7 +46,8 @@ nav {
     width: 150px;
     color: white;
     font-size: 20px;
-    margin-right: 30%;
+    margin-right: 40%;
+    
 
 }
 .menuLink {

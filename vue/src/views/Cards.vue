@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title"> Cardz </h1>
+    <h1 class="title">Cards</h1>
 
 
 <div class="headingRow">
