@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title">Cards</h1>
+    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
 
 
 <div class="headingRow">

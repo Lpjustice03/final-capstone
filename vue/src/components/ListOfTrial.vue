@@ -1,30 +1,31 @@
 <template>
 <div class="fullPage">
- <div class="Story">
-   <div>
-Create a free account today to get access to dozens of cards: plus the ability to add, update, and delete your own decks!
-</div>
+    <div class="Story">
+      Create a free account today to get access to dozens of cards: plus the ability to add, update, and delete your own decks!
     </div>
 <div class= "list-of-trial">
  
 
    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
    
-    
+    <div>
      <router-link id="link" v-bind:to="{name: 'TrialCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} 
           <p> {{deck.description}} </p>
        </div>
       
       </router-link>
+      </div>
 
     </div>
-    <div class="Para">
-  <div> Sign up and see other decks. It's free! Boost your grades with unlimited access to dozens of flashcards!
+</div >
+<div v-on:click="setTitle(deck)">
+ <router-link class="menuLink" id="login" tag="button" :to="{ name: 'login' }">
+  <div class="signUp"> 
+      Sign up and see other decks. It's free! Boost your grades with unlimited access to dozens of flashcards!
   </div>
-</div>
-</div>
-
+  </router-link>
+  </div>
 </div>
 </template>
 
@@ -33,6 +34,10 @@ import deckService from "@/services/DeckService.js";
 export default {
     name: "list-of-trial",
 methods:{
+   setTitle(deck)
+  {
+    this.$store.state.deckTitle = deck.deckName;
+  },
     getTrial() {
    deckService.listTrial().then(response =>{
         this.$store.commit("SET_DECKS", response.data);
@@ -48,12 +53,7 @@ created() {
 
 <style>
 
-.Story {
-  display:flex;
-  font-family:  Arial, Helvetica, sans-serif;
-  flex-flow: row wrap;
-  margin-top: 50px;
-}
+
 .Para{
  font-family:  Arial, Helvetica, sans-serif;
   
@@ -102,20 +102,47 @@ created() {
       display:flex;
       justify-content: center;
       flex-flow: row wrap;
-      min-height: 100vh;
       background-color: #DCC7AA;
      
 
   }
   .fullPage{
     display:flex;
-      justify-content: center;
-      flex-flow: row wrap;
-    
-      background-color: #DCC7AA;
+    justify-content: center;
+    flex-direction: column;    
+    background-color: #DCC7AA;
+    align-content: space-between;
+    min-height: 100vh;
+
 
   }
   
+  .Story{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: rgb(214, 182, 137);
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+
+  }
+
+  .signUp{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+
+   }
 
 
 
@@ -123,6 +150,11 @@ created() {
 
   #link{
 text-decoration: none;
+background-color: #F7882F;
+}
+
+#link:hover{
+  background-color:#F7C331;
 }
 
 </style>

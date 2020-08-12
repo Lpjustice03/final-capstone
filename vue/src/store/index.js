@@ -25,6 +25,7 @@ export default new Vuex.Store({
     userId: 0,
     counterCorrect: 0,
     counterTotal: 0,
+    deckTitle: '',
     activeCard: {
       id:0,
       front: '',

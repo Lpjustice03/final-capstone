@@ -38,11 +38,13 @@
         
       </div>
 <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
+<div v-on:click="setTitle(deck)">
 <router-link id="link" v-bind:to="{name: 'cards', params: {id : deck.id}}">
 <div class="deck"> {{deck.deckName}}
 <p> {{deck.description}} </p>
 </div>
 </router-link>
+</div>
 
  <div class="updeleteButtons"> 
         <button class="updateButton" type="submit" v-on:click="update1(deck)"  v-show = "!updateForm"> Update Deck </button>
@@ -76,6 +78,12 @@ update:{
 },
 
 methods:{
+
+  setTitle(deck)
+  {
+    this.$store.state.deckTitle = deck.deckName;
+  },
+
 getDecks() {
 deckService.list().then(response =>{
 this.$store.commit("SET_DECKS", response.data);
