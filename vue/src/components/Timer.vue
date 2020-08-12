@@ -141,6 +141,7 @@ data () {
 
 .time {
     margin-left: 1%;
+   
 }
 
 </style>
