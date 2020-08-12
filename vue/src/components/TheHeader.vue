@@ -85,6 +85,7 @@ nav {
         "header4"
         "header5";
         grid-template-columns: 0.5fr;
+     
     }
 }
 

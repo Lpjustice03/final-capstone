@@ -1,5 +1,6 @@
 <template>
   <div class="cards">
+    
     <h1 class="title" > DECK {{cardsName}} </h1>
 
 <div class="headingRow">
@@ -35,6 +36,7 @@ import AddCard from '@/components/AddCard.vue';
 
 export default {
   name: "Cards",
+
   data(){
     return{
       cardsName: this.$route.params.id
