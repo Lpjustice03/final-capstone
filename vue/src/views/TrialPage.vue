@@ -39,7 +39,7 @@ h1{
   font-size: 50px;
   color: #ffffff;
   text-align: center;
-  text-shadow: 2px 2px #6e6e6e;
+  
   
  
 }

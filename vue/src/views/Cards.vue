@@ -88,7 +88,7 @@ h2{
   text-shadow: 2px 2px #6e6e6e;
 }
 
-.headingRow{
+/* .headingRow{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -100,7 +100,7 @@ h2{
 
 .add {
   width: 15%;
-}
+} */
 
 
 </style>

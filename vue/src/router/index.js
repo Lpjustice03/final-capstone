@@ -7,7 +7,6 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import Cards from '../views/Cards.vue'
 import Decks from '../views/Decks.vue'
-import DeckCards from '../views/DeckCards.vue'
 import AboutUs from '../views/AboutUs.vue'
 import TrialPage from '../views/TrialPage.vue'
 import TrialCards from '../views/TrialCards.vue'
@@ -72,14 +71,6 @@ const router = new Router({
     path: "/decks",
     name: "decks",
     component: Decks,
-    meta: {
-      requiresAuth: true
-    }
-  },
-  {
-    path: "/decks/:id/cards",
-    name: "DeckCards",
-    component: DeckCards,
     meta: {
       requiresAuth: true
     }

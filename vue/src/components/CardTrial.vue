@@ -140,7 +140,7 @@ color:white;
      }
      
  }
-  button{
+  /* button{
     border-radius: 5px;
     border: 1px solid #cb84b0;
     background-color: #8984cb;
@@ -159,7 +159,7 @@ color:white;
   
   button:hover{
     background-color: #70a66f;
-  }
+  } */
   
       .Pretext {
     color: #000000;
