@@ -3,9 +3,9 @@
   <div>
     <div class="about-section">
   <h1>About Us</h1>
-  <p class="description"> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create this super awesome app. 
+  <p class="description"> We are the creators of FlipDeck.  After going through a rigorous program at Tech Elevator, we all banded together to create FlipDeck, the flashcard study app! 
   Using everything we have learned here at Tech Elevator, we combined back-end code(Java, SQL), with front-end code(HTML,CSS). Using CSS, we were able to experiment with different looks and feels, for the ultimate user experience.
-  Thanks for using the app,and we hope you enjoy it!</p>
+  Thanks for using the app, and we hope you enjoy it!</p>
 </div>
     <h2 class="name">Our Team</h2>
     <div class="row">
@@ -16,7 +16,7 @@
         <h2>Omer Ali</h2>
         <p class="title">The Vue Guy</p>
         <p class="title"></p>
-        <p>Greatest Man ALive. and also the provider of the unlimited zoom. Karim has nothing on me, bro. I am also going to be a father soon. </p>
+        <p>  Working on this project with my teammates Erik, Lance, and Mike has been the second greatest joy in my life.  My greatest joy in life, will be coming into this world in about a month. </p>
         <p>Omer.ali17@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
@@ -186,6 +186,10 @@ h2{
 color: white;
   text-shadow: 1px 1px 1px black,
                 1px 2px 1px black;
+}
+
+.description{
+  font-size: 30px;
 }
 
 </style>

@@ -55,7 +55,9 @@ h2{
 .decks{
   background-color: #DCC7AA;
   margin-top: -34px;
-  color: #F7C331
+  color: #F7C331;
+  background-color: rgb(214, 182, 137);
+
 
 }
   
@@ -67,6 +69,8 @@ h1{
   text-shadow: 2px 2px #6e6e6e;
  
 }
+
+
 
 
 </style>
