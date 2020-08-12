@@ -74,18 +74,31 @@ public class DeckSqlDAO implements DeckDAO {
 	}
 	
 	@Override
-	public void deleteDeck(Long id) {
-		String sqlDelete = "SELECT * from card_deck where deck_id = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlDelete, id);
-		sqlDelete = "DELETE from card_deck where deck_id = ?";
-		jdbcTemplate.update(sqlDelete, id);
-		while(results.next()) {
-			Long cardId = results.getLong("card_id");
-			sqlDelete = "DELETE from cards where card_id = ?";
-			jdbcTemplate.update(sqlDelete, cardId);
+	public void deleteDeck(Long id, Long userId) {
+		String select = "SELECT deck_user_id from decks WHERE deck_id = ?";
+		SqlRowSet user =  jdbcTemplate.queryForRowSet(select, id);
+		Long theUserId = (long) 0;
+		while (user.next())
+		{
+			theUserId = user.getLong("deck_user_id");
 		}
-		sqlDelete = "DELETE from decks where deck_id = ?";
-		jdbcTemplate.update(sqlDelete, id);
+		if (theUserId.equals(userId)) {
+			String sqlDelete = "SELECT * from card_deck where deck_id = ?";
+			SqlRowSet results = jdbcTemplate.queryForRowSet(sqlDelete, id);
+			sqlDelete = "DELETE from card_deck where deck_id = ?";
+			jdbcTemplate.update(sqlDelete, id);
+			while(results.next()) {
+				Long cardId = results.getLong("card_id");
+				sqlDelete = "DELETE from cards where card_id = ?";
+				jdbcTemplate.update(sqlDelete, cardId);
+			}
+			sqlDelete = "DELETE from decks where deck_id = ?";
+			jdbcTemplate.update(sqlDelete, id);
+			
+		}
+
+	
+		
 		
 		
 	}

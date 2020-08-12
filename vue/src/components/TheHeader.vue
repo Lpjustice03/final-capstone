@@ -76,6 +76,17 @@ nav {
 
 @media only screen and (max-width: 600px){
 
+  .navBar {
+        grid-template-areas:
+        "header"
+        "header1"
+        "header2"
+        "header3"
+        "header4"
+        "header5";
+        grid-template-columns: 0.5fr;
+     
+    }
   
 }
 

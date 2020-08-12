@@ -66,10 +66,6 @@ public class FlashCardController {
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "/cards/update", method = RequestMethod.PUT)
 	public void updateCard(@RequestBody Card card) {
-		System.out.println("back: " + card.getBack());
-		System.out.println("front: " + card.getFront());
-		System.out.println("deckId: " + card.getDeckId());
-		System.out.println("cardId: " + card.getId());
 		cardDao.updateCard(card, card.getId());
 	}
 	@PreAuthorize("hasRole('ROLE_USER')")
@@ -102,19 +98,15 @@ public class FlashCardController {
 	@RequestMapping(path = "/decks/update", method = RequestMethod.PUT)
 	public void updateDeck(@RequestBody Deck deck) {
 		
-		System.out.println(deck.getDeckName());
-		System.out.println(deck.getDeckType());
-		System.out.println(deck.getDescription());
-		System.out.println(deck.getId());
-		
 		deckDao.updateDeck(deck, deck.getId());
 	}
 	
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "decks/{id}", method = RequestMethod.DELETE)
-	public void deleteDeck(@PathVariable Long id) {
-		System.out.println(id);
-		deckDao.deleteDeck(id);
+	public void deleteDeck(@PathVariable Long id, Principal principal) {
+		String userName = principal.getName();
+		Long userId = (long)userDao.findIdByUsername(userName);
+		deckDao.deleteDeck(id, userId);
 	
 	}
 	
