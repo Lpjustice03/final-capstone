@@ -113,7 +113,7 @@ label {
 
 button{
     border-radius: 5px;
-    border: 2px solid  #6B7A8F;
+    border: 1px solid  #6B7A8F;
     background-color: #F7882F;
     padding: 8px 15px;
     outline: none;

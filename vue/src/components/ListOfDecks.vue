@@ -38,7 +38,7 @@
         
       </div>
 <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
-<router-link id="link" v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
+<router-link id="link" v-bind:to="{name: 'cards', params: {id : deck.id}}">
 <div class="deck"> {{deck.deckName}}
 <p> {{deck.description}} </p>
 </div>
