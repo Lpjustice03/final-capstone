@@ -8,7 +8,7 @@
 
    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
    
-    <div>
+    <div v-on:click="setTitle(deck)">
      <router-link id="link" v-bind:to="{name: 'TrialCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} 
           <p> {{deck.description}} </p>
@@ -19,13 +19,11 @@
 
     </div>
 </div >
-<div v-on:click="setTitle(deck)">
  <router-link class="menuLink" id="login" tag="button" :to="{ name: 'login' }">
   <div class="signUp"> 
       Sign up and see other decks. It's free! Boost your grades with unlimited access to dozens of flashcards!
   </div>
   </router-link>
-  </div>
 </div>
 </template>
 
@@ -143,6 +141,7 @@ created() {
     border-radius: 10px;
 
    }
+
 
 
 

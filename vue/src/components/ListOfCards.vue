@@ -1,10 +1,8 @@
 <template>
   
   
-<div class= "list-of-cards"> 
-    
-      
-     <div class="cardButton">
+<div>
+         <div class="cardButton">
          
          
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
@@ -23,7 +21,10 @@
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
     </form>
-    </div>    
+    </div>   
+<div class= "list-of-cards"> 
+    
+       
     <div class="action">         
     
     </div>
@@ -46,6 +47,7 @@
 
       
     </div>       
+</div>
 </div>
 
 </template>
