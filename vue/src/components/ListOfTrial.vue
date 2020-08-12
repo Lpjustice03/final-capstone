@@ -4,7 +4,7 @@
    <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
    
     
-     <router-link v-bind:to="{name: 'TrialCards', params: {id : deck.id}}">
+     <router-link id="trialdecks" v-bind:to="{name: 'TrialCards', params: {id : deck.id}}">
        <div class="deck"> {{deck.deckName}} 
           <p> {{deck.description}} </p>
        </div>
@@ -34,6 +34,12 @@ created() {
 </script>
 
 <style>
+
+#trialdecks{
+text-decoration: none;
+
+}
+
 .deck:hover{
   transform: scale(1.1);
 }
@@ -63,7 +69,8 @@ created() {
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     will-change: transform;
     border-style: outset;
-    text-decoration: none;
+    
+    
   }
 
   p {
