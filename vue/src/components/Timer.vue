@@ -100,7 +100,7 @@ data () {
     margin-left: 1%;
   }
 
-  button{
+  button{  
     border-radius: 5px;
     border: 1px solid  #8984cb;
     background-color: #F7C331;
@@ -137,6 +137,7 @@ data () {
 .row {
     display: flex;
     flex-direction: row;
+    
 }
 
 .time {

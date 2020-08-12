@@ -1,29 +1,28 @@
 <template>
   
-  <div class="cardsPage">
+  
+<div class= "list-of-cards"> 
+    
+      
+     <div class="cardButton">
+         
+         
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
         <div>
-            <div class="updoot">
             <label for="front">Question? </label>
             <input type="text" name="front" v-model="update.front" />
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
+            <label for="updateCard">Card to update:</label>
             <!-- <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
             </select> -->
-        </div>
         </div>
     <div class="actions">
       <button id="save" type="submit"> Save</button>
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
     </form>
-<div class= "list-of-cards"> 
-      
-     <div class="cardButton">
-         
-         
-
     </div>    
     <div class="action">         
     
@@ -47,7 +46,6 @@
 
       
     </div>       
-</div>
 </div>
 
 </template>
@@ -234,7 +232,7 @@ color:white;
 
   button{
     border-radius: 5px;
-    border: 1px solid  #6B7A8F;
+    border: 1px solid  #8984cb;
     background-color: #F7882F;
     padding: 8px 15px;
     outline: none;
@@ -301,10 +299,6 @@ color:white;
      font-size: 24px;
     }
 
-   input{
-       width: 20%;
-   }
-
 
 #tick-mark {
     position: relative;
@@ -348,32 +342,7 @@ color:white;
   border-radius: 5px;
 }
     
-
-.cardsPage{
-    display: flex;
-    flex-direction: column;
-  }
-
- .listofcards{
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
- }
-
- .updoot{
-   display:flex;
-   flex-direction: row;
-   justify-content: center;
- }
-
- #save{
-  width: 20%
- }
-
- #cancel{
-  width: 20%
-
- }
+    
 
 
 </style>
