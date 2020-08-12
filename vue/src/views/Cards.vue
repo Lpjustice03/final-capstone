@@ -36,6 +36,7 @@ import AddCard from '@/components/AddCard.vue';
 
 export default {
   name: "Cards",
+
   data(){
     return{
       cardsName: this.$route.params.id

@@ -30,9 +30,8 @@
         <div class="cardProp">
         <h2 class="names">Lance Justice </h2>
         <p class="title">The Vue Guy</p>
-        <p>I am a dynamic figure, often seen scaling walls and my enemies. I don't perspire. I translate ethnic slurs for Cuban refugees, I write award-winning operas, I manage time efficiently.
- I woo women with my sensuous and godlike trombone playing, I have won bullfights in San Juan, cliff-diving competitions in Sri Lanka, and spelling bees at the Kremlin.
- I am an expert in stucco, a veterampln in love, and an outlaw in Peru.</p>
+        <p> I spent 9 years at a bank servicing and processing mortgage loan accounts. My real passion was in coding which led me to Tech Elevator.
+           I am thankful for the skills I've obtained and the languages I've learned. Excited to grow and learn more as software developer.</p>
         <p class="emails">lpjustice03@gmail.com</p>
         <p><button class="button">Contact</button></p>
         </div>
@@ -84,7 +83,9 @@ export default {
 </script>
 
 <style scoped>
-
+img{
+  height:100%;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
