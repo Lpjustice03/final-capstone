@@ -46,7 +46,7 @@ nav {
     width: 150px;
     color: white;
     font-size: 20px;
-    margin-right: 40%;
+    margin-right: 30%;
     
 
 }

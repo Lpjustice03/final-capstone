@@ -1,7 +1,7 @@
 <template>
 
   <div class="decks">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Permanent+Marker" />
+    
     
     <h1 class="heroBanner">Decks</h1>
     <div id="backbutton" >
@@ -48,6 +48,7 @@ img{
 h2{
   color: black;
   font-family: "Permanent Marker";
+  text-shadow: 2px 2px #6e6e6e;
 }
 
 
