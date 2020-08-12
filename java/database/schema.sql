@@ -188,9 +188,9 @@ INSERT INTO cards(front, back, card_creator_id) VALUES (' What is the symbol for
 
 
 
-INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade Math', 2, 'Generic study questions for 6th grade math', true);
-INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade Math', 2, 'Generic study questions for 7th grade math', true);
-INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade Math', 2, 'Generic study questions for 8th grade math', true);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade Mathematics', 2, 'Generic study questions for 6th grade math', true);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade Mathematics', 2, 'Generic study questions for 7th grade math', true);
+INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade Mathematics', 2, 'Generic study questions for 8th grade math', true);
 INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('6th Grade History', 2, 'Generic study questions for 6th grade history', true);
 INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('7th Grade History', 2, 'Generic study questions for 7th grade history', true);
 INSERT INTO decks (deck_name, deck_user_id, deck_description, deck_is_trial) VALUES ('8th Grade History', 2,'Generic study questions for 8th grade history', true);

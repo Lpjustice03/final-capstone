@@ -56,7 +56,7 @@ export default {
   background-color: rgb(214, 182, 137);
 }
 
-.headingRow{
+/* .headingRow{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,7 +68,7 @@ export default {
 
 .add {
   width: 15%;
-}
+} */
 
 
 </style>

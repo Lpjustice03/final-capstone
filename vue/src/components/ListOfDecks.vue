@@ -1,17 +1,11 @@
 <template>
-
-<div class= "list-of-decks">
-  
-
-   <div class="deckButton">
-    
-          
-        <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
-        <div>
-            <label for="deckName">Name of Deck </label>
-              <input type="text" name="deckName" v-model="update.deckName" />
-            <label for="description"> Description: </label>
-              <input type="text" name="description" v-model="update.description"/>
+<div class="decksPage">
+  <form class="listofdecks" v-on:submit="updateDeck" v-show = "updateForm">
+        <div class="updoot">
+            <label  for="deckName">Name of Deck    </label>
+              <input  type="text" name="deckName" v-model="update.deckName" />
+            <label  for="description"> Description:    </label>
+              <input   type="text" name="description" v-model="update.description"/>
             
               
               <select v-model="update.deckType">
@@ -35,6 +29,13 @@
       
       </div>
       </form>
+<div class= "list-of-decks">
+  
+
+   <div class="deckButton">
+    
+          
+        
       </div>
 <div v-for="deck in this.$store.state.decks" v-bind:key="deck.id" >
 <router-link id="link" v-bind:to="{name: 'DeckCards', params: {id : deck.id}}">
@@ -50,7 +51,7 @@
 
 </div>
 </div>
-
+</div>
 </template>
 
 <script>
@@ -180,6 +181,7 @@ this.getDecks();
   .updeleteButtons{
       justify-content: center;
       display:flex;
+
   }
   button:hover{
     background-color: #F7C331;
@@ -190,6 +192,7 @@ this.getDecks();
   -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    border: 1px solid  #6B7A8F;
 }
 #link{
 text-decoration: none;
@@ -204,7 +207,8 @@ text-decoration: none;
   -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
-  
+      border: 1px solid  #6B7A8F;
+
 }
   
   
@@ -217,4 +221,31 @@ text-decoration: none;
      }
  }
   
+  .decksPage{
+    display: flex;
+    flex-direction: column;
+  }
+
+ .listofdecks{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .updoot{
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ #save{
+  width: 20%
+ }
+
+ #cancel{
+  width: 20%
+
+ }
+
+
 </style>

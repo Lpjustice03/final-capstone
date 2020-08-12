@@ -1,6 +1,7 @@
 <template>
  <div class="cardButton">
     <button type="submit" v-on:click="addForm = true" v-show = "!addForm"> Add A Card </button>  
+    <div class="addCardForm">
     <form class="addCard" v-on:submit="saveCard" v-show = "addForm">
     <div>
        <label for="front">Question? </label>
@@ -13,6 +14,7 @@
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
     </form>
+    </div>
 
 </div>
 
@@ -85,12 +87,13 @@ justify-content: center;
 
 #save {
     margin: 5%;
-    width: 30%;
+    width: 75%;
+
 }
 
 #cancel {
-    width: 30%;
-    background-color: #F7C331;
+     width: 75%;
+    background-color: #F7882F;
     border-radius: 5px;
     color: white;
     border: 1px solid #959717;
@@ -100,7 +103,7 @@ justify-content: center;
 }
 
 #cancel:hover {
-    background-color: #F7882F;
+    background-color: #F7C331;
 }
 
 label {
@@ -110,8 +113,8 @@ label {
 
 button{
     border-radius: 5px;
-    border: 1px solid #959717;
-    background-color: #F7C331;
+    border: 2px solid  #6B7A8F;
+    background-color: #F7882F;
     padding: 8px 15px;
     outline: none;
     font-size: 14px;
@@ -123,16 +126,17 @@ button{
     margin-left: 10px;
     margin-bottom: 25px;
     margin-top: 35px;
+
  
   }
 
   button:hover{
-    background-color: #F7882F;
+    background-color: #F7C331;
     border: 1px solid #8984cb
   }
 .cardButton{
-justify-content: center;
 display:flex;
+justify-content: flex-end;
 background-color: rgb(214, 182, 137);
 }
 
