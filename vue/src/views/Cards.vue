@@ -1,7 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title">Cards</h1>
-
+    <h1 class="title" > DECK {{cardsName}} </h1>
 
 <div class="headingRow">
     <div class="timer">
@@ -10,7 +9,15 @@
     <div class="add">
       <add-card />
       </div>
+      
 </div>
+ <div id="backbutton" >
+      <h2> GO BACK</h2>
+     <router-link to="/decks">  
+
+     <img src='@/assets/black-arrow.png' />
+     </router-link>
+    </div>
     <list-of-cards />
 
     
@@ -28,6 +35,11 @@ import AddCard from '@/components/AddCard.vue';
 
 export default {
   name: "Cards",
+  data(){
+    return{
+      cardsName: this.$route.params.id
+    }
+  },
 
   components: {
     ListOfCards,
@@ -44,6 +56,23 @@ export default {
 };
 </script>
 <style scoped>
+
+img{
+  background-size: cover;
+  height: 50px;
+  margin:0px; 
+}
+h2{
+  color: black;
+  font-family: "Permanent Marker";
+}
+
+.backbutton{
+ display: flex;
+ 
+}
+
+
 .cards {
   background-color: rgb(214, 182, 137);
   margin-top: -34px;
@@ -52,8 +81,11 @@ export default {
 .title {
   font-size: 50px;
   text-align: center;
-  color: white;
-  background-color: rgb(214, 182, 137);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px #6e6e6e;
 }
 
 /* .headingRow{

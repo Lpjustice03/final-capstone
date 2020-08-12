@@ -3,6 +3,13 @@
         <h1 class="title"> Cardz </h1>
     <timer />
     <div class="cardsBackground">
+        <div id="backbutton" >
+      <h2> GO BACK</h2>
+     <router-link to="/decks/trial">  
+
+     <img src='@/assets/black-arrow.png' />
+     </router-link>
+    </div>
 <card-trial v-bind:deck-id="parseInt($route.params.id)" />
 </div>
 <div class="button">
@@ -29,6 +36,20 @@ export default {
 </script>
 
 <style>
+
+img{
+  background-size: cover;
+  height: 50px;
+  margin:0px; 
+}
+h2{
+  color: black;
+  font-family: "Permanent Marker";
+  text-shadow: 2px 2px #6e6e6e;
+}
+
+
+
 .trialCards {
   background-color: rgb(214, 182, 137);
   margin-top: -34px;
