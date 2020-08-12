@@ -65,7 +65,7 @@ created() {
     display: flex;
     flex-direction:column;
     width: 250px;
-    height: 400px;
+    height: 300px;
     padding: 40px 25px;
     background-color: rgb(102, 172, 117);
     background-image: url(../assets/computerScreen.jpeg);

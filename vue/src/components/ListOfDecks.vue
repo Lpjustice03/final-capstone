@@ -151,31 +151,34 @@ this.getDecks();
     flex-direction:column;
     width: 250px;
     height: 300px;
-    padding: 40px 25px;
+    padding: 45px 25px;
+    background-color: rgb(102, 172, 117);
     background-image: url(../assets/computerScreen.jpeg);
     background-position: 50% 0%;
-    background-color: rgb(102, 172, 117);
     background-size: cover;
     border-radius: 7px;
-    margin: 15px;
+    margin-top: 15px;
     text-align: center;
-    line-height: 60px;
+    line-height: 30px;
     cursor: pointer;
     position: relative;
     color: #fff;
-    font-weight: 300;
-    font-size: 35px;
+    font-weight: 400;
+    font-size: 30px;
     -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
     will-change: transform;
     border-style: outset;
-    
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   p {
     font-size: 20px;
+    align-content: center;
   }
+    
 
   .list-of-decks{
     background-color: #DCC7AA;
