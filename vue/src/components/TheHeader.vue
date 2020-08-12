@@ -87,6 +87,7 @@ nav {
         grid-template-columns: 0.5fr;
      
     }
+  
 }
 
 

@@ -74,9 +74,10 @@ public class FlashCardController {
 	}
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@RequestMapping(path = "cards/{id}", method = RequestMethod.DELETE)
-	public void cardDelete(@PathVariable Long id) {
-		System.out.println(id);
-		cardDao.deleteCard(id);
+	public void cardDelete(@PathVariable Long id, Principal principal) {
+		String userName = principal.getName();
+		Long userId = (long)userDao.findIdByUsername(userName);
+		cardDao.deleteCard(id, userId);
 	}
 	@PreAuthorize("hasRole('ROLE_USER')")
 	@ResponseStatus(HttpStatus.CREATED)

@@ -80,11 +80,22 @@ public class CardSqlDAO implements CardDAO {
 
 
 	@Override
-	public void deleteCard(Long id) {
-		String sqlDelete = "DELETE from card_deck where card_id = ?";
-		jdbcTemplate.update(sqlDelete, id);
-		sqlDelete = "DELETE from cards where card_id = ?";
-		jdbcTemplate.update(sqlDelete, id);
+	public void deleteCard(Long id, Long userId) {
+		String sqlSelect = "SELECT card_creator_id FROM cards WHERE card_id = ?";
+		SqlRowSet theUser = jdbcTemplate.queryForRowSet(sqlSelect, id);
+		Long theUserId = (long) 0;
+		while (theUser.next())
+		{
+			theUserId = theUser.getLong("card_creator_id");
+		}
+		if (theUserId.equals(userId))
+		{
+			String sqlDelete = "DELETE from card_deck where card_id = ?";
+			jdbcTemplate.update(sqlDelete, id);
+			sqlDelete = "DELETE from cards where card_id = ?";
+			jdbcTemplate.update(sqlDelete, id);
+		}
+
 	}
 	
 

@@ -1,6 +1,6 @@
 <template>
 <div class="trialCards">
-        <h1 class="title"> Cardz </h1>
+    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
     <timer />
     <div class="cardsBackground">
         <div id="backbutton" >

@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
-    
-    <h1 class="title" > DECK {{cardsName}} </h1>
+    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
+
 
 <div class="headingRow">
     <div class="timer">
