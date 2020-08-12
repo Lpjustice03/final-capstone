@@ -12,7 +12,7 @@ public interface CardDAO {
 	
 	void createCard(Card card);
 	
-	void deleteCard(Long id);
+	void deleteCard(Long id, Long userId);
 	
 
 }
