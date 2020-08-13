@@ -155,7 +155,7 @@ this.getDecks();
     height: 300px;
     padding: 45px 25px;
     background-color: rgb(102, 172, 117);
-    background-image: url(../assets/computerScreen.jpeg);
+    background-image: url(../assets/classroom.jpg);
     background-position: 50% 0%;
     background-size: cover;
     border-radius: 7px;

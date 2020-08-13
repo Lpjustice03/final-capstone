@@ -68,7 +68,7 @@ created() {
     height: 300px;
     padding: 40px 25px;
     background-color: rgb(102, 172, 117);
-    background-image: url(../assets/computerScreen.jpeg);
+    background-image: url(../assets/classroom.jpg);
     background-position: 50% 0%;
     background-color: rgb(102, 172, 117);
     background-size: cover;
@@ -90,6 +90,7 @@ created() {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 30%;
     margin-top: 30%;
+    text-shadow: 2px 2px #6e6e6e;
   }
 
   p {
@@ -127,9 +128,9 @@ created() {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 10px;
-      text-shadow: 2px 2px #6e6e6e;
+      text-shadow: 2px 2px rgb(131, 75, 30);
 
 
   }

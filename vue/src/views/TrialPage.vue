@@ -35,7 +35,7 @@ img{
 }
 h2{
   color: black;
-  font-family: "Permanent Marker";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{

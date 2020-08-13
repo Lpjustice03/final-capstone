@@ -106,11 +106,11 @@ created() {
    font-family: "Lucida Console", Courier, monospace;
     font-weight: 600;
     font-size: 20px;
-    -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     will-change: transform;
     border-style: outset;
+     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
   }
   .card:hover{
       transform: scale(1.1);

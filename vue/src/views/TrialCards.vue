@@ -53,6 +53,7 @@ h2{
 .trialCards {
   background-color: rgb(214, 182, 137);
   margin-top: -34px;
+  
 
 }
 
