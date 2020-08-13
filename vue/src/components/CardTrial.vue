@@ -108,9 +108,9 @@ created() {
     font-size: 20px;
     will-change: transform;
     border-style: outset;
-     -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
+     -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
   }
   .card:hover{
       transform: scale(1.1);
