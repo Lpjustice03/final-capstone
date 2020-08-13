@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
+    <h1 class="title"> {{cardsTitle}}</h1>
 
 
 <div class="headingRow">
@@ -39,7 +39,7 @@ export default {
 
   data(){
     return{
-      cardsName: this.$route.params.id
+      cardsTitle: this.$store.state.deckTitle
     }
   },
 

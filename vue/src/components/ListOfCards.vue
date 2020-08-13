@@ -30,7 +30,7 @@
     </div>
 
     <div v-for="card in filterCards" v-bind:key="card.id" >
-    <div class="card" v-on:click="toggleCard (card)"> 
+    <div class="card" v-on:click="toggleCard (card)" > 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
         <footer v-show="card.flipped" id="tick-mark" class="x">
