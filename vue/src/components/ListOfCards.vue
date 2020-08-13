@@ -32,8 +32,8 @@
     <div class="card" v-on:click="toggleCard (card)"> 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
-        <footer v-show="card.flipped" id="tick-mark" class="x">
-            <span class="x"> X </span> </footer>
+        <!-- <footer v-show="card.flipped" id="tick-mark" class="x">
+            <span class="x"> X </span> </footer> -->
         </div> 
         <div class="updeleteButtons" v-show="!card.flipped">
         <button id="updateButton" type="submit" v-on:click="update1(card)" v-show = "!updateForm"> Update Card </button> 
