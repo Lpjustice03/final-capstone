@@ -16,5 +16,5 @@ public interface DeckDAO {
 	
     void createDeck(Deck deck);
     
-    void deleteDeck(Long id);
+    void deleteDeck(Long id, Long userId);
 }

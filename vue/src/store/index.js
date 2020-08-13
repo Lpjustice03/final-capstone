@@ -34,6 +34,10 @@ export default new Vuex.Store({
     
   },
   mutations: {
+    SET_DECK_NAME(state, deckName)
+    {
+        state.deckTitle = deckName;
+    },
     SET_USER_ID(state, id) {
       state.userId = id
     },

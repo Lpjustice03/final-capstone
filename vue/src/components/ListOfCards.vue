@@ -1,10 +1,8 @@
 <template>
   
   
-<div class= "list-of-cards"> 
-    
-      
-     <div class="cardButton">
+<div>
+         <div class="cardButton">
          
          
         <form class="listofcards" v-on:submit="updateCard" v-show = "updateForm">
@@ -13,17 +11,19 @@
             <input type="text" name="front" v-model="update.front" />
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
-            <label for="updateCard">Card to update:</label>
             <!-- <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
             </select> -->
         </div>
-    <div class="actions">
+    <div class="actions" >
       <button id="save" type="submit"> Save</button>
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
     </form>
-    </div>    
+    </div>   
+<div class= "list-of-cards"> 
+    
+       
     <div class="action">         
     
     </div>
@@ -47,6 +47,7 @@
       
     </div>       
 </div>
+</div>
 
 </template>
 
@@ -60,6 +61,7 @@ name: "list-of-cards",
  data() {
 return{
     updateForm: false, 
+    deckTitle: '',
 update:{
 
         front: '',
@@ -248,6 +250,10 @@ color:white;
     font-family: Arial, Helvetica, sans-serif;
 
   }
+
+  .cardButton{
+      background-color: #DCC7AA;
+  }
   
   button:hover{
     background-color: #F7C331;
@@ -300,7 +306,7 @@ color:white;
     }
 
 
-#tick-mark {
+/* #tick-mark {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -343,6 +349,6 @@ color:white;
 }
     
     
-
+ */
 
 </style>

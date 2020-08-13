@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
+    <h1 class="title"> {{$store.state.user.username}}'s Cards </h1>
 
 
 <div class="headingRow">
@@ -36,9 +36,11 @@ import AddCard from '@/components/AddCard.vue';
 
 export default {
   name: "Cards",
+
   data(){
     return{
-      cardsName: this.$route.params.id
+      cardsName: this.$route.params.id,
+      deckName: this.$store.state.deckTitle
     }
   },
 
@@ -46,7 +48,7 @@ export default {
     ListOfCards,
       AddCard,
        Timer    
-  }
+  },
 
 
 
@@ -68,9 +70,8 @@ h2{
   font-family: "Permanent Marker";
 }
 
-.backbutton{
- display: flex;
- 
+#backbutton{
+ background-color: #DCC7AA;
 }
 
 
@@ -89,7 +90,7 @@ h2{
   text-shadow: 2px 2px #6e6e6e;
 }
 
-/* .headingRow{
+.headingRow{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -101,7 +102,7 @@ h2{
 
 .add {
   width: 15%;
-} */
+}
 
 
 </style>
