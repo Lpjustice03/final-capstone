@@ -1,6 +1,6 @@
 <template>
   <div class="cards">
-    <h1 class="title"> {{cardsTitle}}</h1>
+    <h1 class="title"> {{$store.state.user.username}}'s Cards </h1>
 
 
 <div class="headingRow">
@@ -39,7 +39,8 @@ export default {
 
   data(){
     return{
-      cardsTitle: this.$store.state.deckTitle
+      cardsName: this.$route.params.id,
+      deckName: this.$store.state.deckTitle
     }
   },
 
@@ -47,7 +48,7 @@ export default {
     ListOfCards,
       AddCard,
        Timer    
-  }
+  },
 
 
 
@@ -66,12 +67,12 @@ img{
 }
 h2{
   color: black;
-  font-family: "Permanent Marker";
+ font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px #6e6e6e;
 }
 
-.backbutton{
- display: flex;
- 
+#backbutton{
+ background-color: #DCC7AA;
 }
 
 
@@ -90,7 +91,7 @@ h2{
   text-shadow: 2px 2px #6e6e6e;
 }
 
-/* .headingRow{
+.headingRow{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,7 +103,7 @@ h2{
 
 .add {
   width: 15%;
-} */
+}
 
 
 </style>

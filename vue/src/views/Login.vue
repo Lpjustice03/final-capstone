@@ -35,7 +35,9 @@
         required
       />
         <button type="submit">Sign in</button>
+        <div class="registerLink">
         <router-link class="link" :to="{ name: 'register' }">Need an account?</router-link>
+        </div>
     </form>
   </div>
 </div>
@@ -171,5 +173,13 @@ label {
  color: #F7C331;
   font-size: 30px;
   
+}
+
+.registerLink{
+  background: transparent;
+  text-shadow: 2px 2px #6e6e6e;
+  margin-right: 42%;
+  margin-left: 42%;
+
 }
 </style>

@@ -11,12 +11,11 @@
             <input type="text" name="front" v-model="update.front" />
             <label for="back"> Answer: </label>
             <input type="text" name="back" v-model="update.back"/>
-            <label for="updateCard">Card to update:</label>
             <!-- <select v-model="update.id">
                 <option v-for="card in filterCards" v-bind:value="card.id" v-bind:key="card.id"> {{card.front}} </option>
             </select> -->
         </div>
-    <div class="actions">
+    <div class="actions" >
       <button id="save" type="submit"> Save</button>
       <input id="cancel" type="button" value="Cancel" v-on:click.prevent="resetForm" />
     </div>
@@ -33,8 +32,8 @@
     <div class="card" v-on:click="toggleCard (card)" > 
         <h1 class="Pretext">  {{card.flipped ? "Answer:" : "Question:"}}  </h1>
         {{card.flipped ? card.back : card.front}}
-        <footer v-show="card.flipped" id="tick-mark" class="x">
-            <span class="x"> X </span> </footer>
+        <!-- <footer v-show="card.flipped" id="tick-mark" class="x">
+            <span class="x"> X </span> </footer> -->
         </div> 
         <div class="updeleteButtons" v-show="!card.flipped">
         <button id="updateButton" type="submit" v-on:click="update1(card)" v-show = "!updateForm"> Update Card </button> 
@@ -62,6 +61,7 @@ name: "list-of-cards",
  data() {
 return{
     updateForm: false, 
+    deckTitle: '',
 update:{
 
         front: '',
@@ -180,11 +180,11 @@ created() {
    font-family: "Lucida Console", Courier, monospace;
     font-weight: 600;
     font-size: 20px;
-    -webkit-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    -moz-box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
-    box-shadow: 9px 10px 22px -8px rgba(209,193,209,.5);
     will-change: transform;
     border-style: outset;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 
   }
 
@@ -203,6 +203,7 @@ color:white;
     margin-top: 5%;
     display:flex;
     justify-content: center;
+    
 }
 
   .list-of-cards{
@@ -248,7 +249,14 @@ color:white;
     margin-left: 10px;
     margin-bottom: 25px;
     font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
 
+  }
+
+  .cardButton{
+      background-color: #DCC7AA;
   }
   
   button:hover{
@@ -302,7 +310,7 @@ color:white;
     }
 
 
-#tick-mark {
+/* #tick-mark {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -345,6 +353,6 @@ color:white;
 }
     
     
-
+ */
 
 </style>

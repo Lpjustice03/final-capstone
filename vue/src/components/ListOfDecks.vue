@@ -81,7 +81,8 @@ methods:{
 
   setTitle(deck)
   {
-    this.$store.state.deckTitle = deck.deckName;
+    this.$store.commit("SET_DECK_NAME", deck.deckName);
+    console.log(deck.deckName);
   },
 
 getDecks() {
@@ -124,6 +125,7 @@ resetForm() {
 
 created() {
 this.getDecks();
+
 }
 
 }

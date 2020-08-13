@@ -3,6 +3,7 @@
 <div class="trial">
   <div class="header">
    <h1 class="heroBanner">Trial Decks</h1>
+   </div>
   <div id="backbutton" >
       <h2> GO BACK</h2>
      <router-link to="/">  
@@ -10,7 +11,7 @@
      <img src='@/assets/black-arrow.png' />
      </router-link>
     </div>
-    </div>
+    
   <list-of-trial/>
 </div>
 </template>
@@ -42,6 +43,7 @@ h1{
   font-size: 50px;
   color: #ffffff;
   text-align: center;
+  text-shadow: 2px 2px #6e6e6e;
 }
 
 .trial{

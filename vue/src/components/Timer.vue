@@ -98,6 +98,7 @@ data () {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-left: 1%;
+    text-shadow: 1px 1px #6e6e6e;
   }
 
   button{  
@@ -116,6 +117,9 @@ data () {
     margin-left: 10px;
     margin-bottom: 25px;
     font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    -moz-box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
+    box-shadow: 9px 10px 22px -8px rgba(33, 88, 40, 0.774);
   }
    button:hover{
     background-color: #F7C331;
@@ -128,6 +132,7 @@ data () {
       width: 10%;
       height: auto;
       background-color: #F7C331;
+      
 }
 
 .beginStudy:hover{
@@ -142,7 +147,7 @@ data () {
 
 .time {
     margin-left: 1%;
-   
+   text-shadow: 1px 1px #6e6e6e;
 }
 
 </style>

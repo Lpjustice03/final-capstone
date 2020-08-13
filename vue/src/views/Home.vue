@@ -49,7 +49,7 @@ export default {
 .tryIt {
     margin-right: 20%;
     margin-top: 2%;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .tryIt:hover {
   background-color: #F7C331;
@@ -57,8 +57,9 @@ export default {
 
 .paragraph {
   margin-left: 170px;
+  
   font-size: 35px;
-  background: rgb(107, 122, 143, .3);
+  
   color: white;
   font-weight: 175;
   font-family: Arial, Helvetica, sans-serif;
@@ -68,7 +69,7 @@ export default {
   margin-top: 10%;
   margin-right: 10%;
   flex-flow: row wrap;
-  text-align:center;
+  text-align:left;
   font-weight: 600;
 }
 .tryIt {

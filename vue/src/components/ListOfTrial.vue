@@ -19,11 +19,13 @@
 
     </div>
 </div >
- <router-link class="menuLink" id="login" tag="button" :to="{ name: 'login' }">
+<div class="test">
+ <router-link class="menuLink" id="login" tag="button" :to="{ name: 'register' }">
   <div class="signUp"> 
       Sign up and see other decks. It's free! Boost your grades with unlimited access to dozens of flashcards!
   </div>
   </router-link>
+  </div>
 </div>
 </template>
 
@@ -86,6 +88,8 @@ created() {
     border-style: outset;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30%;
+    margin-top: 30%;
   }
 
   p {
@@ -122,10 +126,11 @@ created() {
     font-size: 30px;
     margin-left: 20%;
     margin-right: 20%;
-    background: rgb(214, 182, 137);
     margin-top: 20px;
     color: white;
     border-radius: 10px;
+      text-shadow: 2px 2px #6e6e6e;
+
 
   }
 
@@ -139,6 +144,8 @@ created() {
     margin-top: 20px;
     color: white;
     border-radius: 10px;
+      text-shadow: 2px 2px #6e6e6e;
+
 
    }
 
@@ -154,6 +161,14 @@ background-color: #F7882F;
 
 #link:hover{
   background-color:#F7C331;
+}
+
+.test{
+  display:flex;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+ 
 }
 
 </style>

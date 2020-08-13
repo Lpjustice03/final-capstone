@@ -1,6 +1,6 @@
 <template>
 <div class="trialCards">
-    <h1 class="title"> {{this.$store.state.deckTitle}}</h1>
+    <h1 class="title"> Trial Cards </h1>
     <timer />
     <div class="cardsBackground">
         <div id="backbutton" >
@@ -44,8 +44,8 @@ img{
 }
 h2{
   color: black;
-  font-family: "Permanent Marker";
-  text-shadow: 2px 2px #6e6e6e;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px #6e6e6e;
 }
 
 
@@ -57,10 +57,11 @@ h2{
 }
 
 .title {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
+  color: #ffffff;
   text-align: center;
-  color: white;
-  background-color: rgb(214, 182, 137);
+  text-shadow: 2px 2px #6e6e6e;
 }
 
 .cardsBackground{
